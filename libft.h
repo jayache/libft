@@ -6,7 +6,7 @@
 /*   By: jayache <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/06 19:44:10 by jayache           #+#    #+#             */
-/*   Updated: 2018/11/18 12:24:28 by jayache          ###   ########.fr       */
+/*   Updated: 2018/11/23 18:06:55 by jayache          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@
 #	include <string.h>
 #	include <stdlib.h>
 #	include <unistd.h>
+#	include "mlx.h"
+
 
 typedef struct		s_list
 {
@@ -31,6 +33,12 @@ typedef struct		s_btree
 	struct s_btree	*left;
 	struct s_btree	*parent;
 }					t_btree;
+
+typedef struct		s_pair
+{
+	void			*a;
+	void			*b;
+}					t_pair;
 
 int					ft_toupper(int c);
 int					ft_tolower(int c);
@@ -106,5 +114,10 @@ void				ft_lstadd(t_list **alst, t_list *new);
 void				ft_lstiter(t_list *lst, void (*f)(t_list *elem));
 t_list				*ft_lstnew(void const *content, size_t content_size);
 t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
+
+/* DRAWING FUNCTION */
+
+void				ft_draw_rect(int x, int y, int width, int height,
+	   				t_pair id);
 
 #	endif
