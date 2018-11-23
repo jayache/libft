@@ -6,7 +6,7 @@
 #    By: jayache <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/06 19:39:42 by jayache           #+#    #+#              #
-#    Updated: 2018/11/12 13:09:30 by jayache          ###   ########.fr        #
+#    Updated: 2018/11/23 18:12:32 by jayache          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -29,12 +29,14 @@ IS = ft_isalpha.c ft_iswhitespace.c ft_islower.c ft_isupper.c ft_isdigit.c \
 	 ft_isalnum.c ft_isascii.c ft_isprint.c
 
 NAME = libft.a
+
+DRAW = ft_draw_rect.c
 P1 = $(MEM) $(STR) $(IS) ft_toupper.c ft_tolower.c  ft_bzero.c ft_atoi.c \
 	 ft_abs.c ft_sign.c
 P2 = $(MEM2) $(STR2) $(PUT) ft_itoa.c ft_tmalloc.c
 P3 = ft_lstnew.c ft_lstdelone.c ft_lstdel.c ft_lstadd.c ft_lstiter.c ft_lstmap.c 
-SRCS = $(P1) $(P2) $(P3) 
-INCLUDES = libft.h
+SRCS = $(P1) $(P2) $(P3) $(DRAW) 
+INCLUDES = /usr/local/include
 OBJS = $(SRCS:.c=.o)
 CFLAGS = -Werror -Wextra -Wall
 all: $(NAME)
