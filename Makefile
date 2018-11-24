@@ -6,7 +6,7 @@
 #    By: jayache <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/06 19:39:42 by jayache           #+#    #+#              #
-#    Updated: 2018/11/24 13:52:43 by jayache          ###   ########.fr        #
+#    Updated: 2018/11/24 18:57:11 by jayache          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -37,20 +37,31 @@ SRCS = $(P1) $(P2) $(P3) $(DRAW)
 INCLUDES = /usr/local/include
 OBJS = $(SRCS:.c=.o)
 CFLAGS = -Werror -Wextra -Wall
-all: $(NAME)
+NB = $(shell make $(NAME) -n | wc -l | sed "s/$$/ - 7) \/ 9) + 1/" | sed s/^/"(("/ | bc) 
+COUNTER = 
+plus = x $1
+all: 
+	@echo "$(words $(COUNTER)) / $(NB)\c"
+	@make $(NAME) || make error
+
+error:
+	@echo "\033[31mThe Makefile failed to make !"
 
 %.o: %.c
-	@if [ "$*" = "ft_strlen" ]; then echo "\033[31mCOMPILING STRING FUNCTIONS..."; fi
-	@if [ "$*" = "ft_memccpy" ]; then echo "\033[32mCOMPILING MEM FUNCTIONS..."; fi
-	@if [ "$*" = "ft_isalpha" ]; then echo "\033[33mCOMPILING EVALUATION FUNCTIONS..."; fi
-	@if [ "$*" = "ft_putchar" ]; then echo "\033[34mCOMPILING PRINT FUNCTIONS..."; fi
-	@if [ "$*" = "ft_lstnew" ]; then echo "\033[35mCOMPILING LIST FUNCTIONS..."; fi
-	@if [ "$*" = "ft_draw_rect" ]; then echo "\033[36mCOMPILING DRAWING FUNCTIONS..."; fi
-	@if [ "$*" = "ft_atoi" ]; then echo "\033[37mCOMPILING MATH FUNCTIONS..."; fi
+	@if [ "$*" = "ft_strlen" ]; then echo "\n\033[31mCOMPILING STRING FUNCTIONS"; fi
+	@if [ "$*" = "ft_memccpy" ]; then echo "\n\033[32mCOMPILING MEM FUNCTIONS..."; fi
+	@if [ "$*" = "ft_isalpha" ]; then echo "\n\033[33mCOMPILING EVALUATION FUNCTIONS..."; fi
+	@if [ "$*" = "ft_putchar" ]; then echo "\n\033[34mCOMPILING PRINT FUNCTIONS..."; fi
+	@if [ "$*" = "ft_lstnew" ]; then echo "\n\033[35mCOMPILING LIST FUNCTIONS..."; fi
+	@if [ "$*" = "ft_draw_rect" ]; then echo "\n\033[36mCOMPILING DRAWING FUNCTIONS..."; fi
+	@if [ "$*" = "ft_atoi" ]; then echo "\n\033[37mCOMPILING MATH FUNCTIONS..."; fi
 	@gcc -Werror -Wextra -Wall -c $<
+	$(eval COUNTER += x)
+	@echo "\b\b\b\b\b\b\b$(words $(COUNTER)) / $(NB)\c"
+
 	
 $(NAME): $(OBJS)
-	@echo "\033[90mLinking library..."
+	@echo "\n\033[90mLinking library..."
 	@ar rcs $(NAME) $(OBJS)
 	@echo "\033[1mDONE!"
 
