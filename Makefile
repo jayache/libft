@@ -6,7 +6,7 @@
 #    By: jayache <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/06 19:39:42 by jayache           #+#    #+#              #
-#    Updated: 2018/11/24 18:57:11 by jayache          ###   ########.fr        #
+#    Updated: 2018/11/24 20:10:40 by jayache          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -37,18 +37,19 @@ SRCS = $(P1) $(P2) $(P3) $(DRAW)
 INCLUDES = /usr/local/include
 OBJS = $(SRCS:.c=.o)
 CFLAGS = -Werror -Wextra -Wall
-NB = $(shell make $(NAME) -n | wc -l | sed "s/$$/ - 7) \/ 9) + 1/" | sed s/^/"(("/ | bc) 
 COUNTER = 
+NB = $(words $(SRCS))
 plus = x $1
-all: 
+all:
 	@echo "$(words $(COUNTER)) / $(NB)\c"
+	#$(eval NB = $(shell make $(NAME) -n | wc -l | sed s/$$/"- 7) \/ 9)\+1"/ | sed s/^/'(('/ | bc ))
 	@make $(NAME) || make error
 
 error:
 	@echo "\033[31mThe Makefile failed to make !"
 
 %.o: %.c
-	@if [ "$*" = "ft_strlen" ]; then echo "\n\033[31mCOMPILING STRING FUNCTIONS"; fi
+	@if [ "$*" = "ft_strlen" ]; then echo "\n\033[38mCOMPILING STRING FUNCTIONS"; fi
 	@if [ "$*" = "ft_memccpy" ]; then echo "\n\033[32mCOMPILING MEM FUNCTIONS..."; fi
 	@if [ "$*" = "ft_isalpha" ]; then echo "\n\033[33mCOMPILING EVALUATION FUNCTIONS..."; fi
 	@if [ "$*" = "ft_putchar" ]; then echo "\n\033[34mCOMPILING PRINT FUNCTIONS..."; fi
