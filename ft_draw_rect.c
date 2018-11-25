@@ -6,13 +6,13 @@
 /*   By: jayache <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/23 17:43:44 by jayache           #+#    #+#             */
-/*   Updated: 2018/11/23 17:59:55 by jayache          ###   ########.fr       */
+/*   Updated: 2018/11/25 17:00:58 by jayache          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_draw_rect(int x, int y, int width, int height, t_pair *id)
+void	ft_draw_rect(int x, int y, int width, int height, t_pixel *pixel)
 {
 	int a;
 	int b;
@@ -23,7 +23,7 @@ void	ft_draw_rect(int x, int y, int width, int height, t_pair *id)
 		b = 0;
 		while (b < height)
 		{
-			mlx_pixel_put(id->a, id->b, a + x, b + y, 255);
+			mlx_pixel_put(pixel->mlxid, pixel->winid, a + x, b + y, pixel->color);
 			++b;
 		}
 		++a;
