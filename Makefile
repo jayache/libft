@@ -6,7 +6,7 @@
 #    By: jayache <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/06 19:39:42 by jayache           #+#    #+#              #
-#    Updated: 2018/11/24 20:10:40 by jayache          ###   ########.fr        #
+#    Updated: 2018/11/25 15:56:35 by jayache          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -28,7 +28,7 @@ IS = ft_isalpha.c ft_iswhitespace.c ft_islower.c ft_isupper.c ft_isdigit.c \
 TEST = test
 NAME = libft.a
 
-DRAW = ft_draw_rect.c
+DRAW = ft_draw_rect.c ft_draw_lign.c
 P1 = $(MEM) $(STR) $(IS) ft_toupper.c ft_tolower.c  ft_atoi.c \
 	 ft_abs.c ft_sign.c ft_itoa.c
 P2 = $(PUT) 
@@ -42,7 +42,7 @@ NB = $(words $(SRCS))
 plus = x $1
 all:
 	@echo "$(words $(COUNTER)) / $(NB)\c"
-	#$(eval NB = $(shell make $(NAME) -n | wc -l | sed s/$$/"- 7) \/ 9)\+1"/ | sed s/^/'(('/ | bc ))
+	#$(eval NB = ($(((shell make $(NAME) -n | wc -l | sed 's/$$/ - 7) \/ 9) + 1/' | sed "s/^/((/" | bc )))))
 	@make $(NAME) || make error
 
 error:
@@ -67,10 +67,12 @@ $(NAME): $(OBJS)
 	@echo "\033[1mDONE!"
 
 clean:
+	@echo "\033[35mREMOVING OBJECT FILES."
 	@rm -rf *.o
 	@rm -rf *.gch
 
 fclean: clean
+	@echo "\033[35mREMOVING LIBRARY."
 	@rm -rf $(NAME)
 
 re: fclean all
