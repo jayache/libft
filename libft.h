@@ -6,7 +6,7 @@
 /*   By: jayache <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/06 19:44:10 by jayache           #+#    #+#             */
-/*   Updated: 2018/11/23 18:10:41 by jayache          ###   ########.fr       */
+/*   Updated: 2018/11/25 15:52:33 by jayache          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -119,5 +119,5 @@ t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
 
 void				ft_draw_rect(int x, int y, int width, int height,
 	   				t_pair *id);
-
+void				ft_draw_lign(int x1, int y1, int x2, int y2, t_pair *id);
 #	endif
