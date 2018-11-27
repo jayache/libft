@@ -6,7 +6,7 @@
 #    By: jayache <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/06 19:39:42 by jayache           #+#    #+#              #
-#    Updated: 2018/11/25 15:56:35 by jayache          ###   ########.fr        #
+#    Updated: 2018/11/27 15:42:40 by jayache          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,7 +15,8 @@ STR = ft_strlen.c ft_strcmp.c ft_strncmp.c ft_strstr.c ft_strnstr.c \
 	  ft_strncpy.c ft_strcat.c ft_strncat.c ft_strlcat.c ft_strdel.c \
 	  ft_strnew.c ft_strclr.c ft_striter.c ft_striteri.c \
 	  ft_strmap.c ft_strequ.c ft_strnequ.c ft_strmapi.c ft_strsub.c \
-	  ft_strtrim.c ft_strjoin.c ft_cntspback.c ft_cntspfront.c ft_strsplit.c
+	  ft_strtrim.c ft_strjoin.c ft_cntspback.c ft_cntspfront.c ft_strsplit.c \
+	  ft_strpbrk.c
 
 MEM = ft_memccpy.c ft_memmove.c ft_memset.c ft_memcpy.c ft_memchr.c \
 	  ft_memcmp.c ft_memdel.c ft_memalloc.c ft_bzero.c
@@ -30,7 +31,7 @@ NAME = libft.a
 
 DRAW = ft_draw_rect.c ft_draw_lign.c
 P1 = $(MEM) $(STR) $(IS) ft_toupper.c ft_tolower.c  ft_atoi.c \
-	 ft_abs.c ft_sign.c ft_itoa.c
+	 ft_abs.c ft_sign.c ft_itoa.c ft_nblen.c
 P2 = $(PUT) 
 P3 = ft_lstnew.c ft_lstdelone.c ft_lstdel.c ft_lstadd.c ft_lstiter.c ft_lstmap.c 
 SRCS = $(P1) $(P2) $(P3) $(DRAW) 

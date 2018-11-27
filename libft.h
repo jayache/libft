@@ -6,7 +6,7 @@
 /*   By: jayache <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/06 19:44:10 by jayache           #+#    #+#             */
-/*   Updated: 2018/11/25 17:00:30 by jayache          ###   ########.fr       */
+/*   Updated: 2018/11/27 15:42:57 by jayache          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -91,11 +91,13 @@ int					ft_strcmp(const char *s1, const char *s2);
 int					ft_strncmp(const char *s1, const char *s2, size_t n);
 int					ft_strequ(const char *s1, const char *s2);
 int					ft_strnequ(const char *s1, const char *s2, size_t n);
+int					ft_strpbrk(const char *s, const char *charset);
 
 size_t				ft_cntspback(char const *s, char const c);
 size_t				ft_cntspfront(char const *s, char const c);
 int					ft_sign(int n);
 unsigned long		ft_abs(int nb);
+int					ft_nblen(int nb);
 
 int					ft_islower(int c);
 int					ft_isupper(int c);
@@ -106,7 +108,7 @@ int					ft_isprint(int c);
 int					ft_isascii(int c);
 int					ft_iswhitespace(int c);
 
-void				ft_putchar(unsigned char c);
+void				ft_putchar(unsigned int c);
 void				ft_putstr(const char *s);
 void				ft_putendl(const char *s);
 void				ft_putchar_fd(char c, int fd);
