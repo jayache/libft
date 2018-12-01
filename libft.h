@@ -6,7 +6,7 @@
 /*   By: jayache <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/06 19:44:10 by jayache           #+#    #+#             */
-/*   Updated: 2018/12/01 17:24:13 by jayache          ###   ########.fr       */
+/*   Updated: 2018/12/01 17:43:11 by jayache          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,6 +53,13 @@ typedef struct		s_pixel
 	void			*winid;
 	int				color;
 }					t_pixel;
+
+typedef struct		s_matrix
+{
+	float			**matrix;
+	int				width;
+	int				height;
+}					t_matrix;
 
 int					ft_toupper(int c);
 int					ft_tolower(int c);
@@ -130,6 +137,12 @@ void				ft_lstadd(t_list **alst, t_list *new);
 void				ft_lstiter(t_list *lst, void (*f)(t_list *elem));
 t_list				*ft_lstnew(void const *content, size_t content_size);
 t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
+
+/*
+** MATRIX FUNCTION
+*/
+
+t_matrix			ft_matrix(int width, int height);
 
 /*
 ** VECTOR FUNCTION

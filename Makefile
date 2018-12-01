@@ -6,7 +6,7 @@
 #    By: jayache <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/06 19:39:42 by jayache           #+#    #+#              #
-#    Updated: 2018/12/01 17:21:03 by jayache          ###   ########.fr        #
+#    Updated: 2018/12/01 17:42:46 by jayache          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -39,8 +39,9 @@ VECTOR2= ft_vector2.c ft_vector2_normalize.c ft_vector2_magnitude.c \
 VECTOR3= ft_vector3.c ft_vector3_normalize.c ft_vector3_magnitude.c \
 		 ft_vector3_angle.c ft_vector3_axis.c ft_vector3_cross.c \
 		 ft_vector3_dot.c ft_vector3_add.c
+MATRIX= ft_matrix.c
 P3 = ft_lstnew.c ft_lstdelone.c ft_lstdel.c ft_lstadd.c ft_lstiter.c ft_lstmap.c 
-SRCS = $(P1) $(P2) $(P3) $(DRAW) $(VECTOR2) $(VECTOR3) 
+SRCS = $(P1) $(P2) $(P3) $(DRAW) $(VECTOR2) $(VECTOR3) $(MATRIX)
 INCLUDES = /usr/local/include
 OBJS = $(SRCS:.c=.o)
 CFLAGS = -Werror -Wextra -Wall
