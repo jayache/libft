@@ -6,60 +6,60 @@
 /*   By: jayache <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/24 20:11:58 by jayache           #+#    #+#             */
-/*   Updated: 2018/11/25 17:39:16 by jayache          ###   ########.fr       */
+/*   Updated: 2018/12/01 16:16:07 by jayache          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "libft.h"
+#include "libft.h"
 
-extern void	ft_draw_lign_h(int x1, int y1, int x2, int y2, t_pixel *pixel)
+extern void	ft_draw_lign_h(t_vector2 beg, t_vector2 end, t_pixel *pixel)
 {
 	int e;
 	int dx;
 	int dy;
 
-	e = ft_abs(x1 - x2);
-	dx = (x1 - x2) * 2;
-	dy = (y1 - y2) * 2;
-	while (x1 != x2)
+	e = ft_abs(beg.x - end.x);
+	dx = (beg.x - end.x) * 2;
+	dy = (beg.y - end.y) * 2;
+	while (beg.x != end.x)
 	{
-		mlx_pixel_put(pixel->mlxid, pixel->winid, x1, y1, pixel->color);
-		x1 += -ft_sign(dx);
+		mlx_pixel_put(pixel->mlxid, pixel->winid, beg.x, beg.y, pixel->color);
+		beg.x += -ft_sign(dx);
 		e -= ft_abs(dy);
 		if (e <= 0)
-	   	{
-			y1 += ft_sign(dy);
+		{
+			beg.y += ft_sign(dy);
 			e += ft_abs(dx);
 		}
 	}
 }
 
-extern void	ft_draw_lign_y(int x1, int y1, int x2, int y2, t_pixel *pixel)
+extern void	ft_draw_lign_y(t_vector2 beg, t_vector2 end, t_pixel *pixel)
 {
 	int e;
 	int dx;
 	int dy;
 
-	e = ft_abs(y1 - y2);
-	dy = (y1 - y2) * 2;
-	dx = (x1 - x2) * 2;
-	while (y1 != y2)
+	e = ft_abs(beg.y - end.y);
+	dy = (beg.y - end.y) * 2;
+	dx = (beg.x - end.x) * 2;
+	while (beg.y != end.y)
 	{
-		mlx_pixel_put(pixel->mlxid, pixel->winid, x1, y1, pixel->color);
-		y1 += -ft_sign(dy);
+		mlx_pixel_put(pixel->mlxid, pixel->winid, beg.x, beg.y, pixel->color);
+		beg.y += -ft_sign(dy);
 		e -= ft_abs(dx);
 		if (e <= 0)
-	   	{
-			x1 += ft_sign(dx);
+		{
+			beg.x += ft_sign(dx);
 			e += ft_abs(dy);
 		}
 	}
 }
 
-void	ft_draw_lign(int x1, int y1, int x2, int y2, t_pixel *pixel)
+void		ft_draw_lign(t_vector2 beg, t_vector2 end, t_pixel *pixel)
 {
-	if (ft_abs(x2 - x1) > ft_abs(y2 - y1))
-		ft_draw_lign_h(x1, y1, x2, y2, pixel);
+	if (ft_abs(end.x - beg.x) > ft_abs(end.y - beg.y))
+		ft_draw_lign_h(beg, end, pixel);
 	else
-		ft_draw_lign_y(x1, y1, x2, y2, pixel);
+		ft_draw_lign_y(beg, end, pixel);
 }

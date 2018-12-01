@@ -6,7 +6,7 @@
 /*   By: jayache <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/06 19:44:10 by jayache           #+#    #+#             */
-/*   Updated: 2018/11/27 15:42:57 by jayache          ###   ########.fr       */
+/*   Updated: 2018/12/01 16:16:40 by jayache          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,8 @@
 #	include <string.h>
 #	include <stdlib.h>
 #	include <unistd.h>
+#	include <math.h>
 #	include "mlx.h"
-
 
 typedef struct		s_list
 {
@@ -29,16 +29,23 @@ typedef struct		s_list
 typedef struct		s_btree
 {
 	void			*data;
-	struct s_btree	*right;	
+	struct s_btree	*right;
 	struct s_btree	*left;
 	struct s_btree	*parent;
 }					t_btree;
 
-typedef struct		s_pair
+typedef struct		s_vector2
 {
-	void			*a;
-	void			*b;
-}					t_pair;
+	float			x;
+	float			y;
+}					t_vector2;
+
+typedef struct		s_vector3
+{
+	float			x;
+	float			y;
+	float			z;
+}					t_vector3;
 
 typedef struct		s_pixel
 {
@@ -124,9 +131,29 @@ void				ft_lstiter(t_list *lst, void (*f)(t_list *elem));
 t_list				*ft_lstnew(void const *content, size_t content_size);
 t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
 
-/* DRAWING FUNCTION */
+/*
+** VECTOR FUNCTION
+*/
 
-void				ft_draw_rect(int x, int y, int width, int height,
-	   				t_pixel *pixel);
-void				ft_draw_lign(int x1, int y1, int x2, int y2, t_pixel *pixel);
+t_vector2			ft_vector2(float x, float y);
+t_vector2			ft_vector2_normalize(t_vector2 vec);
+t_vector2			ft_vector2_multiply(t_vector2 vec, float scalar);
+t_vector2			ft_vector2_add(t_vector2 vec, t_vector2 vec2);
+float				ft_vector2_magnitude(t_vector2 vec);
+float				ft_vector2_angle(t_vector2 vec1, t_vector2 vec2);
+float				ft_vector2_rangle(t_vector2 vec1, t_vector2 vec2);
+
+t_vector3			ft_vector3(float x, float y, float z);
+t_vector3			ft_vector3_normalize(t_vector3 vec);
+float				ft_vector3_magnitude(t_vector3 vec);
+//float				ft_vector3_angle(t_vector3 vec1, t_vector3 vec2);
+//float				ft_vector3_axis(t_vector3 vec1, t_vector3 vec2)
+float				ft_vector3_rangle(t_vector3 vec1, t_vector3 vec2);
+
+/*
+** DRAWING FUNCTION
+*/
+
+void				ft_draw_rect(t_vector2 beg, t_vector2 end, t_pixel *pixel);
+void				ft_draw_lign(t_vector2 beg, t_vector2 size, t_pixel *pixel);
 #	endif

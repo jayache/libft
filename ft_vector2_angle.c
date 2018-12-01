@@ -1,22 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_vector2_angle.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jayache <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/07 13:07:09 by jayache           #+#    #+#             */
-/*   Updated: 2018/11/24 18:14:29 by jayache          ###   ########.fr       */
+/*   Created: 2018/12/01 15:22:14 by jayache           #+#    #+#             */
+/*   Updated: 2018/12/01 15:24:28 by jayache          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
+#include "libft.h"
 
-void	ft_bzero(void *s, size_t n)
+float	ft_vector2_angle(t_vector2 vec1, t_vector2 vec2)
 {
-	while (n)
-	{
-		((char*)(s))[n - 1] = '\0';
-		n--;
-	}
+	return (acos(ft_vector2_normalize(vec1) * ft_vector2_normalize(vec2)));
 }

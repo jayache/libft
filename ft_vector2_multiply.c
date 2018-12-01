@@ -1,22 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_vector2_multiply.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jayache <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/07 13:07:09 by jayache           #+#    #+#             */
-/*   Updated: 2018/11/24 18:14:29 by jayache          ###   ########.fr       */
+/*   Created: 2018/12/01 16:02:13 by jayache           #+#    #+#             */
+/*   Updated: 2018/12/01 16:03:09 by jayache          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
+#include "libft.h"
 
-void	ft_bzero(void *s, size_t n)
+t_vector2	ft_vector2_multiply(t_vector2 vec, float scalar)
 {
-	while (n)
-	{
-		((char*)(s))[n - 1] = '\0';
-		n--;
-	}
+	vec.x *= scalar;
+	vec.y *= scalar;
+	return (scalar);
 }

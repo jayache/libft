@@ -6,7 +6,7 @@
 /*   By: jayache <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/08 13:43:35 by jayache           #+#    #+#             */
-/*   Updated: 2018/11/18 12:25:57 by jayache          ###   ########.fr       */
+/*   Updated: 2018/12/01 16:14:50 by jayache          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ char	*ft_strtrim(char const *s)
 	x = ft_cntspfront(s, ' ');
 	if (x >= ft_strlen(s) - 1)
 		return (ft_strnew(0));
-	str = ft_strnew(sizeof(char) * (ft_strlen(s) - x - ft_cntspfront(s, ' ')) + 1);
+	str = ft_strnew(sizeof(char));
 	if (!str)
 		return (NULL);
 	while (x < (ft_strlen(s) - ft_cntspback(s, ' ')))

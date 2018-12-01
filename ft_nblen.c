@@ -6,7 +6,7 @@
 /*   By: jayache <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/27 15:17:55 by jayache           #+#    #+#             */
-/*   Updated: 2018/11/27 15:43:19 by jayache          ###   ########.fr       */
+/*   Updated: 2018/12/01 16:12:50 by jayache          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,8 @@
 
 int	ft_nblen(int nb)
 {
-	long snb;
-	int c;
+	long	snb;
+	int		c;
 
 	c = (nb < 0);
 	snb = ft_abs(nb);

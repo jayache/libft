@@ -1,22 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_vector2_rangle.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jayache <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/07 13:07:09 by jayache           #+#    #+#             */
-/*   Updated: 2018/11/24 18:14:29 by jayache          ###   ########.fr       */
+/*   Created: 2018/12/01 15:24:40 by jayache           #+#    #+#             */
+/*   Updated: 2018/12/01 16:13:39 by jayache          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
+#include "libft.h"
 
-void	ft_bzero(void *s, size_t n)
+/*
+** GIVES THE ANGLE OF VEC2 RELATIVE TO VEC1
+*/
+
+float	ft_vector2_rangle(t_vector2 vec1, t_vector2 vec2)
 {
-	while (n)
-	{
-		((char*)(s))[n - 1] = '\0';
-		n--;
-	}
+	return (atan2(vec2.y, vec2.x) * atan2(vec1.y, vec1.x));
 }

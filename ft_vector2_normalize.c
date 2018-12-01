@@ -1,22 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_vector2_normalize.c                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jayache <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/07 13:07:09 by jayache           #+#    #+#             */
-/*   Updated: 2018/11/24 18:14:29 by jayache          ###   ########.fr       */
+/*   Created: 2018/12/01 14:48:49 by jayache           #+#    #+#             */
+/*   Updated: 2018/12/01 16:12:12 by jayache          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
+#include "libft.h"
 
-void	ft_bzero(void *s, size_t n)
+t_vector2	ft_vector2_normalize(t_vector2 vec)
 {
-	while (n)
-	{
-		((char*)(s))[n - 1] = '\0';
-		n--;
-	}
+	float mag;
+
+	mag = ft_vector2_magnitude(vec);
+	vec.x /= mag;
+	vec.y /= mag;
+	return (vec);
 }
