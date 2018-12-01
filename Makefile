@@ -6,7 +6,7 @@
 #    By: jayache <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/06 19:39:42 by jayache           #+#    #+#              #
-#    Updated: 2018/12/01 15:53:11 by jayache          ###   ########.fr        #
+#    Updated: 2018/12/01 17:21:03 by jayache          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -33,8 +33,12 @@ DRAW = ft_draw_rect.c ft_draw_lign.c
 P1 = $(MEM) $(STR) $(IS) ft_toupper.c ft_tolower.c  ft_atoi.c \
 	 ft_abs.c ft_sign.c ft_itoa.c ft_nblen.c
 P2 = $(PUT) 
-VECTOR2= ft_vector2.c ft_vector2_normalize.c ft_vector2_magnitude.c
-VECTOR3= ft_vector3.c ft_vector3_normalize.c ft_vector3_magnitude.c
+VECTOR2= ft_vector2.c ft_vector2_normalize.c ft_vector2_magnitude.c \
+		 ft_vector2_multiply.c ft_vector2_add.c ft_vector2_angle.c \
+		 ft_vector2_rangle.c
+VECTOR3= ft_vector3.c ft_vector3_normalize.c ft_vector3_magnitude.c \
+		 ft_vector3_angle.c ft_vector3_axis.c ft_vector3_cross.c \
+		 ft_vector3_dot.c ft_vector3_add.c
 P3 = ft_lstnew.c ft_lstdelone.c ft_lstdel.c ft_lstadd.c ft_lstiter.c ft_lstmap.c 
 SRCS = $(P1) $(P2) $(P3) $(DRAW) $(VECTOR2) $(VECTOR3) 
 INCLUDES = /usr/local/include

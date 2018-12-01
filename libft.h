@@ -6,7 +6,7 @@
 /*   By: jayache <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/06 19:44:10 by jayache           #+#    #+#             */
-/*   Updated: 2018/12/01 16:16:40 by jayache          ###   ########.fr       */
+/*   Updated: 2018/12/01 17:24:13 by jayache          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -142,14 +142,17 @@ t_vector2			ft_vector2_add(t_vector2 vec, t_vector2 vec2);
 float				ft_vector2_magnitude(t_vector2 vec);
 float				ft_vector2_angle(t_vector2 vec1, t_vector2 vec2);
 float				ft_vector2_rangle(t_vector2 vec1, t_vector2 vec2);
+float				ft_vector2_dot(t_vector2 vec1, t_vector2 vec2);
 
 t_vector3			ft_vector3(float x, float y, float z);
 t_vector3			ft_vector3_normalize(t_vector3 vec);
 float				ft_vector3_magnitude(t_vector3 vec);
-//float				ft_vector3_angle(t_vector3 vec1, t_vector3 vec2);
-//float				ft_vector3_axis(t_vector3 vec1, t_vector3 vec2)
-float				ft_vector3_rangle(t_vector3 vec1, t_vector3 vec2);
-
+float				ft_vector3_dot(t_vector3 vec1, t_vector3 vec2);
+t_vector3			ft_vector3_multiply(t_vector3 vec1, float scalar);
+t_vector3			ft_vector3_cross(t_vector3 vec1, t_vector3 vec2);
+float				ft_vector3_angle(t_vector3 vec1, t_vector3 vec2);
+t_vector3			ft_vector3_axis(t_vector3 vec1, t_vector3 vec2);
+t_vector3			ft_vector3_add(t_vector3 vec1, t_vector3 vec2);
 /*
 ** DRAWING FUNCTION
 */

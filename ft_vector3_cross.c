@@ -1,19 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_vector2_angle.c                                 :+:      :+:    :+:   */
+/*   ft_vector3_cross.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jayache <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/12/01 15:22:14 by jayache           #+#    #+#             */
-/*   Updated: 2018/12/01 17:24:29 by jayache          ###   ########.fr       */
+/*   Created: 2018/12/01 16:25:08 by jayache           #+#    #+#             */
+/*   Updated: 2018/12/01 16:48:31 by jayache          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-float	ft_vector2_angle(t_vector2 vec1, t_vector2 vec2)
+t_vector3	ft_vector3_cross(t_vector3 vec1, t_vector3 vec2)
 {
-	return (acos(ft_vector2_dot(ft_vector2_normalize(vec1),
-	ft_vector2_normalize(vec2))));
+	return (ft_vector3(vec1.y * vec2.z - vec2.y * vec1.z, vec1.z * vec2.x -
+	vec2.z * vec1.x, vec1.x * vec2.y - vec2.x * vec1.y));
 }
