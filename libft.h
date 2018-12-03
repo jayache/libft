@@ -6,7 +6,7 @@
 /*   By: jayache <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/06 19:44:10 by jayache           #+#    #+#             */
-/*   Updated: 2018/12/01 17:43:11 by jayache          ###   ########.fr       */
+/*   Updated: 2018/12/03 16:55:12 by jayache          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -143,6 +143,7 @@ t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
 */
 
 t_matrix			ft_matrix(int width, int height);
+t_matrix			ft_matrix_product(t_matrix a, t_matrix b);
 
 /*
 ** VECTOR FUNCTION
