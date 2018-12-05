@@ -1,16 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_sign.c                                          :+:      :+:    :+:   */
+/*   ft_vector3_sub.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jayache <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/09 13:23:34 by jayache           #+#    #+#             */
-/*   Updated: 2018/12/05 15:51:11 by jayache          ###   ########.fr       */
+/*   Created: 2018/12/05 13:53:03 by jayache           #+#    #+#             */
+/*   Updated: 2018/12/05 14:15:43 by jayache          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_sign(double n)
+#include "libft.h"
+
+t_vector3	ft_vector3_sub(t_vector3 vec1, t_vector3 vec2)
 {
-	return (n < 0 ? -1 : 1);
+	return (ft_vector3(vec1.x - vec2.x, vec1.y - vec2.y, vec1.z - vec2.z));
 }

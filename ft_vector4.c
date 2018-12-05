@@ -1,16 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_sign.c                                          :+:      :+:    :+:   */
+/*   ft_vector4.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jayache <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/09 13:23:34 by jayache           #+#    #+#             */
-/*   Updated: 2018/12/05 15:51:11 by jayache          ###   ########.fr       */
+/*   Created: 2018/12/05 11:09:51 by jayache           #+#    #+#             */
+/*   Updated: 2018/12/05 11:10:38 by jayache          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_sign(double n)
+#include "libft.h"
+
+t_vector4	ft_vector4(float x, float y, float z, float w)
 {
-	return (n < 0 ? -1 : 1);
+	t_vector4 vec;
+
+	vec.x = x;
+	vec.y = y;
+	vec.z = z;
+	vec.w = w;
+	return (vec);
 }

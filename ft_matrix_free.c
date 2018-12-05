@@ -1,16 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_sign.c                                          :+:      :+:    :+:   */
+/*   ft_matrix_free.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jayache <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/09 13:23:34 by jayache           #+#    #+#             */
-/*   Updated: 2018/12/05 15:51:11 by jayache          ###   ########.fr       */
+/*   Created: 2018/12/05 11:19:05 by jayache           #+#    #+#             */
+/*   Updated: 2018/12/05 11:20:43 by jayache          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_sign(double n)
+#include "libft.h"
+
+void	ft_matrix_free(t_matrix m)
 {
-	return (n < 0 ? -1 : 1);
+	int y;
+
+	y = 0;
+	while (y < m.height)
+	{
+		free(m.matrix[y]);
+		++y;
+	}
+	free(m.matrix);
 }

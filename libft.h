@@ -6,7 +6,7 @@
 /*   By: jayache <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/06 19:44:10 by jayache           #+#    #+#             */
-/*   Updated: 2018/12/03 17:27:53 by jayache          ###   ########.fr       */
+/*   Updated: 2018/12/05 15:51:26 by jayache          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,6 +46,14 @@ typedef struct		s_vector3
 	float			y;
 	float			z;
 }					t_vector3;
+
+typedef struct		s_vector4
+{
+	float			x;
+	float			y;
+	float			z;
+	float			w;
+}					t_vector4;
 
 typedef struct		s_pixel
 {
@@ -100,6 +108,7 @@ char				*ft_strsub(char const *s, unsigned int start, size_t len);
 char				*ft_strjoin(char const *s1, char const *s2);
 char				*ft_strtrim(char const *s);
 char				*ft_itoa(int nb);
+char				*ft_itoa_base(long long nb, int base);
 char				**ft_strsplit(char const *s, char c);
 int					ft_strcmp(const char *s1, const char *s2);
 int					ft_strncmp(const char *s1, const char *s2, size_t n);
@@ -109,7 +118,7 @@ int					ft_strpbrk(const char *s, const char *charset);
 
 size_t				ft_cntspback(char const *s, char const c);
 size_t				ft_cntspfront(char const *s, char const c);
-int					ft_sign(int n);
+int					ft_sign(double n);
 unsigned long		ft_abs(int nb);
 int					ft_nblen(int nb);
 
@@ -146,6 +155,10 @@ int					get_next_line(int fd, char **line);
 
 t_matrix			ft_matrix(int width, int height);
 t_matrix			ft_matrix_product(t_matrix a, t_matrix b);
+t_matrix			ft_vector4_to_matrix(t_vector4 vec);
+t_matrix			ft_vector3_to_matrix(t_vector3);
+void				ft_matrix_free(t_matrix m);
+
 
 /*
 ** VECTOR FUNCTION
@@ -169,10 +182,18 @@ t_vector3			ft_vector3_cross(t_vector3 vec1, t_vector3 vec2);
 float				ft_vector3_angle(t_vector3 vec1, t_vector3 vec2);
 t_vector3			ft_vector3_axis(t_vector3 vec1, t_vector3 vec2);
 t_vector3			ft_vector3_add(t_vector3 vec1, t_vector3 vec2);
+t_vector3			ft_vector3_sub(t_vector3 vec1, t_vector3 vec2);
+
+t_vector4			ft_vector4(float x, float y, float z, float w);
+t_vector4			ft_vector4_p_matrix(t_vector4 vec, t_matrix m);
+t_vector4			ft_matrix_to_vector4(t_matrix m);
+
 /*
 ** DRAWING FUNCTION
 */
 
+void				ft_draw_point(t_vector2 coor, t_pixel *pixel);
 void				ft_draw_rect(t_vector2 beg, t_vector2 end, t_pixel *pixel);
 void				ft_draw_lign(t_vector2 beg, t_vector2 size, t_pixel *pixel);
+
 #	endif

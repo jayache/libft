@@ -6,7 +6,7 @@
 /*   By: jayache <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/24 20:11:58 by jayache           #+#    #+#             */
-/*   Updated: 2018/12/01 16:16:07 by jayache          ###   ########.fr       */
+/*   Updated: 2018/12/05 15:53:35 by jayache          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,12 +23,12 @@ extern void	ft_draw_lign_h(t_vector2 beg, t_vector2 end, t_pixel *pixel)
 	dy = (beg.y - end.y) * 2;
 	while (beg.x != end.x)
 	{
-		mlx_pixel_put(pixel->mlxid, pixel->winid, beg.x, beg.y, pixel->color);
+		ft_draw_point(beg, pixel);
 		beg.x += -ft_sign(dx);
 		e -= ft_abs(dy);
 		if (e <= 0)
 		{
-			beg.y += ft_sign(dy);
+			beg.y += (-ft_sign(dy));
 			e += ft_abs(dx);
 		}
 	}
@@ -45,7 +45,7 @@ extern void	ft_draw_lign_y(t_vector2 beg, t_vector2 end, t_pixel *pixel)
 	dx = (beg.x - end.x) * 2;
 	while (beg.y != end.y)
 	{
-		mlx_pixel_put(pixel->mlxid, pixel->winid, beg.x, beg.y, pixel->color);
+		ft_draw_point(beg, pixel);
 		beg.y += -ft_sign(dy);
 		e -= ft_abs(dx);
 		if (e <= 0)

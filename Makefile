@@ -6,7 +6,7 @@
 #    By: jayache <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/06 19:39:42 by jayache           #+#    #+#              #
-#    Updated: 2018/12/03 17:37:35 by jayache          ###   ########.fr        #
+#    Updated: 2018/12/05 14:45:53 by jayache          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,44 +26,53 @@ PUT = ft_putchar.c ft_putstr.c ft_putnbr.c ft_putchar_fd.c ft_putstr_fd.c \
 
 IS = ft_isalpha.c ft_iswhitespace.c ft_islower.c ft_isupper.c ft_isdigit.c \
 	 ft_isalnum.c ft_isascii.c ft_isprint.c
-TEST = test
+
 NAME = libft.a
 
-DRAW = ft_draw_rect.c ft_draw_lign.c
-P1 = $(MEM) $(STR) $(IS) ft_toupper.c ft_tolower.c  ft_atoi.c \
-	 ft_abs.c ft_sign.c ft_itoa.c ft_nblen.c
-P2 = $(PUT) 
+BASE = $(MEM) $(STR) $(IS) $(PUT) ft_toupper.c ft_tolower.c
+
+LST = ft_lstnew.c ft_lstdelone.c ft_lstdel.c ft_lstadd.c ft_lstiter.c \
+	  ft_lstmap.c 
+
 VECTOR2= ft_vector2.c ft_vector2_normalize.c ft_vector2_magnitude.c \
 		 ft_vector2_multiply.c ft_vector2_add.c ft_vector2_angle.c \
 		 ft_vector2_rangle.c
 VECTOR3= ft_vector3.c ft_vector3_normalize.c ft_vector3_magnitude.c \
 		 ft_vector3_angle.c ft_vector3_axis.c ft_vector3_cross.c \
-		 ft_vector3_dot.c ft_vector3_add.c
-MATRIX= ft_matrix.c ft_matrix_product.c
-P3 = ft_lstnew.c ft_lstdelone.c ft_lstdel.c ft_lstadd.c ft_lstiter.c ft_lstmap.c 
-SRCS = $(P1) $(P2) $(P3) $(DRAW) $(VECTOR2) $(VECTOR3) $(MATRIX) get_next_line.c
+		 ft_vector3_dot.c ft_vector3_add.c ft_vector3_sub.c
+
+VECTOR4= ft_vector4.c ft_vector4_p_matrix.c ft_matrix_to_vector4.c
+MATRIX= ft_matrix.c ft_matrix_product.c ft_matrix_free.c \
+		ft_vector4_to_matrix.c ft_vector3_to_matrix.c
+
+MATH= $(VECTOR2) $(VECTOR3) $(VECTOR4) $(MATRIX) ft_atoi.c ft_abs.c ft_sign.c \
+	 ft_itoa_base.c ft_nblen.c ft_itoa.c 
+DRAW = ft_draw_point.c ft_draw_rect.c ft_draw_lign.c
+SRCS = $(BASE) $(LST) $(DRAW) $(MATH)  get_next_line.c
 INCLUDES = /usr/local/include
 OBJS = $(SRCS:.c=.o)
-CFLAGS = -Werror -Wextra -Wall
-COUNTER = 
+COUNTER= 
 NB = $(words $(SRCS))
-plus = x $1
+
+define tests
+$(if $(filter $(1), ft_strlen), @echo "\n\033[32mCOMPILING STRING \FUNCTIONS")
+$(if $(filter $(1), ft_memccpy), @echo "\n\033[33mCOMPILING MEM \FUNCTIONS")
+$(if $(filter $(1), ft_isalpha), @echo "\n\033[34mCOMPILING EVAL \FUNCTIONS")
+$(if $(filter $(1), ft_putchar), @echo "\n\033[35mCOMPILING PRINT \FUNCTIONS")
+$(if $(filter $(1), ft_draw_point), @echo "\n\033[36mCOMPILING DRAW \FUNCTIONS")
+$(if $(filter $(1), ft_vector2), @echo "\n\033[37mCOMPILING MATH \FUNCTIONS")
+$(if $(filter $(1), ft_lstnew), @echo "\n\033[38mCOMPILING LIST \FUNCTIONS")
+endef
+
 all:
 	@echo "$(words $(COUNTER)) / $(NB)\c"
-	#$(eval NB = ($(((shell make $(NAME) -n | wc -l | sed 's/$$/ - 7) \/ 9) + 1/' | sed "s/^/((/" | bc )))))
 	@make $(NAME) || make error
 
 error:
-	@echo "\033[31mThe Makefile failed to make !"
+	@echo "\033[31mThe Makefile failed to make ! You failed !"
 
 %.o: %.c
-	@if [ "$*" = "ft_strlen" ]; then echo "\n\033[38mCOMPILING STRING FUNCTIONS"; fi
-	@if [ "$*" = "ft_memccpy" ]; then echo "\n\033[32mCOMPILING MEM FUNCTIONS..."; fi
-	@if [ "$*" = "ft_isalpha" ]; then echo "\n\033[33mCOMPILING EVALUATION FUNCTIONS..."; fi
-	@if [ "$*" = "ft_putchar" ]; then echo "\n\033[34mCOMPILING PRINT FUNCTIONS..."; fi
-	@if [ "$*" = "ft_lstnew" ]; then echo "\n\033[35mCOMPILING LIST FUNCTIONS..."; fi
-	@if [ "$*" = "ft_draw_rect" ]; then echo "\n\033[36mCOMPILING DRAWING FUNCTIONS..."; fi
-	@if [ "$*" = "ft_atoi" ]; then echo "\n\033[37mCOMPILING MATH FUNCTIONS..."; fi
+	$(call tests, $*)
 	@gcc -g3 -Werror -Wextra -Wall -c $<
 	$(eval COUNTER += x)
 	@echo "\b\b\b\b\b\b\b$(words $(COUNTER)) / $(NB)\c"

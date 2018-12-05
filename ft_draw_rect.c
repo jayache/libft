@@ -6,7 +6,7 @@
 /*   By: jayache <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/23 17:43:44 by jayache           #+#    #+#             */
-/*   Updated: 2018/12/01 16:10:35 by jayache          ###   ########.fr       */
+/*   Updated: 2018/12/05 14:44:32 by jayache          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,7 @@ void	ft_draw_rect(t_vector2 beg, t_vector2 size, t_pixel *pixel)
 		b = 0;
 		while (b < size.y)
 		{
-			mlx_pixel_put(pixel->mlxid, pixel->winid, a + beg.x, b + beg.y,
-			pixel->color);
+			ft_draw_point(ft_vector2(a + beg.x, b + beg.y), pixel);
 			++b;
 		}
 		++a;
