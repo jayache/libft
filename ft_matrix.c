@@ -6,7 +6,7 @@
 /*   By: jayache <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/01 17:37:48 by jayache           #+#    #+#             */
-/*   Updated: 2018/12/01 17:44:15 by jayache          ###   ########.fr       */
+/*   Updated: 2018/12/04 16:30:18 by jayache          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,15 +19,16 @@ t_matrix	ft_matrix(int width, int height)
 	int			y;
 
 	x = 0;
-	if (!(matrix.matrix = malloc(sizeof(int) * height)))
+	matrix.height = -1;
+	if (!(matrix.matrix = malloc(sizeof(int) * height + 1)))
 		return (matrix);
 	while (x < height)
 	{
-		y = 0;
-		if (!(matrix.matrix[x] = malloc(sizeof(int) * width)))
+		y = -1;
+		if (!(matrix.matrix[x] = malloc(sizeof(int) * width + 1)))
 			return (matrix);
-		while (y < width)
-			matrix.matrix[x][y++] = 0;
+		while ((y++) < width)
+			matrix.matrix[x][y] = 0;
 		++x;
 	}
 	matrix.height = height;

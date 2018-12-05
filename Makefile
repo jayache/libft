@@ -6,7 +6,7 @@
 #    By: jayache <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/06 19:39:42 by jayache           #+#    #+#              #
-#    Updated: 2018/12/03 16:55:51 by jayache          ###   ########.fr        #
+#    Updated: 2018/12/03 17:37:35 by jayache          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -41,7 +41,7 @@ VECTOR3= ft_vector3.c ft_vector3_normalize.c ft_vector3_magnitude.c \
 		 ft_vector3_dot.c ft_vector3_add.c
 MATRIX= ft_matrix.c ft_matrix_product.c
 P3 = ft_lstnew.c ft_lstdelone.c ft_lstdel.c ft_lstadd.c ft_lstiter.c ft_lstmap.c 
-SRCS = $(P1) $(P2) $(P3) $(DRAW) $(VECTOR2) $(VECTOR3) $(MATRIX)
+SRCS = $(P1) $(P2) $(P3) $(DRAW) $(VECTOR2) $(VECTOR3) $(MATRIX) get_next_line.c
 INCLUDES = /usr/local/include
 OBJS = $(SRCS:.c=.o)
 CFLAGS = -Werror -Wextra -Wall
@@ -64,7 +64,7 @@ error:
 	@if [ "$*" = "ft_lstnew" ]; then echo "\n\033[35mCOMPILING LIST FUNCTIONS..."; fi
 	@if [ "$*" = "ft_draw_rect" ]; then echo "\n\033[36mCOMPILING DRAWING FUNCTIONS..."; fi
 	@if [ "$*" = "ft_atoi" ]; then echo "\n\033[37mCOMPILING MATH FUNCTIONS..."; fi
-	@gcc -Werror -Wextra -Wall -c $<
+	@gcc -g3 -Werror -Wextra -Wall -c $<
 	$(eval COUNTER += x)
 	@echo "\b\b\b\b\b\b\b$(words $(COUNTER)) / $(NB)\c"
 

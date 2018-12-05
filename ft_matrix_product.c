@@ -6,7 +6,7 @@
 /*   By: jayache <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/03 16:39:38 by jayache           #+#    #+#             */
-/*   Updated: 2018/12/03 16:57:06 by jayache          ###   ########.fr       */
+/*   Updated: 2018/12/04 17:02:44 by jayache          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,12 +16,15 @@ static float	productcase(t_matrix a, t_matrix b, int x, int y)
 {
 	int		t;
 	float	result;
-
+	float aval;
+	float bval;
 	result = 0;
 	t = 0;
 	while (t < b.height)
 	{
-		result += ((b.matrix[t])[x] * (a.matrix[y])[t]);
+		aval = y >= a.height || t >= a.width ? 0 : (a.matrix[y])[t];
+		bval = x >= b.width || t >= b.height ? 0 : (b.matrix[t])[x];
+		result += (aval * bval);
 		++t;
 	}
 	return (result);

@@ -1,23 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_vector3.c                                       :+:      :+:    :+:   */
+/*   get_next_line.h                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jayache <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/12/01 14:25:06 by jayache           #+#    #+#             */
-/*   Updated: 2018/12/03 17:42:34 by jayache          ###   ########.fr       */
+/*   Created: 2018/11/11 13:10:38 by jayache           #+#    #+#             */
+/*   Updated: 2018/12/03 17:01:03 by jayache          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#ifndef GET_NEXT_LINE_H
+# define GET_NEXT_LINE_H
 
-t_vector3	ft_vector3(float x, float y, float z)
-{
-	t_vector3 vec;
+# define BUFF_SIZE 1
+# define MAX_OPEN 10240
 
-	vec.x = x;
-	vec.y = y;
-	vec.z = z;
-	return (vec);
-}
+int				get_next_line(const int fd, char **line);
+
+#endif
