@@ -6,7 +6,7 @@
 /*   By: jayache <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/06 19:44:10 by jayache           #+#    #+#             */
-/*   Updated: 2018/12/05 15:51:26 by jayache          ###   ########.fr       */
+/*   Updated: 2018/12/16 11:15:52 by jayache          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,6 +87,7 @@ int					ft_atoi(const char *str);
 size_t				ft_strlen(const char *s);
 size_t				ft_strnlen(const char *s, size_t maxlen);
 char				*ft_strdup(const char *s1);
+char				*ft_strndup(const char *s1, int n);
 char				*ft_strcpy(char *dst, const char *src);
 char				*ft_strncpy(char *dst, const char *src, size_t len);
 char				*ft_strncat(char *s1, const char *s2, size_t len);
@@ -108,6 +109,9 @@ char				*ft_strsub(char const *s, unsigned int start, size_t len);
 char				*ft_strjoin(char const *s1, char const *s2);
 char				*ft_strtrim(char const *s);
 char				*ft_itoa(int nb);
+void				ft_stradd(char **str, char c);
+int					ft_min(int a, int b);
+intmax_t			ft_pow(int n, int p);
 char				*ft_itoa_base(long long nb, int base);
 char				**ft_strsplit(char const *s, char c);
 int					ft_strcmp(const char *s1, const char *s2);
@@ -148,7 +152,8 @@ t_list				*ft_lstnew(void const *content, size_t content_size);
 t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
 
 int					get_next_line(int fd, char **line);
-
+int					ft_printf(const char *str, ...);
+		
 /*
 ** MATRIX FUNCTION
 */
