@@ -6,7 +6,7 @@
 #    By: jayache <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/06 19:39:42 by jayache           #+#    #+#              #
-#    Updated: 2018/12/16 11:17:52 by jayache          ###   ########.fr        #
+#    Updated: 2018/12/21 16:11:30 by jayache          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -36,10 +36,11 @@ LST = ft_lstnew.c ft_lstdelone.c ft_lstdel.c ft_lstadd.c ft_lstiter.c \
 
 VECTOR2= ft_vector2.c ft_vector2_normalize.c ft_vector2_magnitude.c \
 		 ft_vector2_multiply.c ft_vector2_add.c ft_vector2_angle.c \
-		 ft_vector2_rangle.c
+		 ft_vector2_rangle.c ft_vector2_dot.c
 VECTOR3= ft_vector3.c ft_vector3_normalize.c ft_vector3_magnitude.c \
 		 ft_vector3_angle.c ft_vector3_axis.c ft_vector3_cross.c \
-		 ft_vector3_dot.c ft_vector3_add.c ft_vector3_sub.c
+		 ft_vector3_dot.c ft_vector3_add.c ft_vector3_sub.c \
+		 ft_vector3_multiply.c
 
 VECTOR4= ft_vector4.c ft_vector4_p_matrix.c ft_matrix_to_vector4.c
 MATRIX= ft_matrix.c ft_matrix_product.c ft_matrix_free.c \

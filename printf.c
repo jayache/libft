@@ -6,7 +6,7 @@
 /*   By: jayache <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/23 15:10:20 by jayache           #+#    #+#             */
-/*   Updated: 2018/12/12 18:41:49 by jayache          ###   ########.fr       */
+/*   Updated: 2018/12/12 18:42:50 by jayache          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,7 @@ extern void	(**tab_init(void))(t_arg arg, t_buffer *buff, va_list *valist)
 extern int	printarg(t_arg arg, t_buffer *buf, va_list *ap)
 {
 	static void	(**parray[255])(t_arg, t_buffer*, va_list*);
-	int		i;
+	int			i;
 
 	i = 0;
 	if (*parray == NULL)

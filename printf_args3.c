@@ -6,7 +6,7 @@
 /*   By: jayache <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/08 14:54:14 by jayache           #+#    #+#             */
-/*   Updated: 2018/12/16 11:15:18 by jayache          ###   ########.fr       */
+/*   Updated: 2018/12/12 11:31:30 by jayache          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,8 +60,7 @@ void	ft_printf_putfloat(t_arg arg, t_buffer *buf, va_list *ap)
 	f = take_double_arg(arg, ap);
 	if (arg.precision == -1)
 		arg.precision = 6;
-	if (!(arg.str = ft_itoa((intmax_t)(ft_pow(10, arg.precision) * f))))
-			return ;
+	arg.str = ft_itoa((intmax_t)(ft_pow(10, arg.precision) * f));
 	if (f < 1 && f > 0)
 		ft_stradd(&arg.str, '0');
 	i = paddingspace(arg, buf);
