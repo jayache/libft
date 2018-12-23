@@ -6,7 +6,7 @@
 #    By: jayache <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/06 19:39:42 by jayache           #+#    #+#              #
-#    Updated: 2018/12/21 16:11:30 by jayache          ###   ########.fr        #
+#    Updated: 2018/12/22 14:36:25 by jayache          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,7 @@ STR = ft_strlen.c ft_strcmp.c ft_strncmp.c ft_strstr.c ft_strnstr.c \
 	  ft_strnew.c ft_strclr.c ft_striter.c ft_striteri.c \
 	  ft_strmap.c ft_strequ.c ft_strnequ.c ft_strmapi.c ft_strsub.c \
 	  ft_strtrim.c ft_strjoin.c ft_cntspback.c ft_cntspfront.c ft_strsplit.c \
-	  ft_strpbrk.c ft_stradd.c
+	  ft_strpbrk.c ft_stradd.c ft_strfjoin.c
 
 MEM = ft_memccpy.c ft_memmove.c ft_memset.c ft_memcpy.c ft_memchr.c \
 	  ft_memcmp.c ft_memdel.c ft_memalloc.c ft_bzero.c

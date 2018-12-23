@@ -6,7 +6,7 @@
 /*   By: jayache <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/06 19:44:10 by jayache           #+#    #+#             */
-/*   Updated: 2018/12/16 11:15:52 by jayache          ###   ########.fr       */
+/*   Updated: 2018/12/22 14:36:56 by jayache          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -107,6 +107,7 @@ char				*ft_strnstr(const char *haystack, const char *needle,
 					size_t len);
 char				*ft_strsub(char const *s, unsigned int start, size_t len);
 char				*ft_strjoin(char const *s1, char const *s2);
+char				*ft_strfjoin(char *s1, char const *s2);
 char				*ft_strtrim(char const *s);
 char				*ft_itoa(int nb);
 void				ft_stradd(char **str, char c);
