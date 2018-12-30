@@ -6,16 +6,16 @@
 /*   By: jayache <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/07 21:58:35 by jayache           #+#    #+#             */
-/*   Updated: 2018/11/07 23:00:27 by jayache          ###   ########.fr       */
+/*   Updated: 2018/12/30 16:39:32 by jayache          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #	include "libft.h"
 #	include <string.h>
 
-char	*ft_strrchr(const char *s, int c)
+const char	*ft_strrchr(const char *s, int c)
 {
-	int x;
+	size_t	x;
 
 	x = ft_strlen(s);
 	while (x)
@@ -25,6 +25,6 @@ char	*ft_strrchr(const char *s, int c)
 		--x;
 	}
 	if (s[x] == c)
-		return ((char*)(s + x));
+		return (s + x);
 	return (NULL);
 }

@@ -6,14 +6,13 @@
 /*   By: jayache <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/08 00:02:42 by jayache           #+#    #+#             */
-/*   Updated: 2018/11/08 20:55:42 by jayache          ###   ########.fr       */
+/*   Updated: 2018/12/30 17:15:55 by jayache          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
 int	ft_isprint(int c)
 {
-	if ((c >= 32 && c < 127))
-		return (1);
-	else
-		return (0);
+	return (c >= 32 && c < 127);
 }

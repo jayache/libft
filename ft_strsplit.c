@@ -6,17 +6,17 @@
 /*   By: jayache <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/08 14:14:21 by jayache           #+#    #+#             */
-/*   Updated: 2018/11/10 12:37:23 by jayache          ###   ########.fr       */
+/*   Updated: 2018/12/30 16:38:19 by jayache          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #	include "libft.h"
 
-static int		wordcount(char const *s, char c)
+static unsigned int		wordcount(char const *s, char c)
 {
-	int x;
-	int count;
-	int inword;
+	unsigned int x;
+	unsigned int count;
+	unsigned int inword;
 
 	inword = 0;
 	count = 0;
@@ -39,7 +39,7 @@ static int		wordcount(char const *s, char c)
 	return (count);
 }
 
-static int		nextword(char const *s, char c, int pos)
+static unsigned int		nextword(char const *s, char c, unsigned int pos)
 {
 	while (s[pos])
 	{
@@ -50,9 +50,9 @@ static int		nextword(char const *s, char c, int pos)
 	return (0);
 }
 
-static int		sizenextword(char const *s, char c, int pos)
+static unsigned int		sizenextword(char const *s, char c, unsigned int pos)
 {
-	int size;
+	unsigned int size;
 
 	size = 0;
 	while (s[pos])
@@ -69,11 +69,11 @@ static int		sizenextword(char const *s, char c, int pos)
 	return (0);
 }
 
-char			**ft_strsplit(char const *s, char c)
+char					**ft_strsplit(char const *s, char c)
 {
-	char	**str;
-	int		x;
-	int		pos;
+	char				**str;
+	unsigned int		x;
+	unsigned int		pos;
 
 	if (!s)
 		return (NULL);

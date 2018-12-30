@@ -6,33 +6,33 @@
 /*   By: jayache <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/07 17:39:00 by jayache           #+#    #+#             */
-/*   Updated: 2018/11/10 16:23:11 by jayache          ###   ########.fr       */
+/*   Updated: 2018/12/30 16:55:14 by jayache          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #	include "libft.h"
 
-void extern	*copyfront(void *dst, const void *src, size_t len)
+static void *copyfront(void *dst, const void *src, size_t len)
 {
 	size_t x;
 
 	x = 0;
 	while (x < len)
 	{
-		((unsigned char*)dst)[x] = ((unsigned char*)src)[x];
+		((unsigned char*)dst)[x] = ((unsigned const char*)src)[x];
 		++x;
 	}
 	return (dst);
 }
 
-void extern	*copyback(void *dst, const void *src, size_t len)
+static void *copyback(void *dst, const void *src, size_t len)
 {
 	size_t x;
 
 	x = len - 1;
 	while (x + 1)
 	{
-		((unsigned char*)dst)[x] = ((unsigned char*)src)[x];
+		((unsigned char*)dst)[x] = ((unsigned const char*)src)[x];
 		--x;
 	}
 	return (dst);

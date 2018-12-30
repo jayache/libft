@@ -6,7 +6,7 @@
 /*   By: jayache <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/01 14:57:19 by jayache           #+#    #+#             */
-/*   Updated: 2018/12/01 16:14:01 by jayache          ###   ########.fr       */
+/*   Updated: 2018/12/30 17:09:03 by jayache          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 t_vector3	ft_vector3_normalize(t_vector3 vec)
 {
-	float mag;
+	double mag;
 
 	mag = ft_vector3_magnitude(vec);
 	vec.x /= mag;

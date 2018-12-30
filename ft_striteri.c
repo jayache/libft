@@ -6,7 +6,7 @@
 /*   By: jayache <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/08 10:54:50 by jayache           #+#    #+#             */
-/*   Updated: 2018/11/10 12:26:46 by jayache          ###   ########.fr       */
+/*   Updated: 2018/12/30 16:46:15 by jayache          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 {
-	int x;
+	unsigned int x;
 
 	if (!s || !f)
 		return ;

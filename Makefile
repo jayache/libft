@@ -6,7 +6,7 @@
 #    By: jayache <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/06 19:39:42 by jayache           #+#    #+#              #
-#    Updated: 2018/12/22 14:36:25 by jayache          ###   ########.fr        #
+#    Updated: 2018/12/30 16:24:49 by jayache          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -52,22 +52,23 @@ PRINTF= printf.c printf_args.c printf_args2.c printf_args3.c \
 		printf_arg_color.c printf_arg_change.c printf_flags2.c printf_flags.c printf_free.c \
 		printf_essentials.c printf_parser.c printf_print_arg.c printf_write.c \
 		printf_take_arg.c
-
+GRAPH= ft_create_graph.c ft_add_link.c
 DRAW = ft_draw_point.c ft_draw_rect.c ft_draw_lign.c
-SRCS = $(BASE) $(LST) $(DRAW) $(MATH) $(PRINTF)  get_next_line.c
+SRCS = $(BASE) $(LST) $(DRAW) $(GRAPH)  $(MATH) $(PRINTF)  get_next_line.c
 INCLUDES = /usr/local/include
 OBJS = $(SRCS:.c=.o)
 COUNTER= 
 NB = $(words $(SRCS))
 
 define tests
-$(if $(filter $(1), ft_strlen), @echo "\n\033[32mCOMPILING STRING \FUNCTIONS")
-$(if $(filter $(1), ft_memccpy), @echo "\n\033[33mCOMPILING MEM \FUNCTIONS")
-$(if $(filter $(1), ft_isalpha), @echo "\n\033[34mCOMPILING EVAL \FUNCTIONS")
-$(if $(filter $(1), ft_putchar), @echo "\n\033[35mCOMPILING PRINT \FUNCTIONS")
-$(if $(filter $(1), ft_draw_point), @echo "\n\033[36mCOMPILING DRAW \FUNCTIONS")
-$(if $(filter $(1), ft_vector2), @echo "\n\033[37mCOMPILING MATH \FUNCTIONS")
-$(if $(filter $(1), ft_lstnew), @echo "\n\033[38mCOMPILING LIST \FUNCTIONS")
+$(if $(filter $(1), ft_strlen), @echo "\n\033[32mCOMPILING STRING FUNCTIONS")
+$(if $(filter $(1), ft_memccpy), @echo "\n\033[33mCOMPILING MEM FUNCTIONS")
+$(if $(filter $(1), ft_isalpha), @echo "\n\033[34mCOMPILING EVAL FUNCTIONS")
+$(if $(filter $(1), ft_putchar), @echo "\n\033[35mCOMPILING PRINT FUNCTIONS")
+$(if $(filter $(1), ft_draw_point), @echo "\n\033[36mCOMPILING DRAW FUNCTIONS")
+$(if $(filter $(1), ft_vector2), @echo "\n\033[37mCOMPILING MATH FUNCTIONS")
+$(if $(filter $(1), ft_lstnew), @echo "\n\033[38mCOMPILING LIST FUNCTIONS")
+$(if $(filter $(1), ft_create_graph), @echo "\n\033[38mCOMPILING GRAPH FUNCTIONS")
 $(if $(filter $(1), printf), @echo "\n\033[38mCOMPILING PRINTF")
 endef
 

@@ -6,11 +6,11 @@
 /*   By: jayache <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/07 18:16:44 by jayache           #+#    #+#             */
-/*   Updated: 2018/11/10 16:21:33 by jayache          ###   ########.fr       */
+/*   Updated: 2018/12/30 16:45:18 by jayache          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#	include <string.h>
+#	include "libft.h"
 
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
@@ -21,13 +21,13 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 		return (0);
 	while (x < n && s1[x] && s2[x])
 	{
-		if (((unsigned char*)s1)[x] != ((unsigned char*)s2)[x])
+		if ((s1)[x] != (s2)[x])
 		{
-			return (((unsigned char*)s1)[x] - ((unsigned char*)s2)[x]);
+			return ((s1)[x] - (s2)[x]);
 		}
 		x++;
 	}
 	if ((s1 || s2) && x < n)
-		return (((unsigned char*)s1)[x] - ((unsigned char*)s2)[x]);
+		return ((s1)[x] - (s2)[x]);
 	return (0);
 }

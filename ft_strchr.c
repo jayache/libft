@@ -6,13 +6,13 @@
 /*   By: jayache <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/07 21:58:35 by jayache           #+#    #+#             */
-/*   Updated: 2018/11/07 22:48:09 by jayache          ###   ########.fr       */
+/*   Updated: 2018/12/30 16:48:36 by jayache          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#	include <string.h>
+#	include "libft.h"
 
-char	*ft_strchr(const char *s, int c)
+const char	*ft_strchr(const char *s, int c)
 {
 	int x;
 
@@ -24,6 +24,6 @@ char	*ft_strchr(const char *s, int c)
 		++x;
 	}
 	if (s[x] == c)
-		return ((char*)(s + x));
+		return ((s + x));
 	return (NULL);
 }

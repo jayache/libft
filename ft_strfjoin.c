@@ -6,7 +6,7 @@
 /*   By: jayache <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/08 13:37:49 by jayache           #+#    #+#             */
-/*   Updated: 2018/12/22 15:32:26 by jayache          ###   ########.fr       */
+/*   Updated: 2018/12/30 16:12:18 by jayache          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 /*
 ** DOES THE SAME JOB AS STRJOIN'
-** BUT... 
+** BUT...
 */
 
 char	*ft_strfjoin(char *s1, char const *s2)

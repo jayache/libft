@@ -6,11 +6,13 @@
 /*   By: jayache <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/09 13:26:35 by jayache           #+#    #+#             */
-/*   Updated: 2018/11/09 13:32:46 by jayache          ###   ########.fr       */
+/*   Updated: 2018/12/30 17:20:47 by jayache          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-unsigned long	ft_abs(int nb)
+#include "libft.h"
+
+uintmax_t	ft_abs(intmax_t nb)
 {
-	return (nb < 0 ? (unsigned long)nb * -1 : nb);
+	return (nb < 0 ? (uintmax_t)(nb * -1) : (uintmax_t)nb);
 }

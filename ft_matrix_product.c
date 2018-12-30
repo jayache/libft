@@ -6,18 +6,19 @@
 /*   By: jayache <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/03 16:39:38 by jayache           #+#    #+#             */
-/*   Updated: 2018/12/04 17:02:44 by jayache          ###   ########.fr       */
+/*   Updated: 2018/12/30 17:11:59 by jayache          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static float	productcase(t_matrix a, t_matrix b, int x, int y)
+static double	productcase(t_matrix a, t_matrix b, int x, int y)
 {
 	int		t;
-	float	result;
-	float aval;
-	float bval;
+	double	result;
+	double	aval;
+	double	bval;
+
 	result = 0;
 	t = 0;
 	while (t < b.height)

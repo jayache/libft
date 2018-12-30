@@ -6,7 +6,7 @@
 /*   By: jayache <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/29 14:56:30 by jayache           #+#    #+#             */
-/*   Updated: 2018/12/10 11:08:26 by jayache          ###   ########.fr       */
+/*   Updated: 2018/12/30 17:35:53 by jayache          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,9 @@
 ** RETURN NULL ON FAILURE
 */
 
-static int	nblen_base(long nb, int base)
+static size_t	nblen_base(uintmax_t nb, unsigned int base)
 {
-	int x;
+	size_t x;
 
 	x = 0;
 	if (nb == 0)
@@ -33,12 +33,12 @@ static int	nblen_base(long nb, int base)
 	return (x);
 }
 
-char		*ft_itoa_base(long long nb, int base)
+char		*ft_itoa_base(intmax_t nb, unsigned int base)
 {
-	char				*str;
-	int					c;
-	int					s;
-	unsigned long long	nbs;
+	char		*str;
+	size_t		c;
+	size_t		s;
+	uintmax_t	nbs;
 
 	nbs = ft_abs(nb);
 	s = nblen_base(nbs, base);
