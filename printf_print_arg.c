@@ -6,7 +6,7 @@
 /*   By: jayache <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/06 18:18:00 by jayache           #+#    #+#             */
-/*   Updated: 2018/12/08 16:46:43 by jayache          ###   ########.fr       */
+/*   Updated: 2018/12/30 17:50:40 by jayache          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,6 @@ int	print_arg_nbr(t_arg arg, t_buffer *buf, char *str)
 	while (str[size])
 		printf_putchar(buf, str[size++]);
 	return (size + i);
-	arg.str[0] = 0;
 }
 
 int	print_arg_oct(t_arg arg, t_buffer *buf, char *str)

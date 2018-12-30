@@ -6,7 +6,7 @@
 /*   By: jayache <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/29 13:58:11 by jayache           #+#    #+#             */
-/*   Updated: 2018/12/22 15:58:05 by jayache          ###   ########.fr       */
+/*   Updated: 2018/12/30 17:55:08 by jayache          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ int	paddingspace(t_arg arg, t_buffer *buf)
 	blank = calc_blank_space(arg);
 	if (ft_strchr(arg.flags, '0'))
 	{
-		zeros = ft_strlen(arg.str) - (is_signed(arg));
+		zeros = (int)ft_strlen(arg.str) - (is_signed(arg));
 		if (arg.precision > zeros)
 		{
 			zeros = arg.precision - zeros;
@@ -35,7 +35,7 @@ int	paddingspace(t_arg arg, t_buffer *buf)
 	}
 	else if (!ft_strchr(arg.flags, '0') && arg.precision != -1)
 	{
-		zeros = arg.precision - (ft_strlen(arg.str) - (arg.str[0] == '-'));
+		zeros = arg.precision - ((int)ft_strlen(arg.str) - (arg.str[0] == '-'));
 		if (zeros > 0)
 			blank -= zeros;
 	}
@@ -52,13 +52,13 @@ int	paddingzeros(t_arg arg, t_buffer *buf)
 	int i;
 
 	i = 0;
-	blank = (ft_strlen(arg.str) + (ft_strchr(arg.flags, ' ') != NULL) +
+	blank = ((int)ft_strlen(arg.str) + (ft_strchr(arg.flags, ' ') != NULL) +
 	(sign(arg, NULL, arg.str))) + hashflag(arg, NULL, arg.str);
 	blank = arg.minimum - blank;
 	zeros = 0;
 	if (ft_strchr(arg.flags, '0') && !ft_strchr(arg.flags, '-'))
 	{
-		zeros = ft_strlen(arg.str) - (is_signed(arg));
+		zeros = (int)ft_strlen(arg.str) - (is_signed(arg));
 		if (arg.precision > zeros)
 			zeros = arg.precision - zeros;
 		else
@@ -66,7 +66,7 @@ int	paddingzeros(t_arg arg, t_buffer *buf)
 	}
 	else if ((!ft_strchr(arg.flags, '0') || ft_strchr(arg.flags, '-')) &&
 	arg.precision != -1)
-		zeros = arg.precision - (ft_strlen(arg.str) - (arg.str[0] == '-'));
+		zeros = arg.precision - ((int)ft_strlen(arg.str) - (arg.str[0] == '-'));
 	while (i < zeros)
 		i += printf_putchar(buf, '0');
 	return (i < 0 ? 0 : i);

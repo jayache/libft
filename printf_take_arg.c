@@ -6,7 +6,7 @@
 /*   By: jayache <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/01 11:27:35 by jayache           #+#    #+#             */
-/*   Updated: 2018/12/11 11:30:16 by jayache          ###   ########.fr       */
+/*   Updated: 2018/12/30 17:49:21 by jayache          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,5 +50,5 @@ long double	take_double_arg(t_arg arg, va_list *ap)
 {
 	if (ft_strequ(arg.conversion, "L"))
 		return (va_arg(*ap, long double));
-	return (va_arg(*ap, double));
+	return ((long double)va_arg(*ap, double));
 }

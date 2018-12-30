@@ -6,7 +6,7 @@
 /*   By: jayache <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/10 15:21:12 by jayache           #+#    #+#             */
-/*   Updated: 2018/12/12 11:01:02 by jayache          ###   ########.fr       */
+/*   Updated: 2018/12/30 17:51:26 by jayache          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ t_buffer	init_buffer(void)
 	fd.moment = ft_memalloc(1);
 	fd.fd = ft_memalloc(1);
 	buf.size = 1000;
-	buf.buffer = ft_strnew(buf.size);
+	buf.buffer = ft_strnew((size_t)buf.size);
 	buf.bufx = 0;
 	buf.fd = fd;
 	return (buf);

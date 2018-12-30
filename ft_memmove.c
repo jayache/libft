@@ -6,13 +6,13 @@
 /*   By: jayache <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/07 17:39:00 by jayache           #+#    #+#             */
-/*   Updated: 2018/12/30 16:55:14 by jayache          ###   ########.fr       */
+/*   Updated: 2018/12/30 18:12:03 by jayache          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #	include "libft.h"
 
-static void *copyfront(void *dst, const void *src, size_t len)
+static void	*copyfront(void *dst, const void *src, size_t len)
 {
 	size_t x;
 
@@ -25,7 +25,7 @@ static void *copyfront(void *dst, const void *src, size_t len)
 	return (dst);
 }
 
-static void *copyback(void *dst, const void *src, size_t len)
+static void	*copyback(void *dst, const void *src, size_t len)
 {
 	size_t x;
 

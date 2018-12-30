@@ -6,7 +6,7 @@
 /*   By: jayache <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/06 19:44:10 by jayache           #+#    #+#             */
-/*   Updated: 2018/12/30 17:47:31 by jayache          ###   ########.fr       */
+/*   Updated: 2018/12/30 18:13:31 by jayache          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -103,7 +103,7 @@ char				*ft_strncpy(char *dst, const char *src, size_t len);
 char				*ft_strncat(char *s1, const char *s2, size_t len);
 char				*ft_strcat(char *s1, const char *s2);
 size_t				ft_strlcat(char *s1, const char *s2, size_t size);
-const char				*ft_strchr(const char *s, int c);
+const char			*ft_strchr(const char *s, int c);
 const char			*ft_strrchr(const char *s, int c);
 char				*ft_strnew(size_t size);
 void				ft_strdel(char **as);

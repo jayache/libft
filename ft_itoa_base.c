@@ -6,7 +6,7 @@
 /*   By: jayache <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/29 14:56:30 by jayache           #+#    #+#             */
-/*   Updated: 2018/12/30 17:35:53 by jayache          ###   ########.fr       */
+/*   Updated: 2018/12/30 18:12:40 by jayache          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ static size_t	nblen_base(uintmax_t nb, unsigned int base)
 	return (x);
 }
 
-char		*ft_itoa_base(intmax_t nb, unsigned int base)
+char			*ft_itoa_base(intmax_t nb, unsigned int base)
 {
 	char		*str;
 	size_t		c;

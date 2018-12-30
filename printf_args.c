@@ -6,7 +6,7 @@
 /*   By: jayache <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/28 10:23:21 by jayache           #+#    #+#             */
-/*   Updated: 2018/12/12 18:43:54 by jayache          ###   ########.fr       */
+/*   Updated: 2018/12/30 18:08:02 by jayache          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,13 @@
 
 void	invalid_arg(t_arg arg, t_buffer *buf, va_list *ap)
 {
+	if (!ap)
+	{
+		printf_putchar(buf, '0');
+		if (ap)
+			arg.flags = NULL;
+	}
 	return ;
-	printf_putchar(buf, '0');
-	if (ap)
-		arg.flags = NULL;
 }
 
 /*
@@ -40,7 +43,7 @@ void	ft_printf_putnbr(t_arg arg, t_buffer *buf, va_list *ap)
 		arg.str[0] = '\0';
 	i = paddingspace(arg, buf);
 	size = print_arg_nbr(arg, buf, arg.str);
-	i += reverse_padding(arg, buf, i + size);
+	i += reverse_padding(arg, buf, (int)i + size);
 	free_arg(&arg);
 }
 
@@ -56,7 +59,7 @@ void	ft_printf_putstr(t_arg arg, t_buffer *buf, va_list *ap)
 	arg.str = (char*)va_arg(*ap, char*);
 	if (!arg.str)
 		arg.str = "(null)";
-	i = strpadding(arg, buf, ft_strlen(arg.str));
+	i = strpadding(arg, buf, (int)ft_strlen(arg.str));
 	x = 0;
 	while (arg.str[x] && (x < arg.precision || arg.precision == -1))
 	{
@@ -64,10 +67,10 @@ void	ft_printf_putstr(t_arg arg, t_buffer *buf, va_list *ap)
 		++x;
 	}
 	if (arg.precision != -1)
-		i += reverse_padding(arg, buf, i + ft_min(ft_strlen(arg.str),
+		i += reverse_padding(arg, buf, i + ft_min((int)ft_strlen(arg.str),
 		arg.precision));
 	else
-		i += reverse_padding(arg, buf, i + ft_strlen(arg.str));
+		i += reverse_padding(arg, buf, i + (int)ft_strlen(arg.str));
 	arg.str = NULL;
 	free_arg(&arg);
 }
