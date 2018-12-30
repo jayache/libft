@@ -1,35 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_nblen.c                                         :+:      :+:    :+:   */
+/*   ft_create_graph.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jayache <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/27 15:17:55 by jayache           #+#    #+#             */
-/*   Updated: 2018/11/30 15:30:29 by jayache          ###   ########.fr       */
+/*   Created: 2018/12/30 10:53:49 by jayache           #+#    #+#             */
+/*   Updated: 2018/12/30 16:08:13 by jayache          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-/*
-**	RETURN THE SIZE OF THE NUMBER
-**	OR THE SIZE + 1 IF IT IS NEGATIVE
-*/
-
-int	ft_nblen(int nb)
+t_graph	*ft_create_graph(void *elem, int size)
 {
-	long	snb;
-	int		c;
+	t_graph *graph;
 
-	c = (nb < 0);
-	snb = ft_abs(nb);
-	if (nb == 0)
-		return (1);
-	while (snb > 0)
-	{
-		++c;
-		snb /= 10;
-	}
-	return (c);
+	graph = ft_memalloc(sizeof(t_graph));
+	graph->elem = elem;
+	graph->size = size;
+	graph->neighbors_number = 0;
+	graph->neighbors = ft_memalloc(1);;
+	return (graph);
 }

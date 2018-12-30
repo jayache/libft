@@ -1,35 +1,44 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_nblen.c                                         :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jayache <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/27 15:17:55 by jayache           #+#    #+#             */
-/*   Updated: 2018/11/30 15:30:29 by jayache          ###   ########.fr       */
+/*   Created: 2018/11/08 13:37:49 by jayache           #+#    #+#             */
+/*   Updated: 2018/12/22 15:32:26 by jayache          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#	include "libft.h"
 
 /*
-**	RETURN THE SIZE OF THE NUMBER
-**	OR THE SIZE + 1 IF IT IS NEGATIVE
+** DOES THE SAME JOB AS STRJOIN'
+** BUT... 
 */
 
-int	ft_nblen(int nb)
+char	*ft_strfjoin(char *s1, char const *s2)
 {
-	long	snb;
-	int		c;
+	char	*str;
+	int		x;
+	int		a;
 
-	c = (nb < 0);
-	snb = ft_abs(nb);
-	if (nb == 0)
-		return (1);
-	while (snb > 0)
+	a = 0;
+	x = 0;
+	if (!s1 || !s2)
+		return (NULL);
+	if (!(str = malloc(sizeof(char) * (ft_strlen(s1) + ft_strlen(s2) + 1))))
+		return (NULL);
+	while (s1[a])
 	{
-		++c;
-		snb /= 10;
+		str[x] = s1[a];
+		++x;
+		++a;
 	}
-	return (c);
+	a = 0;
+	while (s2[a])
+		str[x++] = s2[a++];
+	str[x] = '\0';
+	free(s1);
+	return (str);
 }
