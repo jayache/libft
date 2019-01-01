@@ -6,13 +6,13 @@
 /*   By: jayache <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/30 10:59:39 by jayache           #+#    #+#             */
-/*   Updated: 2018/12/30 17:44:01 by jayache          ###   ########.fr       */
+/*   Updated: 2019/01/01 10:48:26 by jayache          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_add_link(t_graph *nodea, t_graph *nodeb)
+void	ft_graph_add_link(t_graph *nodea, t_graph *nodeb)
 {
 	void	*temp;
 

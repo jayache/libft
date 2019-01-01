@@ -6,13 +6,13 @@
 /*   By: jayache <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/30 10:53:49 by jayache           #+#    #+#             */
-/*   Updated: 2018/12/30 17:44:22 by jayache          ###   ########.fr       */
+/*   Updated: 2019/01/01 10:46:47 by jayache          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_graph	*ft_create_graph(void *elem, size_t size)
+t_graph	*ft_graph_new(void *elem, size_t size)
 {
 	t_graph *graph;
 

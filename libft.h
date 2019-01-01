@@ -6,7 +6,7 @@
 /*   By: jayache <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/06 19:44:10 by jayache           #+#    #+#             */
-/*   Updated: 2018/12/30 18:13:31 by jayache          ###   ########.fr       */
+/*   Updated: 2019/01/01 10:52:57 by jayache          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,13 @@ typedef struct		s_btree
 	struct s_btree	*parent;
 }					t_btree;
 
+typedef struct		s_pile
+{
+	t_btree			*elem;
+	struct s_pile	*next;
+	int				level;
+}					t_pile;
+
 typedef struct		s_vector2
 {
 	double			x;
@@ -54,6 +61,13 @@ typedef struct		s_vector4
 	double			z;
 	double			w;
 }					t_vector4;
+
+typedef struct		s_node
+{
+	void			*elem;
+	struct s_node	**neighbors;
+	size_t			neighbors_number;
+}					t_node;
 
 typedef	struct		s_graph
 {
@@ -207,8 +221,8 @@ t_vector4			ft_matrix_to_vector4(t_matrix m);
 **	GRAPH FUNCTIONS
 */
 
-t_graph				*ft_create_graph(void *elem, size_t size);
-void				ft_add_link(t_graph *nodea, t_graph *nodeb);
+t_graph				*ft_graph_new(void *elem, size_t size);
+void				ft_graph_add_link(t_graph *nodea, t_graph *nodeb);
 
 /*
 ** DRAWING FUNCTION
@@ -218,4 +232,18 @@ void				ft_draw_point(t_vector2 coor, t_pixel *pixel);
 void				ft_draw_rect(t_vector2 beg, t_vector2 end, t_pixel *pixel);
 void				ft_draw_lign(t_vector2 beg, t_vector2 size, t_pixel *pixel);
 
+/*
+**	BINARY TREE FUNCTIONS
+*/
+
+void				*ft_btree_search_item(t_btree *root, void *data_ref,
+					int(*cmpf)(void *, void *));
+int					ft_btree_level_count(t_btree *root);
+void				ft_btree_insert_data(t_btree **root, void *item,
+					int (*cmpf)(void *, void *));
+t_btree				*ft_btree_create_node(void *elem);
+void				ft_btree_apply_suffix(t_btree *root, void (*applyf)(void*));
+void				ft_btree_apply_inffix(t_btree *root, void (*applyf)(void*));
+void				ft_btree_apply_preffix(t_btree *root,
+					void (*applyf)(void*));
 #	endif

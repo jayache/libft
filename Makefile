@@ -6,7 +6,7 @@
 #    By: jayache <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/06 19:39:42 by jayache           #+#    #+#              #
-#    Updated: 2018/12/30 16:24:49 by jayache          ###   ########.fr        #
+#    Updated: 2019/01/01 10:49:37 by jayache          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -47,12 +47,15 @@ MATRIX= ft_matrix.c ft_matrix_product.c ft_matrix_free.c \
 		ft_vector4_to_matrix.c ft_vector3_to_matrix.c
 MATH= $(VECTOR2) $(VECTOR3) $(VECTOR4) $(MATRIX) ft_atoi.c ft_abs.c ft_sign.c \
 	 ft_itoa_base.c ft_nblen.c ft_itoa.c ft_min.c ft_pow.c 
-
+BTREE= ft_btree_create_node.c ft_btree_apply_infix.c ft_btree_apply_sufix.c \
+	   ft_btree_level_count.c ft_btree_apply_prefix.c \
+	   ft_btree_apply_by_level.c ft_btree_search_item.c ft_btree_insert_data.c
+	   
 PRINTF= printf.c printf_args.c printf_args2.c printf_args3.c \
 		printf_arg_color.c printf_arg_change.c printf_flags2.c printf_flags.c printf_free.c \
 		printf_essentials.c printf_parser.c printf_print_arg.c printf_write.c \
 		printf_take_arg.c
-GRAPH= ft_create_graph.c ft_add_link.c
+GRAPH= ft_graph_new.c ft_graph_add_link.c
 DRAW = ft_draw_point.c ft_draw_rect.c ft_draw_lign.c
 SRCS = $(BASE) $(LST) $(DRAW) $(GRAPH)  $(MATH) $(PRINTF)  get_next_line.c
 INCLUDES = /usr/local/include
@@ -68,8 +71,9 @@ $(if $(filter $(1), ft_putchar), @echo "\n\033[35mCOMPILING PRINT FUNCTIONS")
 $(if $(filter $(1), ft_draw_point), @echo "\n\033[36mCOMPILING DRAW FUNCTIONS")
 $(if $(filter $(1), ft_vector2), @echo "\n\033[37mCOMPILING MATH FUNCTIONS")
 $(if $(filter $(1), ft_lstnew), @echo "\n\033[38mCOMPILING LIST FUNCTIONS")
-$(if $(filter $(1), ft_create_graph), @echo "\n\033[38mCOMPILING GRAPH FUNCTIONS")
-$(if $(filter $(1), printf), @echo "\n\033[38mCOMPILING PRINTF")
+$(if $(filter $(1), ft_graph_new), @echo "\n\033[42m \033[38mCOMPILING GRAPH FUNCTIONS")
+$(if $(filter $(1), ft_btree_create_node), @echo "\n\033[42m \033[33mCOMPILING BTREE FUNCTIONS")
+$(if $(filter $(1), printf), @echo "\n\033[42m \033[34mCOMPILING PRINTF")
 endef
 
 all:
