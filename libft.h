@@ -6,7 +6,7 @@
 /*   By: jayache <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/06 19:44:10 by jayache           #+#    #+#             */
-/*   Updated: 2019/01/01 10:52:57 by jayache          ###   ########.fr       */
+/*   Updated: 2019/01/01 11:09:25 by jayache          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,16 +65,15 @@ typedef struct		s_vector4
 typedef struct		s_node
 {
 	void			*elem;
+	size_t			size;
 	struct s_node	**neighbors;
 	size_t			neighbors_number;
 }					t_node;
 
 typedef	struct		s_graph
 {
-	void			*elem;
 	size_t			size;
-	size_t			neighbors_number;
-	struct s_graph	**neighbors;
+	struct s_node	**nodes;
 }					t_graph;
 
 typedef struct		s_pixel
@@ -221,8 +220,9 @@ t_vector4			ft_matrix_to_vector4(t_matrix m);
 **	GRAPH FUNCTIONS
 */
 
-t_graph				*ft_graph_new(void *elem, size_t size);
-void				ft_graph_add_link(t_graph *nodea, t_graph *nodeb);
+t_graph				*ft_graph_new(void);
+t_node				*ft_graph_node_new(void *elem, size_t size);
+void				ft_graph_add_link(t_node *nodea, t_node *nodeb);
 
 /*
 ** DRAWING FUNCTION

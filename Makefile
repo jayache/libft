@@ -6,7 +6,7 @@
 #    By: jayache <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/06 19:39:42 by jayache           #+#    #+#              #
-#    Updated: 2019/01/01 10:49:37 by jayache          ###   ########.fr        #
+#    Updated: 2019/01/01 11:08:08 by jayache          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -55,7 +55,7 @@ PRINTF= printf.c printf_args.c printf_args2.c printf_args3.c \
 		printf_arg_color.c printf_arg_change.c printf_flags2.c printf_flags.c printf_free.c \
 		printf_essentials.c printf_parser.c printf_print_arg.c printf_write.c \
 		printf_take_arg.c
-GRAPH= ft_graph_new.c ft_graph_add_link.c
+GRAPH= ft_graph_new.c ft_graph_add_link.c ft_graph_node_new.c
 DRAW = ft_draw_point.c ft_draw_rect.c ft_draw_lign.c
 SRCS = $(BASE) $(LST) $(DRAW) $(GRAPH)  $(MATH) $(PRINTF)  get_next_line.c
 INCLUDES = /usr/local/include
