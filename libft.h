@@ -6,7 +6,7 @@
 /*   By: jayache <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/06 19:44:10 by jayache           #+#    #+#             */
-/*   Updated: 2019/01/01 15:34:39 by jayache          ###   ########.fr       */
+/*   Updated: 2019/01/25 17:18:34 by jayache          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,12 +19,20 @@
 #	include <math.h>
 #	include "mlx.h"
 
+/*
+** CHAINED LIST
+*/
+
 typedef struct		s_list
 {
 	void			*content;
 	size_t			content_size;
 	struct s_list	*next;
 }					t_list;
+
+/*
+** BINARY TREE
+*/
 
 typedef struct		s_btree
 {
@@ -34,6 +42,10 @@ typedef struct		s_btree
 	struct s_btree	*parent;
 }					t_btree;
 
+/*
+** USED IN A BTREE FUNCTION
+*/
+
 typedef struct		s_pile
 {
 	t_btree			*elem;
@@ -41,11 +53,19 @@ typedef struct		s_pile
 	int				level;
 }					t_pile;
 
+/*
+** VECTOR2
+*/
+
 typedef struct		s_vector2
 {
 	double			x;
 	double			y;
 }					t_vector2;
+
+/*
+** VECTOR3
+*/
 
 typedef struct		s_vector3
 {
@@ -53,6 +73,10 @@ typedef struct		s_vector3
 	double			y;
 	double			z;
 }					t_vector3;
+
+/*
+** VECTOR4
+*/
 
 typedef struct		s_vector4
 {
@@ -62,6 +86,10 @@ typedef struct		s_vector4
 	double			w;
 }					t_vector4;
 
+/*
+** NODE OF A GRAPH
+*/
+
 typedef struct		s_node
 {
 	void			*elem;
@@ -70,11 +98,19 @@ typedef struct		s_node
 	size_t			neighbors_number;
 }					t_node;
 
+/*
+** GRAPH
+*/
+
 typedef	struct		s_graph
 {
 	size_t			size;
 	struct s_node	**nodes;
 }					t_graph;
+
+/*
+** STRUCT FOR USE WITH MLX - GOING TO REMOVE IT SOON
+*/
 
 typedef struct		s_pixel
 {
@@ -83,6 +119,10 @@ typedef struct		s_pixel
 	int				color;
 	int				id;
 }					t_pixel;
+
+/*
+** MATRIX
+*/
 
 typedef struct		s_matrix
 {
@@ -223,7 +263,7 @@ t_vector4			ft_matrix_to_vector4(t_matrix m);
 t_graph				*ft_graph_new(void);
 t_node				*ft_graph_node_new(void *elem, size_t size);
 void				ft_graph_add_link(t_node *nodea, t_node *nodeb);
-void				ft_graph_add_node(t_graph graph, t_node *nodeb);
+void				ft_graph_add_node(t_graph *graph, t_node *nodeb);
 
 /*
 ** DRAWING FUNCTION
