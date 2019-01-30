@@ -6,7 +6,7 @@
 /*   By: jayache <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/18 16:11:41 by jayache           #+#    #+#             */
-/*   Updated: 2019/01/25 17:17:33 by jayache          ###   ########.fr       */
+/*   Updated: 2019/01/26 14:58:36 by jayache          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,10 @@ t_node	**bruteforce(t_node *current, t_node** (*neighbors)(t_node *), int (*vali
 	t_node **path;
 
 	x = 0;
+	ft_printf("%d\n", level);
 	if (valid(current)) //success condition
 	{
+		ft_printf("HELLO\n");
 		path = ft_memalloc(sizeof(t_node*) * level + 1);
 		path[level] = current;
 		return (path);
@@ -41,10 +43,10 @@ t_node	**bruteforce(t_node *current, t_node** (*neighbors)(t_node *), int (*vali
 }
 
 /* ft_solve, prepare the bruteforce */
-t_node	**ft_solve(t_node *start, t_node** (*neighbors)(t_node *), int (*valid)(t_node *))
+t_node	**ft_solve(t_node *start, t_node** (*n)(t_node *), int (*v)(t_node *))
 {
 	t_node **path;
 
-	path = bruteforce(start, neighbors, valid, 0);
+	path = bruteforce(start, n, v, 0);
 	return (path);
 }
