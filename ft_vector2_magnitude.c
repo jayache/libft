@@ -6,13 +6,13 @@
 /*   By: jayache <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/01 14:51:15 by jayache           #+#    #+#             */
-/*   Updated: 2018/12/30 17:06:48 by jayache          ###   ########.fr       */
+/*   Updated: 2018/12/01 14:55:19 by jayache          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-double	ft_vector2_magnitude(t_vector2 vec)
+float	ft_vector2_magnitude(t_vector2 vec)
 {
 	return (sqrt((vec.x * vec.x) + (vec.y * vec.y)));
 }

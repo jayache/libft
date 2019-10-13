@@ -6,7 +6,7 @@
 /*   By: jayache <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/27 15:17:55 by jayache           #+#    #+#             */
-/*   Updated: 2018/12/30 17:32:06 by jayache          ###   ########.fr       */
+/*   Updated: 2018/11/30 15:30:29 by jayache          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,8 @@
 
 int	ft_nblen(int nb)
 {
-	uintmax_t	snb;
-	int			c;
+	long	snb;
+	int		c;
 
 	c = (nb < 0);
 	snb = ft_abs(nb);

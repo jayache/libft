@@ -6,13 +6,13 @@
 /*   By: jayache <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/01 14:25:06 by jayache           #+#    #+#             */
-/*   Updated: 2018/12/30 17:10:11 by jayache          ###   ########.fr       */
+/*   Updated: 2018/12/03 17:42:34 by jayache          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_vector3	ft_vector3(double x, double y, double z)
+t_vector3	ft_vector3(float x, float y, float z)
 {
 	t_vector3 vec;
 

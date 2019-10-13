@@ -6,13 +6,13 @@
 /*   By: jayache <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/08 14:48:12 by jayache           #+#    #+#             */
-/*   Updated: 2018/12/30 17:38:20 by jayache          ###   ########.fr       */
+/*   Updated: 2018/11/12 15:08:34 by jayache          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #	include "libft.h"
 
-static char	*initstritoa(char n, int neg)
+static char	*initstritoa(long n, int neg)
 {
 	char	*str;
 
@@ -32,18 +32,18 @@ static char	*initstritoa(char n, int neg)
 	return (str);
 }
 
-char		*ft_itoa(intmax_t n)
+char		*ft_itoa(int n)
 {
-	char		*str;
-	int			neg;
-	char		*s1;
-	char		*s2;
-	uintmax_t	sn;
+	char	*str;
+	int		neg;
+	char	*s1;
+	char	*s2;
+	long	sn;
 
 	sn = ft_abs(n);
 	neg = ft_sign(n);
 	if (sn < 10)
-		return (initstritoa((char)sn, neg));
+		return (initstritoa(sn, neg));
 	s2 = ft_itoa(sn % (10));
 	s1 = ft_itoa(sn / (10));
 	str = (ft_strjoin(s1, s2));

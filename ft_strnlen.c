@@ -6,11 +6,11 @@
 /*   By: jayache <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/07 18:46:19 by jayache           #+#    #+#             */
-/*   Updated: 2018/12/30 16:42:45 by jayache          ###   ########.fr       */
+/*   Updated: 2018/11/08 20:26:36 by jayache          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <string.h>
 
 size_t	ft_strnlen(const char *s, size_t maxlen)
 {

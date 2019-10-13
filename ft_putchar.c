@@ -12,14 +12,14 @@
 
 #	include "libft.h"
 
-void	ft_putchar(unsigned int c)
+int	ft_putchar(unsigned int c)
 {
 	if (c <= 255)
-		write(1, &c, 1);
+		return (write(1, &c, 1));
 	else if (c <= 65535)
-		write(1, &c, 2);
+		return (write(1, &c, 2));
 	else if (c <= 16777215)
-		write(1, &c, 3);
+		return (write(1, &c, 3));
 	else
-		write(1, &c, 4);
+		return (write(1, &c, 4));
 }

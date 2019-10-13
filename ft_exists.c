@@ -1,31 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_draw_rect.c                                     :+:      :+:    :+:   */
+/*   ft_exists.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jayache <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/23 17:43:44 by jayache           #+#    #+#             */
-/*   Updated: 2018/12/05 14:44:32 by jayache          ###   ########.fr       */
+/*   Created: 2018/12/26 17:58:03 by jayache           #+#    #+#             */
+/*   Updated: 2018/12/26 17:58:15 by jayache          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_draw_rect(t_vector2 beg, t_vector2 size, t_pixel *pixel)
+int		ft_exists(char *file)
 {
-	int a;
-	int b;
+	struct stat	buf;
 
-	a = 0;
-	while (a < size.x)
+	lstat(file, &buf);
+	if (errno)
 	{
-		b = 0;
-		while (b < size.y)
-		{
-			ft_draw_point(ft_vector2(a + beg.x, b + beg.y), pixel);
-			++b;
-		}
-		++a;
+		errno = 0;
+		return (0);
 	}
+	return (1);
 }

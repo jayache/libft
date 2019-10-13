@@ -1,20 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_draw_point.c                                    :+:      :+:    :+:   */
+/*   ft_vector4_from_3.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jayache <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/12/05 14:39:31 by jayache           #+#    #+#             */
-/*   Updated: 2018/12/30 18:13:15 by jayache          ###   ########.fr       */
+/*   Created: 2019/09/01 10:56:23 by jayache           #+#    #+#             */
+/*   Updated: 2019/09/01 10:57:09 by jayache          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_draw_point(t_vector2 coor, t_pixel *pixel)
+t_vector4	ft_vector4_from_3(t_vector3 vtc)
 {
-	if (coor.x >= 0 && coor.y >= 0)
-		mlx_pixel_put(pixel->mlxid, pixel->winid, (int)coor.x, (int)coor.y,
-		pixel->color);
+	return (ft_vector4(vtc.x, vtc.y, vtc.z, 1));
 }

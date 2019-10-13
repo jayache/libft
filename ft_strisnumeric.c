@@ -1,23 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_create_graph.c                                  :+:      :+:    :+:   */
+/*   ft_strisnumeric.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jayache <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/12/30 10:53:49 by jayache           #+#    #+#             */
-/*   Updated: 2019/01/01 11:05:08 by jayache          ###   ########.fr       */
+/*   Created: 2019/08/25 15:10:26 by jayache           #+#    #+#             */
+/*   Updated: 2019/08/25 15:16:36 by jayache          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_graph	*ft_graph_new(void)
+int	ft_strisnumeric(char const *str)
 {
-	t_graph *graph;
+	int	i;
 
-	graph = (t_graph*)ft_memalloc(sizeof(t_graph) + 1);
-	graph->size = 0;
-	graph->nodes = ft_memalloc(1);
-	return (graph);
+	i = 0;
+	while (str[i] && str[i] >= '0' && str[i] <= '9')
+		++i;
+	return (!str[i]);
 }

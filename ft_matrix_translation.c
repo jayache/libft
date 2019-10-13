@@ -1,32 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   btree_search_item.c                                :+:      :+:    :+:   */
+/*   ft_matrix_translation.c                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jayache <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/08/17 13:57:54 by jayache           #+#    #+#             */
-/*   Updated: 2018/12/31 14:25:24 by jayache          ###   ########.fr       */
+/*   Created: 2019/08/29 22:39:26 by jayache           #+#    #+#             */
+/*   Updated: 2019/08/29 23:01:50 by jayache          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*btree_search_item(t_btree *root, void *data_ref,
-		int (*cmpf)(void *, void *))
+t_matrix	ft_matrix_translation(t_vector3 translation)
 {
-	void *elem;
+	t_matrix matrix;
 
-	elem = (NULL);
-	if (root->left)
-		elem = (btree_search_item(root->left, data_ref, cmpf));
-	if (elem)
-		return (elem);
-	if (!cmpf(root->item, data_ref))
-		return (root->item);
-	if (root->right)
-		elem = (btree_search_item(root->right, data_ref, cmpf));
-	if (elem)
-		return (elem);
-	return (NULL);
+	matrix = ft_matrix_identity();
+	matrix.matrix[0][3] = translation.x;
+	matrix.matrix[1][3] = translation.y;
+	matrix.matrix[2][3] = translation.z;
+	return (matrix);
 }

@@ -6,11 +6,9 @@
 /*   By: jayache <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/07 19:27:17 by jayache           #+#    #+#             */
-/*   Updated: 2018/12/30 16:46:30 by jayache          ###   ########.fr       */
+/*   Updated: 2018/11/07 19:38:57 by jayache          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 char	*ft_strcpy(char *dst, const char *src)
 {

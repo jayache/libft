@@ -6,7 +6,7 @@
 /*   By: jayache <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/10 15:21:12 by jayache           #+#    #+#             */
-/*   Updated: 2018/12/30 17:51:26 by jayache          ###   ########.fr       */
+/*   Updated: 2019/08/18 18:16:27 by jayache          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ t_buffer	init_buffer(void)
 	fd.moment = ft_memalloc(1);
 	fd.fd = ft_memalloc(1);
 	buf.size = 1000;
-	buf.buffer = ft_strnew((size_t)buf.size);
+	buf.buffer = ft_strnew(buf.size);
 	buf.bufx = 0;
 	buf.fd = fd;
 	return (buf);
@@ -33,6 +33,7 @@ void		printf_write(t_buffer buf)
 	int		x;
 	t_fd	fds;
 	int		fd;
+	int		to_write;
 
 	fds = buf.fd;
 	x = 0;
@@ -40,9 +41,13 @@ void		printf_write(t_buffer buf)
 	fd = 1;
 	while (i < buf.bufx)
 	{
+		to_write = 1;
 		if (x < fds.size && fds.moment[x] == i)
 			fd = fds.fd[x++];
-		write(fd, buf.buffer + i, 1);
+		if (x < fds.size)
+			to_write = fds.moment[x] - i;
+		if (!write(fd, buf.buffer + i, to_write))
+			return ;
 		++i;
 	}
 }

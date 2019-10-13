@@ -6,14 +6,14 @@
 /*   By: jayache <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/11 13:04:52 by jayache           #+#    #+#             */
-/*   Updated: 2018/12/30 17:48:03 by jayache          ###   ########.fr       */
+/*   Updated: 2018/12/03 17:00:58 by jayache          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #	include "get_next_line.h"
 #	include "libft.h"
 
-static char		*strjjoin(char *s1, char *s2, size_t x, int cut)
+static char		*strjjoin(char *s1, char *s2, int x, int cut)
 {
 	char *str;
 
@@ -31,8 +31,8 @@ static char		*strjjoin(char *s1, char *s2, size_t x, int cut)
 
 static int		ft_readfile(char **tab, char **line, const int fd)
 {
-	ssize_t	status;
-	size_t	x;
+	int status;
+	int x;
 
 	status = 1;
 	x = 0;

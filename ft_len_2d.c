@@ -1,30 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_graph_add_node.c                                :+:      :+:    :+:   */
+/*   ft_len_2d.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jayache <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/01/01 15:30:31 by jayache           #+#    #+#             */
-/*   Updated: 2019/01/25 17:24:29 by jayache          ###   ########.fr       */
+/*   Created: 2019/08/26 23:03:53 by jayache           #+#    #+#             */
+/*   Updated: 2019/08/26 23:26:48 by jayache          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-void	ft_graph_add_node(t_graph *graph, t_node *node)
+int	ft_len_2d(char **array)
 {
-	t_node	**tmp;
-	size_t	i;
+	int i;
 
 	i = 0;
-	tmp = graph->nodes;
-	graph->nodes = (t_node**)ft_memalloc((graph->size + 1) * sizeof(t_node*));
-	while (i < graph->size)
-	{
-		graph->nodes[i] = tmp[i];
+	while (array && array[i])
 		++i;
-	}
-	graph->nodes[graph->size] = node;
-	graph->size++;
+	return (i);
 }

@@ -6,7 +6,7 @@
 /*   By: jayache <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/23 15:10:20 by jayache           #+#    #+#             */
-/*   Updated: 2018/12/30 18:09:44 by jayache          ###   ########.fr       */
+/*   Updated: 2018/12/22 16:09:23 by jayache          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 ** INIT A TAB
 */
 
-static void	(**tab_init(void))(t_arg arg, t_buffer *buff, va_list *valist)
+extern void	(**tab_init(void))(t_arg arg, t_buffer *buff, va_list *valist)
 {
 	void	(**parray)(t_arg, t_buffer*, va_list*);
 	int		i;
@@ -48,12 +48,10 @@ static void	(**tab_init(void))(t_arg arg, t_buffer *buff, va_list *valist)
 ** PRINTS NEXT ARG
 */
 
-static int	printarg(t_arg arg, t_buffer *buf, va_list *ap)
+extern int	printarg(t_arg arg, t_buffer *buf, va_list *ap)
 {
 	static void	(**parray[255])(t_arg, t_buffer*, va_list*);
-	int			i;
 
-	i = 0;
 	if (*parray == NULL)
 	{
 		if (!(parray[0] = tab_init()))

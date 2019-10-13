@@ -6,7 +6,7 @@
 /*   By: jayache <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/17 10:14:17 by jayache           #+#    #+#             */
-/*   Updated: 2018/12/31 14:23:42 by jayache          ###   ########.fr       */
+/*   Updated: 2019/08/09 15:43:04 by jayache          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,8 @@ void	ft_btree_apply_infix(t_btree *root, void (*applyf)(void *))
 	if (!root)
 		return ;
 	if (root->left)
-		btree_apply_infix(root->left, applyf);
+		ft_btree_apply_infix(root->left, applyf);
 	applyf(root->item);
 	if (root->right)
-		btree_apply_infix(root->right, applyf);
+		ft_btree_apply_infix(root->right, applyf);
 }

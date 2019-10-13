@@ -6,11 +6,11 @@
 /*   By: jayache <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/07 19:27:17 by jayache           #+#    #+#             */
-/*   Updated: 2018/12/30 16:43:05 by jayache          ###   ########.fr       */
+/*   Updated: 2018/11/07 19:59:21 by jayache          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#	include "libft.h"
+#	include <string.h>
 
 char	*ft_strncpy(char *dst, const char *src, size_t len)
 {

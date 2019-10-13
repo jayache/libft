@@ -1,25 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_node_new.c                                      :+:      :+:    :+:   */
+/*   ft_is_dir.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jayache <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/01/01 11:05:19 by jayache           #+#    #+#             */
-/*   Updated: 2019/01/01 11:09:47 by jayache          ###   ########.fr       */
+/*   Created: 2018/12/26 17:58:44 by jayache           #+#    #+#             */
+/*   Updated: 2019/08/09 15:17:06 by jayache          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_node	*ft_graph_node_new(void *elem, size_t size)
+int		ft_is_dir(char *name)
 {
-	t_node *node;
+	struct stat	buf;
 
-	node = (t_node*)ft_memalloc(sizeof(t_node));
-	node->size = size;
-	node->elem = elem;
-	node->neighbors = ft_memalloc(1);
-	node->neighbors_number = 0;
-	return (node);
+	lstat(name, &buf);
+	if (errno)
+	{
+		errno = 0;
+		return (0);
+	}
+	return ((buf.st_mode & S_IFDIR) == S_IFDIR);
 }

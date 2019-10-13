@@ -6,35 +6,26 @@
 /*   By: jayache <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/01 17:37:48 by jayache           #+#    #+#             */
-/*   Updated: 2018/12/30 17:13:52 by jayache          ###   ########.fr       */
+/*   Updated: 2019/08/29 23:00:48 by jayache          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-/*
-** CREATES A MATRIX
-** THE MATRIX AS A HEIGHT OF -1
-** IN CASE OF FAILURE
-*/
-
 t_matrix	ft_matrix(int width, int height)
 {
 	t_matrix	matrix;
 	int			x;
-	int			y;
 
 	x = 0;
 	matrix.height = -1;
-	if (!(matrix.matrix = malloc(sizeof(int) * (size_t)height + 1)))
+	if (!(matrix.matrix = malloc(sizeof(int) * height + 1)))
 		return (matrix);
 	while (x < height)
 	{
-		y = -1;
-		if (!(matrix.matrix[x] = malloc(sizeof(int) * (size_t)width + 1)))
+		if (!(matrix.matrix[x] = malloc(sizeof(int) * width + 1)))
 			return (matrix);
-		while ((y++) < width)
-			matrix.matrix[x][y] = 0;
+		ft_bzero(matrix.matrix[x], width * sizeof(int));
 		++x;
 	}
 	matrix.height = height;

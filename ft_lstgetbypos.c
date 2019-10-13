@@ -1,27 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   btree_level_count.c                                :+:      :+:    :+:   */
+/*   ft_lstgetbypos.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jayache <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/08/17 14:20:28 by jayache           #+#    #+#             */
-/*   Updated: 2018/12/31 14:25:49 by jayache          ###   ########.fr       */
+/*   Created: 2019/08/23 22:51:21 by jayache           #+#    #+#             */
+/*   Updated: 2019/08/23 23:04:09 by jayache          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_btree_level_count(t_btree *root)
-{
-	int count_r;
-	int count_l;
+/*
+** RETURN THE N-MEMBER OF THE LIST
+*/
 
-	count_r = 1;
-	count_l = 1;
-	if (root->right)
-		count_r = count_r + btree_level_count(root->right);
-	if (root->left)
-		count_l = count_l + btree_level_count(root->left);
-	return (count_l > count_r ? count_l : count_r);
+t_list	*ft_lstgetbypos(t_list *lst, int pos)
+{
+	int	i;
+
+	i = 0;
+	if (pos <= 0)
+		return (lst);
+	while (i < pos && lst)
+	{
+		++i;
+		lst = lst->next;
+	}
+	return (lst);
 }

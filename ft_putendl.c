@@ -6,14 +6,13 @@
 /*   By: jayache <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/08 15:05:36 by jayache           #+#    #+#             */
-/*   Updated: 2018/11/08 15:06:58 by jayache          ###   ########.fr       */
+/*   Updated: 2019/08/18 18:21:28 by jayache          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #	include "libft.h"
 
-void	ft_putendl(char const *s)
+int	ft_putendl(char const *s)
 {
-	ft_putstr(s);
-	write(1, "\n", 1);
+	return (ft_putstr(s) + write(1, "\n", 1));
 }

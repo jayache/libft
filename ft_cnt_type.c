@@ -1,24 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   btree_apply_suffix.c                               :+:      :+:    :+:   */
+/*   ft_cnt_type.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jayache <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/08/17 10:10:24 by jayache           #+#    #+#             */
-/*   Updated: 2018/12/31 14:24:06 by jayache          ###   ########.fr       */
+/*   Created: 2018/12/26 14:13:21 by jayache           #+#    #+#             */
+/*   Updated: 2019/08/09 15:17:29 by jayache          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_btree_apply_suffix(t_btree *root, void (*applyf)(void *))
+int		ft_cnt_type(char **files, int size, int type)
 {
-	if (!root)
-		return ;
-	if (root->left)
-		btree_apply_suffix(root->left, applyf);
-	if (root->right)
-		btree_apply_suffix(root->right, applyf);
-	applyf(root->item);
+	struct stat buf;
+	int			cnt;
+
+	cnt = 0;
+	while (size)
+	{
+		size--;
+		lstat(files[size], &buf);
+		if (errno == 0 && (buf.st_mode & type) == (unsigned int)type)
+			cnt++;
+	}
+	return (cnt);
 }

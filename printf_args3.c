@@ -6,7 +6,7 @@
 /*   By: jayache <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/08 14:54:14 by jayache           #+#    #+#             */
-/*   Updated: 2018/12/30 18:11:41 by jayache          ###   ########.fr       */
+/*   Updated: 2018/12/12 11:31:30 by jayache          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,17 +22,16 @@ void	ft_printf_putlonguns(t_arg arg, t_buffer *buf, va_list *ap)
 {
 	uintmax_t	i;
 	int			s;
-	intmax_t	c;
 
 	s = 0;
 	i = (unsigned long)va_arg(*ap, long);
-	arg.str = ft_itoa_base((intmax_t)i, 10);
-	c = paddingspace(arg, buf);
-	c += paddingzeros(arg, buf);
+	arg.str = ft_itoa_base(i, 10);
+	i = paddingspace(arg, buf);
+	i += paddingzeros(arg, buf);
 	s = 0;
 	while (arg.str[s])
 		printf_putchar(buf, arg.str[s++]);
-	c += reverse_padding(arg, buf, (int)c + (int)ft_strlen(arg.str));
+	i += reverse_padding(arg, buf, i + ft_strlen(arg.str));
 	free_arg(&arg);
 }
 
@@ -71,7 +70,7 @@ void	ft_printf_putfloat(t_arg arg, t_buffer *buf, va_list *ap)
 	i += printf_putchar(buf, '.');
 	while (arg.str[s])
 		s += printf_putchar(buf, arg.str[s]);
-	i += reverse_padding(arg, buf, i + (int)ft_strlen(arg.str));
+	i += reverse_padding(arg, buf, i + ft_strlen(arg.str));
 	free_arg(&arg);
 }
 
@@ -82,12 +81,11 @@ void	ft_printf_putfd(t_arg arg, t_buffer *buf, va_list *ap)
 	int		*fds;
 
 	fd = buf->fd;
-	moment = ft_memalloc(((size_t)(fd.size + 1) * sizeof(int) + 1));
-	if (!(fds = ft_memalloc((size_t)(fd.size + 1) * sizeof(int) + 1)) ||
-	!moment)
+	moment = ft_memalloc(((fd.size + 1) * sizeof(int) + 1));
+	if (!(fds = ft_memalloc((fd.size + 1) * sizeof(int) + 1)) || !moment)
 		exit(1);
-	ft_memcpy(moment, fd.moment, (size_t)fd.size + 1);
-	ft_memcpy(fds, fd.fd, (size_t)fd.size + 1);
+	ft_memcpy(moment, fd.moment, fd.size + 1);
+	ft_memcpy(fds, fd.fd, fd.size + 1);
 	free(fd.moment);
 	free(fd.fd);
 	fd.fd = fds;
@@ -105,18 +103,17 @@ void	ft_printf_putbinary(t_arg arg, t_buffer *buf, va_list *ap)
 {
 	uintmax_t	i;
 	int			s;
-	intmax_t	c;
 
 	i = take_unsigned_arg(arg, ap);
-	arg.str = ft_itoa_base((intmax_t)i, 2);
-	c = paddingspace(arg, buf);
+	arg.str = ft_itoa_base(i, 2);
+	i = paddingspace(arg, buf);
 	if (arg.precision == -1)
-		c += paddingzeros(arg, buf);
+		i += paddingzeros(arg, buf);
 	s = 0;
 	while (arg.str[s])
 		printf_putchar(buf, arg.str[s++]);
 	while (s++ < arg.precision && arg.precision != -1)
 		printf_putchar(buf, '0');
-	c += reverse_padding(arg, buf, (int)c + (int)ft_strlen(arg.str));
+	i += reverse_padding(arg, buf, i + ft_strlen(arg.str));
 	free_arg(&arg);
 }
