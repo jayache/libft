@@ -6,7 +6,7 @@
 #    By: jayache <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/06 19:39:42 by jayache           #+#    #+#              #
-#    Updated: 2019/09/14 18:27:44 by jayache          ###   ########.fr        #
+#    Updated: 2019/10/16 10:51:00 by jayache          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -33,7 +33,8 @@ NAME = libft.a
 BASE = $(MEM) $(STR) $(IS) $(PUT) ft_toupper.c ft_tolower.c ft_error.c
 
 LST = ft_lstnew.c ft_lstdelone.c ft_lstdel.c ft_lstadd.c ft_lstiter.c \
-	  ft_lstmap.c  ft_lst_append.c ft_lstgetbypos.c ft_lstnew_no_copy.c
+	  ft_lstmap.c  ft_lst_append.c ft_lstgetbypos.c ft_lstnew_no_copy.c \
+	  ft_sorted_list_insert.c
 VECTOR2= ft_vector2.c ft_vector2_normalize.c ft_vector2_magnitude.c \
 		 ft_vector2_multiply.c ft_vector2_add.c ft_vector2_angle.c \
 		 ft_vector2_rangle.c ft_vector2_dot.c
