@@ -6,7 +6,7 @@
 /*   By: jayache <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/06 19:44:10 by jayache           #+#    #+#             */
-/*   Updated: 2019/09/14 18:27:32 by jayache          ###   ########.fr       */
+/*   Updated: 2019/11/11 11:27:10 by jayache          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,23 @@
 #	include <fcntl.h>
 
 #	define ERROR_MALLOC "Malloc returned 0\n"
+
+/*
+** COMPLEX NUMBER
+*/
+
+typedef struct		s_complex
+{
+	double	real;
+	double	i;
+}					t_complex;
+
+typedef struct		s_color
+{
+	unsigned char	red;
+	unsigned char	green;
+	unsigned char	blue;
+}					t_color;
 
 typedef struct		s_list
 {
@@ -234,4 +251,21 @@ t_btree				*ft_btree_create_node(void *item);
 void				ft_btree_insert_data(t_btree **root, void *item,
 		int (*cmpf)(void *, void *));
 
+/*
+** COLOR FUNCTIONS
+*/
+
+t_color				ft_color(unsigned char red, unsigned char green,
+		unsigned char blue);
+t_color				ft_color_get_gradient(t_color start, t_color end,
+		double step);
+
+/*
+** COMPLEX NUMBERS FUNCTIONS
+*/
+
+t_complex			ft_complex(double real, double i);
+double				ft_complex_abs(t_complex c);
+t_complex			ft_complex_sum(t_complex a, t_complex b);
+t_complex			ft_complex_product(t_complex a, t_complex b);
 #	endif
