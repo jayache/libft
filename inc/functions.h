@@ -6,7 +6,7 @@
 /*   By: jayache <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/02 11:24:35 by jayache           #+#    #+#             */
-/*   Updated: 2019/11/13 11:34:14 by jayache          ###   ########.fr       */
+/*   Updated: 2019/11/14 10:41:06 by jayache          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,16 @@
 # define FUNCTIONS_H
 
 void	fractal(t_screen *screen);
-t_color	create_color(t_screen *screen, double proximity);
 void	zoom_plus(t_screen *screen, double x, double y);
 void	zoom_minus(t_screen *screen, double x, double y);
+
+/*
+** COLOR FUNCTIONS
+** GOAL: GENERATE A COLOR FROM PIXEL DATA TO COLOR THE FRACTAL
+*/
+
+t_color	create_color(t_screen *screen, double proximity);
+t_color	create_color_smooth(t_screen *screen, double proximity);
 
 /*
 ** PRINT COMMANDLINE

@@ -28,6 +28,7 @@ INC	/Users/jayache/Projets/fractol/Makefile	/^INC := $(addprefix $(INCDIR), $(I)
 INCDIR	/Users/jayache/Projets/fractol/Makefile	/^INCDIR = inc\/$/;"	m
 INCLUDES	/Users/jayache/Projets/fractol/libft/Makefile	/^INCLUDES = \/usr\/local\/include$/;"	m
 IS	/Users/jayache/Projets/fractol/libft/Makefile	/^IS = ft_isalpha.c ft_iswhitespace.c ft_islower.c ft_isupper.c ft_isdigit.c \\$/;"	m
+KEY_C	/Users/jayache/Projets/fractol/inc/fractol.h	/^# define KEY_C	/;"	d
 KEY_DOWN	/Users/jayache/Projets/fractol/inc/fractol.h	/^# define KEY_DOWN	/;"	d
 KEY_ESCAPE	/Users/jayache/Projets/fractol/inc/fractol.h	/^# define KEY_ESCAPE	/;"	d
 KEY_F	/Users/jayache/Projets/fractol/inc/fractol.h	/^# define KEY_F	/;"	d
@@ -36,6 +37,8 @@ KEY_MINUS	/Users/jayache/Projets/fractol/inc/fractol.h	/^# define KEY_MINUS	/;"	
 KEY_PLUS	/Users/jayache/Projets/fractol/inc/fractol.h	/^# define KEY_PLUS	/;"	d
 KEY_RIGHT	/Users/jayache/Projets/fractol/inc/fractol.h	/^# define KEY_RIGHT	/;"	d
 KEY_UP	/Users/jayache/Projets/fractol/inc/fractol.h	/^# define KEY_UP	/;"	d
+KEY_X	/Users/jayache/Projets/fractol/inc/fractol.h	/^# define KEY_X	/;"	d
+KEY_Z	/Users/jayache/Projets/fractol/inc/fractol.h	/^# define KEY_Z	/;"	d
 L	/Users/jayache/Projets/fractol/Makefile	/^L = libft.a$/;"	m
 LIB	/Users/jayache/Projets/fractol/Makefile	/^LIB := $(addprefix $(LIBDIR), $(L))$/;"	m
 LIBDIR	/Users/jayache/Projets/fractol/Makefile	/^LIBDIR = libft\/$/;"	m
@@ -58,7 +61,7 @@ OBJS	/Users/jayache/Projets/fractol/libft/Makefile	/^OBJS = $(SRCS:.c=.o)$/;"	m
 PRINTF	/Users/jayache/Projets/fractol/libft/Makefile	/^PRINTF= printf.c printf_args.c printf_args2.c printf_args3.c \\$/;"	m
 PUT	/Users/jayache/Projets/fractol/libft/Makefile	/^PUT = ft_putchar.c ft_putstr.c ft_putnbr.c ft_putchar_fd.c ft_putstr_fd.c \\$/;"	m
 RIGHTCLICK	/Users/jayache/Projets/fractol/inc/fractol.h	/^# define RIGHTCLICK	/;"	d
-S	/Users/jayache/Projets/fractol/Makefile	/^S = helper_update_screen.c hooks.c draw.c handle_colors.c ft_draw_point.c fractals.c$/;"	m
+S	/Users/jayache/Projets/fractol/Makefile	/^S = help.c helper_update_screen.c hooks.c draw.c handle_colors.c ft_draw_point.c fractals.c$/;"	m
 SCROLL_DOWN	/Users/jayache/Projets/fractol/inc/fractol.h	/^# define SCROLL_DOWN	/;"	d
 SCROLL_UP	/Users/jayache/Projets/fractol/inc/fractol.h	/^# define SCROLL_UP	/;"	d
 SRC	/Users/jayache/Projets/fractol/Makefile	/^SRC := $(addprefix $(SRCDIR), $(S))$/;"	m
@@ -80,7 +83,6 @@ blue	/Users/jayache/Projets/fractol/libft/libft.h	/^	unsigned char	blue;$/;"	m	s
 buffer	/Users/jayache/Projets/fractol/libft/ft_printf.h	/^	char		*buffer;$/;"	m	struct:s_buffer
 bufx	/Users/jayache/Projets/fractol/libft/ft_printf.h	/^	int			bufx;$/;"	m	struct:s_buffer
 calc_blank_space	/Users/jayache/Projets/fractol/libft/printf_essentials.c	/^int		calc_blank_space(t_arg arg)$/;"	f
-close_color	/Users/jayache/Projets/fractol/inc/struct.h	/^	t_color	close_color;$/;"	m	struct:s_screen
 color_table	/Users/jayache/Projets/fractol/libft/printf_arg_color.c	/^static char	*color_table(t_arg arg)$/;"	f	file:
 color_table2	/Users/jayache/Projets/fractol/libft/printf_arg_color.c	/^static char	*color_table2(t_arg arg)$/;"	f	file:
 content	/Users/jayache/Projets/fractol/libft/libft.h	/^	void			*content;$/;"	m	struct:s_list
@@ -89,11 +91,11 @@ conversion	/Users/jayache/Projets/fractol/libft/ft_printf.h	/^	char		*conversion
 copyback	/Users/jayache/Projets/fractol/libft/ft_memmove.c	/^static void		*copyback(void *dst, const void *src, size_t len)$/;"	f	file:
 copyfront	/Users/jayache/Projets/fractol/libft/ft_memmove.c	/^static void		*copyfront(void *dst, const void *src, size_t len)$/;"	f	file:
 create_color	/Users/jayache/Projets/fractol/src/handle_colors.c	/^t_color	create_color(t_screen *screen, double proximity)$/;"	f
+create_color_smooth	/Users/jayache/Projets/fractol/src/handle_colors.c	/^t_color	create_color_smooth(t_screen *screen, double proximity)$/;"	f
 details	/Users/jayache/Projets/fractol/inc/struct.h	/^	int		details;$/;"	m	struct:s_screen
 draw_everything	/Users/jayache/Projets/fractol/src/draw.c	/^void	draw_everything(t_screen *screen)$/;"	f
 draw_single_pixel	/Users/jayache/Projets/fractol/src/draw.c	/^void	draw_single_pixel(t_screen *screen, t_vector2 pos, int prox)$/;"	f
 e_fractal	/Users/jayache/Projets/fractol/inc/struct.h	/^typedef enum	e_fractal$/;"	g
-far_color	/Users/jayache/Projets/fractol/inc/struct.h	/^	t_color	far_color;$/;"	m	struct:s_screen
 fd	/Users/jayache/Projets/fractol/libft/ft_printf.h	/^	int			*fd;$/;"	m	struct:s_fd
 fd	/Users/jayache/Projets/fractol/libft/ft_printf.h	/^	t_fd		fd;$/;"	m	struct:s_buffer
 flags	/Users/jayache/Projets/fractol/libft/ft_printf.h	/^	char		*flags;$/;"	m	struct:s_arg
@@ -263,6 +265,7 @@ green	/Users/jayache/Projets/fractol/libft/libft.h	/^	unsigned char	green;$/;"	m
 hashflag	/Users/jayache/Projets/fractol/libft/printf_flags.c	/^int	hashflag(t_arg arg, t_buffer *buf, char *str)$/;"	f
 height	/Users/jayache/Projets/fractol/inc/struct.h	/^	int		height;$/;"	m	struct:s_screen
 height	/Users/jayache/Projets/fractol/libft/libft.h	/^	int				height;$/;"	m	struct:s_matrix
+help	/Users/jayache/Projets/fractol/src/help.c	/^int			help(void)$/;"	f
 hook_keys	/Users/jayache/Projets/fractol/src/hooks.c	/^int			hook_keys(int key, void *screen)$/;"	f
 hook_motion	/Users/jayache/Projets/fractol/src/hooks.c	/^int			hook_motion(int x, int y, void *screen)$/;"	f
 hook_mouse	/Users/jayache/Projets/fractol/src/hooks.c	/^int			hook_mouse(int button, int x, int y, void *screen)$/;"	f
@@ -299,6 +302,7 @@ precision	/Users/jayache/Projets/fractol/libft/ft_printf.h	/^	int			precision;$/
 print_arg_hexa	/Users/jayache/Projets/fractol/libft/printf_print_arg.c	/^int	print_arg_hexa(t_arg arg, t_buffer *buf, char *str)$/;"	f
 print_arg_nbr	/Users/jayache/Projets/fractol/libft/printf_print_arg.c	/^int	print_arg_nbr(t_arg arg, t_buffer *buf, char *str)$/;"	f
 print_arg_oct	/Users/jayache/Projets/fractol/libft/printf_print_arg.c	/^int	print_arg_oct(t_arg arg, t_buffer *buf, char *str)$/;"	f
+print_keys	/Users/jayache/Projets/fractol/src/help.c	/^void		print_keys(void)$/;"	f
 printarg	/Users/jayache/Projets/fractol/libft/printf.c	/^extern int	printarg(t_arg arg, t_buffer *buf, va_list *ap)$/;"	f
 printf_putchar	/Users/jayache/Projets/fractol/libft/printf_essentials.c	/^int		printf_putchar(t_buffer *buf, char c)$/;"	f
 printf_putuchar	/Users/jayache/Projets/fractol/libft/printf_essentials.c	/^int		printf_putuchar(t_buffer *buf, int c)$/;"	f
@@ -327,6 +331,7 @@ size	/Users/jayache/Projets/fractol/libft/ft_printf.h	/^	int			size;$/;"	m	struc
 size	/Users/jayache/Projets/fractol/libft/ft_printf.h	/^	int			size;$/;"	m	struct:s_buffer
 size	/Users/jayache/Projets/fractol/libft/ft_printf.h	/^	long		size;$/;"	m	struct:s_fd
 sizenextword	/Users/jayache/Projets/fractol/libft/ft_strsplit.c	/^static int		sizenextword(char const *s, char c, int pos)$/;"	f	file:
+smooth_color	/Users/jayache/Projets/fractol/inc/struct.h	/^	char	smooth_color;$/;"	m	struct:s_screen
 str	/Users/jayache/Projets/fractol/libft/ft_printf.h	/^	char		*str;$/;"	m	struct:s_arg
 strjjoin	/Users/jayache/Projets/fractol/libft/get_next_line.c	/^static char		*strjjoin(char *s1, char *s2, int x, int cut)$/;"	f	file:
 strpadding	/Users/jayache/Projets/fractol/libft/printf_flags2.c	/^int	strpadding(t_arg arg, t_buffer *buf, int size)$/;"	f

@@ -6,7 +6,7 @@
 /*   By: jayache <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/02 10:36:03 by jayache           #+#    #+#             */
-/*   Updated: 2019/11/13 11:26:20 by jayache          ###   ########.fr       */
+/*   Updated: 2019/11/14 10:53:47 by jayache          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,8 +28,7 @@ t_screen	new_screen(int width, int height)
 	screen.zoom = 100;
 	screen.top = -height / 2.0 / screen.zoom;
 	screen.left = -width / 2.0 / screen.zoom;
-	screen.close_color = ft_color(0, 0, 255);
-	screen.far_color = ft_color(0, 255, 0);
+	screen.smooth_color = 0;
 	return (screen);
 }
 
@@ -67,6 +66,7 @@ int			main(int ac, char **av)
 	screen.fractal = get_fractal(av[1]);
 	if (screen.fractal == -1)
 		return (help());
+	print_keys();
 	if (ac == 4)
 		screen = new_screen_custom_size(av);
 	else

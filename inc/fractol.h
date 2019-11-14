@@ -6,7 +6,7 @@
 /*   By: jayache <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/02 10:31:42 by jayache           #+#    #+#             */
-/*   Updated: 2019/11/13 11:31:50 by jayache          ###   ########.fr       */
+/*   Updated: 2019/11/14 10:49:38 by jayache          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,7 @@
 # define KEY_F			3
 # define KEY_Z			6
 # define KEY_X			7
+# define KEY_C			8
 
 # define SCROLL_UP		5
 # define SCROLL_DOWN	4

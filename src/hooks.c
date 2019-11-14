@@ -6,7 +6,7 @@
 /*   By: jayache <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/06 11:02:32 by jayache           #+#    #+#             */
-/*   Updated: 2019/11/13 11:34:42 by jayache          ###   ########.fr       */
+/*   Updated: 2019/11/14 10:48:06 by jayache          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,8 @@ static void	update_screen(t_screen *screen, int key)
 		screen->details += 3;
 	else if (key == KEY_X)
 		screen->details -= 3;
+	else if (key == KEY_C)
+		screen->smooth_color = !screen->smooth_color;
 }
 
 int			hook_keys(int key, void *screen)

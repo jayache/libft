@@ -6,7 +6,7 @@
 /*   By: jayache <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/13 11:26:23 by jayache           #+#    #+#             */
-/*   Updated: 2019/11/13 11:33:28 by jayache          ###   ########.fr       */
+/*   Updated: 2019/11/14 10:52:40 by jayache          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,4 +27,5 @@ void		print_keys(void)
 	ft_printf("Right Click: Lock current fractal\n");
 	ft_printf("Escape: Quit program\n");
 	ft_printf("Z/X: Change level of details (more is slower)\n");
+	ft_printf("C: Toggle smooth coloring (slightly slower)\n");
 }

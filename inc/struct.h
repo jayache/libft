@@ -6,7 +6,7 @@
 /*   By: jayache <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/02 11:14:35 by jayache           #+#    #+#             */
-/*   Updated: 2019/11/12 10:31:30 by jayache          ###   ########.fr       */
+/*   Updated: 2019/11/14 10:46:22 by jayache          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,8 +43,7 @@ typedef struct	s_screen
 	double	zoom;
 	double	argx;
 	double	argy;
-	t_color	close_color;
-	t_color	far_color;
+	char	smooth_color;
 }				t_screen;
 
 #endif
