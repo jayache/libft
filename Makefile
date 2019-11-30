@@ -6,7 +6,7 @@
 #    By: jayache <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/06 19:39:42 by jayache           #+#    #+#              #
-#    Updated: 2019/11/11 10:36:20 by jayache          ###   ########.fr        #
+#    Updated: 2019/10/16 10:51:00 by jayache          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -49,11 +49,8 @@ MATRIX= ft_matrix.c ft_matrix_product.c ft_matrix_free.c \
 		ft_vector4_to_matrix.c ft_vector3_to_matrix.c ft_matrix_identity.c \
 		ft_print_matrix.c ft_matrix_translation.c ft_matrix_ry.c \
 		ft_matrix_diag_symetrie.c ft_matrix_projection.c
-
-COMPLEX= ft_complex.c ft_complex_abs.c ft_complex_product.c ft_complex_sum.c
-
-MATH= $(VECTOR2) $(VECTOR3) $(VECTOR4) $(MATRIX) $(COMPLEX) ft_atoi.c ft_abs.c \
-	 ft_sign.c ft_itoa_base.c ft_nblen.c ft_itoa.c ft_min.c ft_pow.c 
+MATH= $(VECTOR2) $(VECTOR3) $(VECTOR4) $(MATRIX) ft_atoi.c ft_abs.c ft_sign.c \
+	 ft_itoa_base.c ft_nblen.c ft_itoa.c ft_min.c ft_pow.c 
 
 PRINTF= printf.c printf_args.c printf_args2.c printf_args3.c \
 		printf_arg_color.c printf_arg_change.c printf_flags2.c printf_flags.c printf_free.c \
@@ -65,9 +62,7 @@ DIR= ft_is_dot.c ft_is_hidden.c ft_cnt_type.c ft_is_dir.c ft_exists.c
 BTREE= ft_btree_apply_prefix.c ft_btree_apply_defix.c ft_btree_apply_infix.c ft_btree_apply_suffix.c ft_btree_create_node.c \
 	   ft_btree_insert_data.c ft_btree_free.c
 
-COLOR= ft_color.c ft_color_get_gradient.c
-
-SRCS = $(BASE) $(LST) $(MATH) $(PRINTF) $(COLOR)  get_next_line.c $(DIR) $(BTREE)
+SRCS = $(BASE) $(LST) $(MATH) $(PRINTF)  get_next_line.c $(DIR) $(BTREE)
 INCLUDES = /usr/local/include
 OBJS = $(SRCS:.c=.o)
 COUNTER= 
@@ -76,7 +71,6 @@ FLAG = -Wall -Wextra -g3 -O3
 
 define tests
 $(if $(filter $(1), ft_strlen), @echo "\n\033[32mCOMPILING STRING FUNCTIONS")
-$(if $(filter $(1), ft_complex), @echo "\n\033[32mCOMPILING COMPLEX NUMBER FUNCTIONS")
 $(if $(filter $(1), ft_memccpy), @echo "\n\033[33mCOMPILING MEM FUNCTIONS")
 $(if $(filter $(1), ft_isalpha), @echo "\n\033[34mCOMPILING EVAL FUNCTIONS")
 $(if $(filter $(1), ft_putchar), @echo "\n\033[35mCOMPILING PRINT FUNCTIONS")
