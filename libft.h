@@ -24,6 +24,7 @@
 #	include <fcntl.h>
 
 #	define ERROR_MALLOC "Malloc returned 0\n"
+
 #   ifdef __linux__
     typedef __intmax_t intmax_t;
     typedef unsigned long long uintmax_t;
