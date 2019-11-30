@@ -1,0 +1,4 @@
+unit_test_lib/
+*.o
+*.d
+*.a

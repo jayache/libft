@@ -51,7 +51,7 @@ MATRIX= ft_matrix.c ft_matrix_product.c ft_matrix_free.c \
 		ft_matrix_diag_symetrie.c ft_matrix_projection.c
 MATH= $(VECTOR2) $(VECTOR3) $(VECTOR4) $(MATRIX) ft_atoi.c ft_abs.c ft_sign.c \
 	 ft_itoa_base.c ft_nblen.c ft_itoa.c ft_min.c ft_pow.c 
-
+HASHTABLE= ft_hashtable_new.c ft_hashtable_sub.c ft_hashtable_free.c ft_hashtable_search.c ft_hashtable_add.c ft_hashtable_hash.c ft_hashnode_new.c
 PRINTF= printf.c printf_args.c printf_args2.c printf_args3.c \
 		printf_arg_color.c printf_arg_change.c printf_flags2.c printf_flags.c printf_free.c \
 		printf_essentials.c printf_parser.c printf_print_arg.c printf_write.c \
@@ -62,9 +62,12 @@ DIR= ft_is_dot.c ft_is_hidden.c ft_cnt_type.c ft_is_dir.c ft_exists.c
 BTREE= ft_btree_apply_prefix.c ft_btree_apply_defix.c ft_btree_apply_infix.c ft_btree_apply_suffix.c ft_btree_create_node.c \
 	   ft_btree_insert_data.c ft_btree_free.c
 
-SRCS = $(BASE) $(LST) $(MATH) $(PRINTF)  get_next_line.c $(DIR) $(BTREE)
+SRCS = $(BASE) $(LST) $(MATH) $(PRINTF)  get_next_line.c $(DIR) $(BTREE) $(HASHTABLE)
 INCLUDES = /usr/local/include
-OBJS = $(SRCS:.c=.o)
+OBJDIR = obj/
+OBJ = $(SRCS:.c=.o)
+OBJS = $(addprefix $(OBJDIR), $(OBJ))
+DEP = $(OBJS:%.o=%.d)
 COUNTER= 
 NB = $(words $(SRCS))
 FLAG = -Wall -Wextra -g3 -O3
@@ -80,6 +83,7 @@ $(if $(filter $(1), ft_lstnew), @echo "\n\033[38mCOMPILING LIST FUNCTIONS")
 $(if $(filter $(1), ft_is_dot), @echo "\n\033[38mCOMPILING DIR FUNCTIONS")
 $(if $(filter $(1), ft_btree_apply_prefix), @echo "\n\033[32mCOMPILING BTREE FUNCTIONS")
 $(if $(filter $(1), printf), @echo "\n\033[38mCOMPILING PRINTF")
+$(if $(filter $(1), ft_hashtable_new), @echo "\n\033[38mCOMPILING HASHTABLE")
 endef
 
 all:
@@ -89,9 +93,9 @@ all:
 error:
 	@echo "\033[31mThe Makefile failed to make ! You failed !"
 
-%.o: %.c
+$(OBJDIR)%.o: %.c
 	$(call tests, $*)
-	@gcc $(FLAG) -c $<
+	@gcc -MMD $(FLAG) -c $< -o $@
 	$(eval COUNTER += x)
 	@echo "\b\b\b\b\b\b\b\b\b\b$(words $(COUNTER)) / $(NB)\c"
 
@@ -103,11 +107,13 @@ $(NAME): $(OBJS)
 
 clean:
 	@echo "\033[35mREMOVING OBJECT FILES."
-	@rm -rf *.o
-	@rm -rf *.gch
+	@rm -rf $(OBJS)
+	@rm -rf $(DEP)
 
 fclean: clean
 	@echo "\033[35mREMOVING LIBRARY."
 	@rm -rf $(NAME)
 
 re: fclean all
+
+-include $(DEP)

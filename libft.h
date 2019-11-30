@@ -37,6 +37,18 @@ typedef struct		s_list
 	struct s_list	*next;
 }					t_list;
 
+typedef struct      s_hashtable
+{
+    size_t  size;
+    t_list  **content;
+}                   t_hashtable;
+
+typedef struct      s_hashnode
+{
+    char    *key;
+    void    *content;
+}                   t_hashnode;
+
 typedef struct		s_btree
 {
 	void			*item;
@@ -242,5 +254,18 @@ void				ft_btree_free(t_btree *root);
 t_btree				*ft_btree_create_node(void *item);
 void				ft_btree_insert_data(t_btree **root, void *item,
 		int (*cmpf)(void *, void *));
+
+/*
+** HASHTABLE
+*/
+
+t_hashtable         *ft_hashtable_new(size_t size);
+size_t              ft_hashtable_hash(const char *key);
+void                ft_hashtable_add(t_hashtable *table, const char *index,
+        void *value);
+void                ft_hashtable_sub(t_hashtable *table, const char *index);
+t_hashnode          *ft_hashnode_new(char *index, void *value);
+void                *ft_hashtable_search(t_hashtable *table, const char *index);
+void                ft_hashtable_free(t_hashtable *table);
 
 #	endif

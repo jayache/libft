@@ -20,6 +20,7 @@ void	ft_sorted_list_insert(t_list **begin_list, void *data, int (*cmp)())
 
 	inserted = 0;
 	elem = *begin_list;
+    temp = NULL;
 	while (elem && !inserted)
 	{
 		if (cmp(elem->content, data) >= 0)
