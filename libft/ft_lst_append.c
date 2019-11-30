@@ -12,12 +12,15 @@
 
 #include "libft.h"
 
-void	ft_lst_append(t_list *root, t_list *append)
+void	ft_lst_append(t_list **root, t_list *append)
 {
-	while (root && root->next)
-		root = root->next;
-	if (!root)
-		root = append;
-	else
-		root->next = append;
+    t_list *head;
+
+    head = *root;
+    while (head && head->next)
+        head = head->next;
+    if (!head)
+        *root = append;
+    else
+        head->next = append;
 }

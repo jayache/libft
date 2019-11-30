@@ -19,8 +19,8 @@ t_vector3	ft_vector3_normalize(t_vector3 vec)
 	mag = ft_vector3_magnitude(vec);
 	if (mag == 0)
 		return (vec);
-	vec.x = vec.x /= mag;
-	vec.y = vec.y /= mag;
-	vec.z = vec.z /= mag;
+	vec.x = vec.x / mag;
+	vec.y = vec.y / mag;
+	vec.z = vec.z / mag;
 	return (vec);
 }

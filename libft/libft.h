@@ -24,6 +24,10 @@
 #	include <fcntl.h>
 
 #	define ERROR_MALLOC "Malloc returned 0\n"
+#   ifdef __linux__
+    typedef __intmax_t intmax_t;
+    typedef unsigned long long uintmax_t;
+#   endif
 
 /*
 ** COMPLEX NUMBER
@@ -171,7 +175,11 @@ int					ft_putendl_fd(const char *s, int fd);
 void				ft_lstdel(t_list **alst, void (*del)(void *, size_t));
 void				ft_lstdelone(t_list **alst, void (*del)(void *, size_t));
 void				ft_lstadd(t_list **alst, t_list *new);
-void				ft_lst_append(t_list *root, t_list *append);
+void				ft_lst_append(t_list **root, t_list *append);
+void				ft_lstdelbyval(t_list **root, void *val, int (*cmp)(),
+        void (*del)());
+void				ft_lst_sorted_insert(t_list **root, t_list *add,
+        int (*cmp)());
 void				ft_lstiter(t_list *lst, void (*f)(t_list *elem));
 t_list				*ft_lstnew(void const *content, size_t content_size);
 t_list				*ft_lstnew_no_copy(void *content, size_t content_size);

@@ -12,10 +12,16 @@
 
 #include "libft.h"
 
+/*
+** PRINT AN ERROR MESSAGE AND EXIT PROGRAM
+*/
+
 void	ft_error(const char *const str)
 {
-	write(2, "Fatal error: ", 13);
-	if (str)
-		write(2, str, ft_strlen(str));
-	exit(1);
+    int nb;
+
+	nb = write(2, "Fatal error: ", 13);
+	if (str && nb != 0)
+		nb += write(2, str, ft_strlen(str));
+    exit(1);
 }
