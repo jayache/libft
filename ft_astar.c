@@ -6,7 +6,7 @@
 /*   By: jayache <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/08 10:02:56 by jayache           #+#    #+#             */
-/*   Updated: 2019/12/08 10:19:37 by jayache          ###   ########.fr       */
+/*   Updated: 2019/12/08 10:55:38 by jayache          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,7 @@ static void	**reconstruct_path(t_hashtable *camefrom, t_algo_input *algo,
 	return (path);
 }
 
-static void	process_neighbor(t_algo_data *data, t_algo_input *algo,
+static void		process_neighbor(t_algo_data *data, t_algo_input *algo,
 		void *neighbor, void *current)
 {
 	size_t	tg;
@@ -70,7 +70,8 @@ static void	process_neighbor(t_algo_data *data, t_algo_input *algo,
 	free(neighbor);
 }
 
-static void	*astar_loop(t_algo_data *data, t_algo_input *algo)
+static void		*astar_loop(t_algo_data *data, t_algo_input *algo,
+		t_algo_output *out)
 {
 	size_t	i;
 	void	*current;
@@ -93,14 +94,17 @@ static void	*astar_loop(t_algo_data *data, t_algo_input *algo)
 	save = data->openset->next;
 	ft_lstdelone(&(data->openset), free_p);
 	data->openset = save;
+	out->otime = ft_max(out->otime, ft_lst_size(data->openset));
 	return (0);
 }
 
-void		**ft_astar(void *start, t_algo_input *algo)
+t_algo_output	ft_astar(void *start, t_algo_input *algo)
 {
-	t_algo_data	data;
-	void		**path;
+	t_algo_data		data;
+	void			**path;
+	t_algo_output	out;
 
+	ft_bzero(&out, sizeof(t_algo_output));
 	data.openset = ft_lstnew_no_copy(start, sizeof(start));
 	data.camefrom = ft_hashtable_new(10000, NULL);
 	data.gscore = ft_hashtable_new(10000, (void*)-1);
@@ -109,16 +113,16 @@ void		**ft_astar(void *start, t_algo_input *algo)
 			(void*)algo->heuristic(start));
 	while (data.openset)
 	{
-		if ((path = astar_loop(&data, algo)))
+		if ((path = astar_loop(&data, algo, &out)))
 		{
-			path = reconstruct_path(data.camefrom, algo, path);
+			out.path = reconstruct_path(data.camefrom, algo, path);
 			ft_hashtable_clean(data.camefrom);
 			ft_hashtable_free(data.gscore);
 			ft_hashtable_free(data.fscore);
 			ft_lstdel(&(data.openset->next), free_p);
 			free(data.openset);
-			return (path);
+			return (out);
 		}
 	}
-	return (0);
+	return (out);
 }

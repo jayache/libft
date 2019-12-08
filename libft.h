@@ -6,7 +6,7 @@
 /*   By: jayache <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/06 19:44:10 by jayache           #+#    #+#             */
-/*   Updated: 2019/12/08 10:33:08 by jayache          ###   ########.fr       */
+/*   Updated: 2019/12/08 11:01:54 by jayache          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -107,6 +107,9 @@ typedef struct		s_algo_data
 
 typedef struct      s_algo_output
 {
+	size_t			otime;
+	size_t			osize;
+	void			**path;
 }                   t_algo_output;
 
 int					ft_toupper(int c);
@@ -171,6 +174,7 @@ int					ft_strisnumeric(const char *s);
 size_t				ft_cntspback(char const *s, char const c);
 size_t				ft_cntspfront(char const *s, char const c);
 int					ft_sign(double n);
+long				ft_max(long a, long b);
 unsigned long		ft_abs(int nb);
 int					ft_nblen(int nb);
 
@@ -192,6 +196,13 @@ int					ft_putstr_fd(char const *s, int fd);
 void				ft_putnbr(int nb);
 int					ft_putendl_fd(const char *s, int fd);
 
+int					get_next_line(int fd, char **line);
+int					ft_printf(const char *str, ...);
+
+/*
+** LIST FUNCTION
+*/
+
 void				ft_lstdel(t_list **alst, void (*del)(void *, size_t));
 void				ft_lstdelone(t_list **alst, void (*del)(void *, size_t));
 void				ft_lstadd(t_list **alst, t_list *new);
@@ -206,9 +217,7 @@ t_list				*ft_lstnew_no_copy(void *content, size_t content_size);
 t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
 t_list				*ft_lstgetbypos(t_list *lst, int pos);
 int					ft_lst_exist(t_list *root, void *data, int (cmp()));
-
-int					get_next_line(int fd, char **line);
-int					ft_printf(const char *str, ...);
+size_t				ft_lst_size(t_list	*root);
 
 /*
 ** MATRIX FUNCTION
@@ -293,10 +302,11 @@ t_hashnode			*ft_hashnode_new(char *index, void *value);
 void				*ft_hashtable_search(t_hashtable *table, const char *index);
 void				ft_hashtable_clean(t_hashtable *table);
 void				ft_hashtable_free(t_hashtable *table);
+void				ft_hashtable_size(t_hashtable *table);
 
 /*
 ** ALGOS
 */
 
-void				**ft_astar(void *start, t_algo_input *algo);
+t_algo_output		ft_astar(void *start, t_algo_input *algo);
 #	endif

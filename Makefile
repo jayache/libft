@@ -6,7 +6,7 @@
 #    By: jayache <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/06 19:39:42 by jayache           #+#    #+#              #
-#    Updated: 2019/10/16 10:51:00 by jayache          ###   ########.fr        #
+#    Updated: 2019/12/08 10:53:09 by jayache          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -91,7 +91,7 @@ $(if $(filter $(1), ft_astar), @echo "\n\033[38mCOMPILING ALGO FUNCTIONS")
 endef
 
 all:
-	@pkdir -p obj
+	@mkdir -p obj
 	@echo "$(words $(COUNTER)) / $(NB)\c"
 	@make $(NAME) || make error
 
