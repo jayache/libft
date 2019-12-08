@@ -6,7 +6,7 @@
 /*   By: jayache <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/08/22 14:23:00 by jayache           #+#    #+#             */
-/*   Updated: 2019/10/16 10:50:36 by jayache          ###   ########.fr       */
+/*   Updated: 2019/12/08 09:52:46 by jayache          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ void	ft_sorted_list_insert(t_list **begin_list, void *data, int (*cmp)())
 
 	inserted = 0;
 	elem = *begin_list;
-    temp = NULL;
+	temp = NULL;
 	while (elem && !inserted)
 	{
 		if (cmp(elem->content, data) >= 0)

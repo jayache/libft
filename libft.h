@@ -6,7 +6,7 @@
 /*   By: jayache <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/06 19:44:10 by jayache           #+#    #+#             */
-/*   Updated: 2019/09/14 18:27:32 by jayache          ###   ########.fr       */
+/*   Updated: 2019/12/08 10:13:47 by jayache          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -96,6 +96,14 @@ typedef struct      s_algo_input
     int             (*goal_f)(void *data);
     void            *goal_p;
 }                   t_algo_input;
+
+typedef struct		s_algo_data
+{
+	t_hashtable		*gscore;
+	t_hashtable		*fscore;
+	t_hashtable		*camefrom;
+	t_list			*openset;
+}					t_algo_data;
 
 int					ft_toupper(int c);
 int					ft_tolower(int c);
@@ -272,7 +280,7 @@ void				ft_btree_insert_data(t_btree **root, void *item,
 ** HASHTABLE
 */
 
-t_hashtable         *ft_hashtable_new(size_t size);
+t_hashtable         *ft_hashtable_new(size_t size, void *def);
 size_t              ft_hashtable_hash(const char *key);
 void                ft_hashtable_add(t_hashtable *table, const char *index,
         void *value);
