@@ -105,6 +105,10 @@ typedef struct		s_algo_data
 	t_list			*openset;
 }					t_algo_data;
 
+typedef struct      s_algo_output
+{
+}                   t_algo_output;
+
 int					ft_toupper(int c);
 int					ft_tolower(int c);
 

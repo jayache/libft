@@ -3,323 +3,511 @@
 !_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
 !_TAG_PROGRAM_NAME	Exuberant Ctags	//
 !_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
-!_TAG_PROGRAM_VERSION	5.8	//
-ALGO	/Users/jayache/Projets/libft/Makefile	/^ALGO= ft_astar.c$/;"	m
-BASE	/Users/jayache/Projets/libft/Makefile	/^BASE = $(MEM) $(STR) $(IS) $(PUT) ft_toupper.c ft_tolower.c ft_error.c$/;"	m
-BTREE	/Users/jayache/Projets/libft/Makefile	/^BTREE= ft_btree_apply_prefix.c ft_btree_apply_defix.c ft_btree_apply_infix.c ft_btree_apply_suffix.c ft_btree_create_node.c \\$/;"	m
-BUFF_SIZE	/Users/jayache/Projets/libft/get_next_line.h	/^# define BUFF_SIZE /;"	d
-COUNTER	/Users/jayache/Projets/libft/Makefile	/^COUNTER= $/;"	m
-DEP	/Users/jayache/Projets/libft/Makefile	/^DEP = $(OBJS:%.o=%.d)$/;"	m
-DIR	/Users/jayache/Projets/libft/Makefile	/^DIR= ft_is_dot.c ft_is_hidden.c ft_cnt_type.c ft_is_dir.c ft_exists.c$/;"	m
-ERROR_MALLOC	/Users/jayache/Projets/libft/libft.h	/^#	define ERROR_MALLOC /;"	d
-FLAG	/Users/jayache/Projets/libft/Makefile	/^FLAG = -Wall -Wextra -Werror -g3 -O3 #-fsanitize=address$/;"	m
-FT_PRINTF_H	/Users/jayache/Projets/libft/ft_printf.h	/^# define FT_PRINTF_H$/;"	d
-GET_NEXT_LINE_H	/Users/jayache/Projets/libft/get_next_line.h	/^# define GET_NEXT_LINE_H$/;"	d
-HASHTABLE	/Users/jayache/Projets/libft/Makefile	/^HASHTABLE= ft_hashtable_new.c ft_hashtable_clean.c ft_hashtable_sub.c ft_hashtable_free.c ft_hashtable_search.c ft_hashtable_add.c ft_hashtable_hash.c ft_hashnode_new.c$/;"	m
-INCLUDES	/Users/jayache/Projets/libft/Makefile	/^INCLUDES = \/usr\/local\/include$/;"	m
-IS	/Users/jayache/Projets/libft/Makefile	/^IS = ft_isalpha.c ft_iswhitespace.c ft_islower.c ft_isupper.c ft_isdigit.c \\$/;"	m
-LIBFT_H	/Users/jayache/Projets/libft/libft.h	/^#	define LIBFT_H$/;"	d
-LST	/Users/jayache/Projets/libft/Makefile	/^LST = ft_lstnew.c ft_lstdelone.c ft_lstdel.c ft_lstadd.c ft_lstiter.c \\$/;"	m
-MATH	/Users/jayache/Projets/libft/Makefile	/^MATH= $(VECTOR2) $(VECTOR3) $(VECTOR4) $(MATRIX) ft_atoi.c ft_abs.c ft_sign.c \\$/;"	m
-MATRIX	/Users/jayache/Projets/libft/Makefile	/^MATRIX= ft_matrix.c ft_matrix_product.c ft_matrix_free.c \\$/;"	m
-MAX_OPEN	/Users/jayache/Projets/libft/get_next_line.h	/^# define MAX_OPEN /;"	d
-MEM	/Users/jayache/Projets/libft/Makefile	/^MEM = ft_memccpy.c ft_memmove.c ft_memset.c ft_memcpy.c ft_memchr.c \\$/;"	m
-NAME	/Users/jayache/Projets/libft/Makefile	/^NAME = libft.a$/;"	m
-NB	/Users/jayache/Projets/libft/Makefile	/^NB = $(words $(SRCS))$/;"	m
-OBJ	/Users/jayache/Projets/libft/Makefile	/^OBJ = $(SRCS:.c=.o)$/;"	m
-OBJDIR	/Users/jayache/Projets/libft/Makefile	/^OBJDIR = obj\/$/;"	m
-OBJS	/Users/jayache/Projets/libft/Makefile	/^OBJS = $(addprefix $(OBJDIR), $(OBJ))$/;"	m
-PRINTF	/Users/jayache/Projets/libft/Makefile	/^PRINTF= printf.c printf_args.c printf_args2.c printf_args3.c \\$/;"	m
-PUT	/Users/jayache/Projets/libft/Makefile	/^PUT = ft_putchar.c ft_putstr.c ft_putnbr.c ft_putchar_fd.c ft_putstr_fd.c \\$/;"	m
-SRCS	/Users/jayache/Projets/libft/Makefile	/^SRCS = $(BASE) $(LST) $(MATH) $(PRINTF) $(ALGO) get_next_line.c $(DIR) $(BTREE) $(HASHTABLE)$/;"	m
-STR	/Users/jayache/Projets/libft/Makefile	/^STR = ft_strlen.c ft_strcmp.c ft_strncmp.c ft_strstr.c ft_strnstr.c \\$/;"	m
-VECTOR2	/Users/jayache/Projets/libft/Makefile	/^VECTOR2= ft_vector2.c ft_vector2_normalize.c ft_vector2_magnitude.c \\$/;"	m
-VECTOR3	/Users/jayache/Projets/libft/Makefile	/^VECTOR3= ft_vector3.c ft_vector3_normalize.c ft_vector3_magnitude.c \\$/;"	m
-VECTOR4	/Users/jayache/Projets/libft/Makefile	/^VECTOR4= ft_vector4.c ft_vector4_p_matrix.c ft_matrix_to_vector4.c \\$/;"	m
-arg_add_flag	/Users/jayache/Projets/libft/printf_arg_change.c	/^t_arg	arg_add_flag(t_arg arg, const char *str)$/;"	f
-arg_change_conv	/Users/jayache/Projets/libft/printf_arg_change.c	/^t_arg	arg_change_conv(t_arg arg, const char *str)$/;"	f
-arg_change_flag	/Users/jayache/Projets/libft/printf_arg_change.c	/^t_arg	arg_change_flag(t_arg arg, const char *str)$/;"	f
-astar_loop	/Users/jayache/Projets/libft/ft_astar.c	/^static void	*astar_loop(t_algo_data *data, t_algo_input *algo)$/;"	f	file:
-buffer	/Users/jayache/Projets/libft/ft_printf.h	/^	char		*buffer;$/;"	m	struct:s_buffer
-bufx	/Users/jayache/Projets/libft/ft_printf.h	/^	int			bufx;$/;"	m	struct:s_buffer
-calc_blank_space	/Users/jayache/Projets/libft/printf_essentials.c	/^int		calc_blank_space(t_arg arg)$/;"	f
-camefrom	/Users/jayache/Projets/libft/libft.h	/^	t_hashtable		*camefrom;$/;"	m	struct:s_algo_data
-cmp	/Users/jayache/Projets/libft/libft.h	/^    int             (*cmp)();$/;"	m	struct:s_algo_input
-color_table	/Users/jayache/Projets/libft/printf_arg_color.c	/^static char	*color_table(t_arg arg)$/;"	f	file:
-color_table2	/Users/jayache/Projets/libft/printf_arg_color.c	/^static char	*color_table2(t_arg arg)$/;"	f	file:
-content	/Users/jayache/Projets/libft/libft.h	/^	void			*content;$/;"	m	struct:s_list
-content	/Users/jayache/Projets/libft/libft.h	/^    t_list  **content;$/;"	m	struct:s_hashtable
-content	/Users/jayache/Projets/libft/libft.h	/^    void    *content;$/;"	m	struct:s_hashnode
-content_size	/Users/jayache/Projets/libft/libft.h	/^	size_t			content_size;$/;"	m	struct:s_list
-conversion	/Users/jayache/Projets/libft/ft_printf.h	/^	char		*conversion;$/;"	m	struct:s_arg
-copyback	/Users/jayache/Projets/libft/ft_memmove.c	/^static void		*copyback(void *dst, const void *src, size_t len)$/;"	f	file:
-copyfront	/Users/jayache/Projets/libft/ft_memmove.c	/^static void		*copyfront(void *dst, const void *src, size_t len)$/;"	f	file:
-def	/Users/jayache/Projets/libft/libft.h	/^    void    *def;$/;"	m	struct:s_hashtable
-fd	/Users/jayache/Projets/libft/ft_printf.h	/^	int			*fd;$/;"	m	struct:s_fd
-fd	/Users/jayache/Projets/libft/ft_printf.h	/^	t_fd		fd;$/;"	m	struct:s_buffer
-flags	/Users/jayache/Projets/libft/ft_printf.h	/^	char		*flags;$/;"	m	struct:s_arg
-free	/Users/jayache/Projets/libft/libft.h	/^    void            (*free)(void *data, size_t size);$/;"	m	struct:s_algo_input
-free_arg	/Users/jayache/Projets/libft/printf_free.c	/^void	free_arg(t_arg *arg)$/;"	f
-free_buffer	/Users/jayache/Projets/libft/printf_free.c	/^void	free_buffer(t_buffer *buf)$/;"	f
-free_f	/Users/jayache/Projets/libft/ft_hashtable_sub.c	/^static void	free_f(void *p, size_t size)$/;"	f	file:
-free_hashnode	/Users/jayache/Projets/libft/ft_hashtable_clean.c	/^static void	free_hashnode(void *hashnode, size_t size)$/;"	f	file:
-free_hashnode	/Users/jayache/Projets/libft/ft_hashtable_free.c	/^static void	free_hashnode(void *hashnode, size_t size)$/;"	f	file:
-free_p	/Users/jayache/Projets/libft/ft_astar.c	/^static void	free_p(void *p, size_t size)$/;"	f	file:
-fscore	/Users/jayache/Projets/libft/libft.h	/^	t_hashtable		*fscore;$/;"	m	struct:s_algo_data
-ft_abs	/Users/jayache/Projets/libft/ft_abs.c	/^unsigned long	ft_abs(int nb)$/;"	f
-ft_astar	/Users/jayache/Projets/libft/ft_astar.c	/^void		**ft_astar(void *start, t_algo_input *algo)$/;"	f
-ft_atoi	/Users/jayache/Projets/libft/ft_atoi.c	/^int	ft_atoi(const char *str)$/;"	f
-ft_btree_apply_defix	/Users/jayache/Projets/libft/ft_btree_apply_defix.c	/^void	ft_btree_apply_defix(t_btree *root, void (*applyf)(void *))$/;"	f
-ft_btree_apply_infix	/Users/jayache/Projets/libft/ft_btree_apply_infix.c	/^void	ft_btree_apply_infix(t_btree *root, void (*applyf)(void *))$/;"	f
-ft_btree_apply_prefix	/Users/jayache/Projets/libft/ft_btree_apply_prefix.c	/^void	ft_btree_apply_prefix(t_btree *root, void (*applyf)(void *))$/;"	f
-ft_btree_apply_suffix	/Users/jayache/Projets/libft/ft_btree_apply_suffix.c	/^void	ft_btree_apply_suffix(t_btree *root, void (*applyf)(void *))$/;"	f
-ft_btree_create_node	/Users/jayache/Projets/libft/ft_btree_create_node.c	/^t_btree	*ft_btree_create_node(void *item)$/;"	f
-ft_btree_free	/Users/jayache/Projets/libft/ft_btree_free.c	/^void	ft_btree_free(t_btree *root)$/;"	f
-ft_btree_insert_data	/Users/jayache/Projets/libft/ft_btree_insert_data.c	/^void	ft_btree_insert_data(t_btree **root, void *item,$/;"	f
-ft_bzero	/Users/jayache/Projets/libft/ft_bzero.c	/^void	ft_bzero(void *s, size_t n)$/;"	f
-ft_cnt_type	/Users/jayache/Projets/libft/ft_cnt_type.c	/^int		ft_cnt_type(char **files, int size, int type)$/;"	f
-ft_cntspback	/Users/jayache/Projets/libft/ft_cntspback.c	/^size_t	ft_cntspback(char const *s, char const c)$/;"	f
-ft_cntspfront	/Users/jayache/Projets/libft/ft_cntspfront.c	/^size_t	ft_cntspfront(char const *s, char const c)$/;"	f
-ft_error	/Users/jayache/Projets/libft/ft_error.c	/^void	ft_error(const char *const str)$/;"	f
-ft_exists	/Users/jayache/Projets/libft/ft_exists.c	/^int		ft_exists(char *file)$/;"	f
-ft_free_2d	/Users/jayache/Projets/libft/ft_free_2d.c	/^void	ft_free_2d(void *array, int size)$/;"	f
-ft_hashnode_new	/Users/jayache/Projets/libft/ft_hashnode_new.c	/^t_hashnode	*ft_hashnode_new(char *index, void *val)$/;"	f
-ft_hashtable_add	/Users/jayache/Projets/libft/ft_hashtable_add.c	/^void	ft_hashtable_add(t_hashtable *table, const char *index, void *value)$/;"	f
-ft_hashtable_clean	/Users/jayache/Projets/libft/ft_hashtable_clean.c	/^void		ft_hashtable_clean(t_hashtable *table)$/;"	f
-ft_hashtable_free	/Users/jayache/Projets/libft/ft_hashtable_free.c	/^void		ft_hashtable_free(t_hashtable *table)$/;"	f
-ft_hashtable_hash	/Users/jayache/Projets/libft/ft_hashtable_hash.c	/^size_t	ft_hashtable_hash(const char *key)$/;"	f
-ft_hashtable_new	/Users/jayache/Projets/libft/ft_hashtable_new.c	/^t_hashtable	*ft_hashtable_new(size_t size)$/;"	f
-ft_hashtable_search	/Users/jayache/Projets/libft/ft_hashtable_search.c	/^void	*ft_hashtable_search(t_hashtable *table, const char *index)$/;"	f
-ft_hashtable_sub	/Users/jayache/Projets/libft/ft_hashtable_sub.c	/^void		ft_hashtable_sub(t_hashtable *table, const char *index)$/;"	f
-ft_is_dir	/Users/jayache/Projets/libft/ft_is_dir.c	/^int		ft_is_dir(char *name)$/;"	f
-ft_is_dot	/Users/jayache/Projets/libft/ft_is_dot.c	/^int	ft_is_dot(char *name)$/;"	f
-ft_is_hidden	/Users/jayache/Projets/libft/ft_is_hidden.c	/^int		ft_is_hidden(char *filename)$/;"	f
-ft_isalnum	/Users/jayache/Projets/libft/ft_isalnum.c	/^int	ft_isalnum(int c)$/;"	f
-ft_isalpha	/Users/jayache/Projets/libft/ft_isalpha.c	/^int	ft_isalpha(int c)$/;"	f
-ft_isascii	/Users/jayache/Projets/libft/ft_isascii.c	/^int	ft_isascii(int c)$/;"	f
-ft_isdigit	/Users/jayache/Projets/libft/ft_isdigit.c	/^int	ft_isdigit(int c)$/;"	f
-ft_islower	/Users/jayache/Projets/libft/ft_islower.c	/^int	ft_islower(int c)$/;"	f
-ft_isprint	/Users/jayache/Projets/libft/ft_isprint.c	/^int	ft_isprint(int c)$/;"	f
-ft_isupper	/Users/jayache/Projets/libft/ft_isupper.c	/^int	ft_isupper(int c)$/;"	f
-ft_iswhitespace	/Users/jayache/Projets/libft/ft_iswhitespace.c	/^int	ft_iswhitespace(char c)$/;"	f
-ft_itoa	/Users/jayache/Projets/libft/ft_itoa.c	/^char		*ft_itoa(int n)$/;"	f
-ft_itoa_base	/Users/jayache/Projets/libft/ft_itoa_base.c	/^char		*ft_itoa_base(long long nb, int base)$/;"	f
-ft_len_2d	/Users/jayache/Projets/libft/ft_len_2d.c	/^int	ft_len_2d(char **array)$/;"	f
-ft_lst_append	/Users/jayache/Projets/libft/ft_lst_append.c	/^void	ft_lst_append(t_list **root, t_list *append)$/;"	f
-ft_lst_exist	/Users/jayache/Projets/libft/ft_lst_exist.c	/^int	ft_lst_exist(t_list *root, void *data, int (cmp(void*, void*)))$/;"	f
-ft_lst_sorted_insert	/Users/jayache/Projets/libft/ft_lst_sorted_insert.c	/^void	ft_lst_sorted_insert(t_list **begin_list, t_list *data, int (*cmp)())$/;"	f
-ft_lstadd	/Users/jayache/Projets/libft/ft_lstadd.c	/^void	ft_lstadd(t_list **alst, t_list *new)$/;"	f
-ft_lstdel	/Users/jayache/Projets/libft/ft_lstdel.c	/^void	ft_lstdel(t_list **alst, void (*del)(void *, size_t))$/;"	f
-ft_lstdelbyval	/Users/jayache/Projets/libft/ft_lstdelbyval.c	/^void	ft_lstdelbyval(t_list **lst, void *data, int (*cmp)(), void (*del)())$/;"	f
-ft_lstdelone	/Users/jayache/Projets/libft/ft_lstdelone.c	/^void	ft_lstdelone(t_list **alst, void (*dsl)(void *, size_t))$/;"	f
-ft_lstgetbypos	/Users/jayache/Projets/libft/ft_lstgetbypos.c	/^t_list	*ft_lstgetbypos(t_list *lst, int pos)$/;"	f
-ft_lstiter	/Users/jayache/Projets/libft/ft_lstiter.c	/^void	ft_lstiter(t_list *lst, void (*f)(t_list *elem))$/;"	f
-ft_lstmap	/Users/jayache/Projets/libft/ft_lstmap.c	/^t_list	*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem))$/;"	f
-ft_lstnew	/Users/jayache/Projets/libft/ft_lstnew.c	/^t_list	*ft_lstnew(void const *content, size_t content_size)$/;"	f
-ft_lstnew_no_copy	/Users/jayache/Projets/libft/ft_lstnew_no_copy.c	/^t_list	*ft_lstnew_no_copy(void *content, size_t content_size)$/;"	f
-ft_matrix	/Users/jayache/Projets/libft/ft_matrix.c	/^t_matrix	ft_matrix(int width, int height)$/;"	f
-ft_matrix_diag_symetrie	/Users/jayache/Projets/libft/ft_matrix_diag_symetrie.c	/^t_matrix	ft_matrix_diag_symetrie(t_matrix matrix)$/;"	f
-ft_matrix_free	/Users/jayache/Projets/libft/ft_matrix_free.c	/^void	ft_matrix_free(t_matrix m)$/;"	f
-ft_matrix_identity	/Users/jayache/Projets/libft/ft_matrix_identity.c	/^t_matrix	ft_matrix_identity(void)$/;"	f
-ft_matrix_product	/Users/jayache/Projets/libft/ft_matrix_product.c	/^t_matrix		ft_matrix_product(t_matrix a, t_matrix b)$/;"	f
-ft_matrix_projection	/Users/jayache/Projets/libft/ft_matrix_projection.c	/^t_matrix	ft_matrix_projection(float ratio, int near, int far, int fov)$/;"	f
-ft_matrix_ry	/Users/jayache/Projets/libft/ft_matrix_ry.c	/^t_matrix	ft_matrix_ry(float angle)$/;"	f
-ft_matrix_to_vector4	/Users/jayache/Projets/libft/ft_matrix_to_vector4.c	/^t_vector4	ft_matrix_to_vector4(t_matrix m)$/;"	f
-ft_matrix_translation	/Users/jayache/Projets/libft/ft_matrix_translation.c	/^t_matrix	ft_matrix_translation(t_vector3 translation)$/;"	f
-ft_memalloc	/Users/jayache/Projets/libft/ft_memalloc.c	/^void	*ft_memalloc(size_t size)$/;"	f
-ft_memccpy	/Users/jayache/Projets/libft/ft_memccpy.c	/^void	*ft_memccpy(void *dst, const void *src, int c, size_t n)$/;"	f
-ft_memchr	/Users/jayache/Projets/libft/ft_memchr.c	/^void	*ft_memchr(const void *s, int c, size_t n)$/;"	f
-ft_memcmp	/Users/jayache/Projets/libft/ft_memcmp.c	/^int	ft_memcmp(const void *s1, const void *s2, size_t n)$/;"	f
-ft_memcpy	/Users/jayache/Projets/libft/ft_memcpy.c	/^void	*ft_memcpy(void *dst, const void *src, size_t n)$/;"	f
-ft_memdel	/Users/jayache/Projets/libft/ft_memdel.c	/^void	ft_memdel(void **ap)$/;"	f
-ft_memmove	/Users/jayache/Projets/libft/ft_memmove.c	/^void			*ft_memmove(void *dst, const void *src, size_t len)$/;"	f
-ft_memset	/Users/jayache/Projets/libft/ft_memset.c	/^void	*ft_memset(void *b, int c, size_t len)$/;"	f
-ft_min	/Users/jayache/Projets/libft/ft_min.c	/^int	ft_min(int a, int b)$/;"	f
-ft_nblen	/Users/jayache/Projets/libft/ft_nblen.c	/^int	ft_nblen(int nb)$/;"	f
-ft_pow	/Users/jayache/Projets/libft/ft_pow.c	/^intmax_t	ft_pow(int n, int p)$/;"	f
-ft_print_matrix	/Users/jayache/Projets/libft/ft_print_matrix.c	/^void	ft_print_matrix(t_matrix matrix)$/;"	f
-ft_printf	/Users/jayache/Projets/libft/printf.c	/^int			ft_printf(const char *format, ...)$/;"	f
-ft_printf_printstr	/Users/jayache/Projets/libft/printf_args.c	/^int		ft_printf_printstr(t_buffer *buf, const char *str, int x)$/;"	f
-ft_printf_putbinary	/Users/jayache/Projets/libft/printf_args3.c	/^void	ft_printf_putbinary(t_arg arg, t_buffer *buf, va_list *ap)$/;"	f
-ft_printf_putchar	/Users/jayache/Projets/libft/printf_args.c	/^void	ft_printf_putchar(t_arg arg, t_buffer *buf, va_list *ap)$/;"	f
-ft_printf_putcolor	/Users/jayache/Projets/libft/printf_arg_color.c	/^void		ft_printf_putcolor(t_arg arg, t_buffer *buf, va_list *ap)$/;"	f
-ft_printf_putfd	/Users/jayache/Projets/libft/printf_args3.c	/^void	ft_printf_putfd(t_arg arg, t_buffer *buf, va_list *ap)$/;"	f
-ft_printf_putfloat	/Users/jayache/Projets/libft/printf_args3.c	/^void	ft_printf_putfloat(t_arg arg, t_buffer *buf, va_list *ap)$/;"	f
-ft_printf_puthexa	/Users/jayache/Projets/libft/printf_args2.c	/^void		ft_printf_puthexa(t_arg arg, t_buffer *buf, va_list *ap)$/;"	f
-ft_printf_putlonguns	/Users/jayache/Projets/libft/printf_args3.c	/^void	ft_printf_putlonguns(t_arg arg, t_buffer *buf, va_list *ap)$/;"	f
-ft_printf_putnbr	/Users/jayache/Projets/libft/printf_args.c	/^void	ft_printf_putnbr(t_arg arg, t_buffer *buf, va_list *ap)$/;"	f
-ft_printf_putoct	/Users/jayache/Projets/libft/printf_args2.c	/^void		ft_printf_putoct(t_arg arg, t_buffer *buf, va_list *ap)$/;"	f
-ft_printf_putpercent	/Users/jayache/Projets/libft/printf_args2.c	/^void		ft_printf_putpercent(t_arg arg, t_buffer *buf, va_list *ap)$/;"	f
-ft_printf_putptr	/Users/jayache/Projets/libft/printf_args3.c	/^void	ft_printf_putptr(t_arg arg, t_buffer *buf, va_list *ap)$/;"	f
-ft_printf_putstr	/Users/jayache/Projets/libft/printf_args.c	/^void	ft_printf_putstr(t_arg arg, t_buffer *buf, va_list *ap)$/;"	f
-ft_printf_putuns	/Users/jayache/Projets/libft/printf_args2.c	/^void		ft_printf_putuns(t_arg arg, t_buffer *buf, va_list *ap)$/;"	f
-ft_putchar	/Users/jayache/Projets/libft/ft_putchar.c	/^int	ft_putchar(unsigned int c)$/;"	f
-ft_putchar_fd	/Users/jayache/Projets/libft/ft_putchar_fd.c	/^int	ft_putchar_fd(char c, int fd)$/;"	f
-ft_putendl	/Users/jayache/Projets/libft/ft_putendl.c	/^int	ft_putendl(char const *s)$/;"	f
-ft_putendl_fd	/Users/jayache/Projets/libft/ft_putendl_fd.c	/^int	ft_putendl_fd(char const *s, int fd)$/;"	f
-ft_putnbr	/Users/jayache/Projets/libft/ft_putnbr.c	/^void	ft_putnbr(int nb)$/;"	f
-ft_putnbr_fd	/Users/jayache/Projets/libft/ft_putnbr_fd.c	/^void	ft_putnbr_fd(int nb, int fd)$/;"	f
-ft_putstr	/Users/jayache/Projets/libft/ft_putstr.c	/^int	ft_putstr(char const *s)$/;"	f
-ft_putstr_fd	/Users/jayache/Projets/libft/ft_putstr_fd.c	/^int	ft_putstr_fd(char const *s, int fd)$/;"	f
-ft_readfile	/Users/jayache/Projets/libft/get_next_line.c	/^static int		ft_readfile(char **tab, char **line, const int fd)$/;"	f	file:
-ft_sign	/Users/jayache/Projets/libft/ft_sign.c	/^int	ft_sign(double n)$/;"	f
-ft_sorted_list_insert	/Users/jayache/Projets/libft/ft_sorted_list_insert.c	/^void	ft_sorted_list_insert(t_list **begin_list, void *data, int (*cmp)())$/;"	f
-ft_str3join	/Users/jayache/Projets/libft/ft_str3join.c	/^char	*ft_str3join(const char *a, const char *b, const char *c)$/;"	f
-ft_stradd	/Users/jayache/Projets/libft/ft_stradd.c	/^void	ft_stradd(char **str, char c)$/;"	f
-ft_strcat	/Users/jayache/Projets/libft/ft_strcat.c	/^char	*ft_strcat(char *s1, const char *s2)$/;"	f
-ft_strchr	/Users/jayache/Projets/libft/ft_strchr.c	/^char	*ft_strchr(const char *s, int c)$/;"	f
-ft_strclr	/Users/jayache/Projets/libft/ft_strclr.c	/^void	ft_strclr(char *s)$/;"	f
-ft_strcmp	/Users/jayache/Projets/libft/ft_strcmp.c	/^int	ft_strcmp(const char *s1, const char *s2)$/;"	f
-ft_strcpy	/Users/jayache/Projets/libft/ft_strcpy.c	/^char	*ft_strcpy(char *dst, const char *src)$/;"	f
-ft_strcut	/Users/jayache/Projets/libft/ft_strcut.c	/^char	*ft_strcut(char *cut, int begin, int end)$/;"	f
-ft_strdel	/Users/jayache/Projets/libft/ft_strdel.c	/^void	ft_strdel(char **as)$/;"	f
-ft_strdup	/Users/jayache/Projets/libft/ft_strdup.c	/^char	*ft_strdup(const char *s1)$/;"	f
-ft_strequ	/Users/jayache/Projets/libft/ft_strequ.c	/^int	ft_strequ(char const *s1, char const *s2)$/;"	f
-ft_strfjoin	/Users/jayache/Projets/libft/ft_strfjoin.c	/^char	*ft_strfjoin(char *s1, char const *s2)$/;"	f
-ft_strins	/Users/jayache/Projets/libft/ft_strins.c	/^char	*ft_strins(char const *string, char const *ins, int pos)$/;"	f
-ft_strisnumeric	/Users/jayache/Projets/libft/ft_strisnumeric.c	/^int	ft_strisnumeric(char const *str)$/;"	f
-ft_striswhitespace	/Users/jayache/Projets/libft/ft_striswhitespace.c	/^int	ft_striswhitespace(char const *str)$/;"	f
-ft_striter	/Users/jayache/Projets/libft/ft_striter.c	/^void	ft_striter(char *s, void (*f)(char *))$/;"	f
-ft_striteri	/Users/jayache/Projets/libft/ft_striteri.c	/^void	ft_striteri(char *s, void (*f)(unsigned int, char *))$/;"	f
-ft_strjoin	/Users/jayache/Projets/libft/ft_strjoin.c	/^char	*ft_strjoin(char const *s1, char const *s2)$/;"	f
-ft_strlcat	/Users/jayache/Projets/libft/ft_strlcat.c	/^size_t	ft_strlcat(char *s1, const char *s2, size_t size)$/;"	f
-ft_strlen	/Users/jayache/Projets/libft/ft_strlen.c	/^size_t	ft_strlen(const char *s)$/;"	f
-ft_strmap	/Users/jayache/Projets/libft/ft_strmap.c	/^char	*ft_strmap(char const *s, char (*f)(char))$/;"	f
-ft_strmapi	/Users/jayache/Projets/libft/ft_strmapi.c	/^char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))$/;"	f
-ft_strncat	/Users/jayache/Projets/libft/ft_strncat.c	/^char	*ft_strncat(char *s1, const char *s2, size_t len)$/;"	f
-ft_strncmp	/Users/jayache/Projets/libft/ft_strncmp.c	/^int	ft_strncmp(const char *s1, const char *s2, size_t n)$/;"	f
-ft_strncpy	/Users/jayache/Projets/libft/ft_strncpy.c	/^char	*ft_strncpy(char *dst, const char *src, size_t len)$/;"	f
-ft_strndup	/Users/jayache/Projets/libft/ft_strndup.c	/^char	*ft_strndup(const char *s1, int n)$/;"	f
-ft_strnequ	/Users/jayache/Projets/libft/ft_strnequ.c	/^int	ft_strnequ(char const *s1, char const *s2, size_t n)$/;"	f
-ft_strnew	/Users/jayache/Projets/libft/ft_strnew.c	/^char	*ft_strnew(size_t size)$/;"	f
-ft_strnlen	/Users/jayache/Projets/libft/ft_strnlen.c	/^size_t	ft_strnlen(const char *s, size_t maxlen)$/;"	f
-ft_strnstr	/Users/jayache/Projets/libft/ft_strnstr.c	/^char	*ft_strnstr(const char *haystack, const char *needle, size_t len)$/;"	f
-ft_strpbrk	/Users/jayache/Projets/libft/ft_strpbrk.c	/^int	ft_strpbrk(const char *s, const char *charset)$/;"	f
-ft_strrchr	/Users/jayache/Projets/libft/ft_strrchr.c	/^char	*ft_strrchr(const char *s, int c)$/;"	f
-ft_strsplit	/Users/jayache/Projets/libft/ft_strsplit.c	/^char			**ft_strsplit(char const *s, char c)$/;"	f
-ft_strstr	/Users/jayache/Projets/libft/ft_strstr.c	/^char	*ft_strstr(const char *haystack, const char *needle)$/;"	f
-ft_strsub	/Users/jayache/Projets/libft/ft_strsub.c	/^char	*ft_strsub(char const *s, unsigned int start, size_t len)$/;"	f
-ft_strtrim	/Users/jayache/Projets/libft/ft_strtrim.c	/^char	*ft_strtrim(char const *s)$/;"	f
-ft_tolower	/Users/jayache/Projets/libft/ft_tolower.c	/^int	ft_tolower(int c)$/;"	f
-ft_toupper	/Users/jayache/Projets/libft/ft_toupper.c	/^int	ft_toupper(int c)$/;"	f
-ft_vector2	/Users/jayache/Projets/libft/ft_vector2.c	/^t_vector2	ft_vector2(float x, float y)$/;"	f
-ft_vector2_add	/Users/jayache/Projets/libft/ft_vector2_add.c	/^t_vector2	ft_vector2_add(t_vector2 vec, t_vector2 vec2)$/;"	f
-ft_vector2_angle	/Users/jayache/Projets/libft/ft_vector2_angle.c	/^float	ft_vector2_angle(t_vector2 vec1, t_vector2 vec2)$/;"	f
-ft_vector2_dot	/Users/jayache/Projets/libft/ft_vector2_dot.c	/^float	ft_vector2_dot(t_vector2 vec1, t_vector2 vec2)$/;"	f
-ft_vector2_magnitude	/Users/jayache/Projets/libft/ft_vector2_magnitude.c	/^float	ft_vector2_magnitude(t_vector2 vec)$/;"	f
-ft_vector2_multiply	/Users/jayache/Projets/libft/ft_vector2_multiply.c	/^t_vector2	ft_vector2_multiply(t_vector2 vec, float scalar)$/;"	f
-ft_vector2_normalize	/Users/jayache/Projets/libft/ft_vector2_normalize.c	/^t_vector2	ft_vector2_normalize(t_vector2 vec)$/;"	f
-ft_vector2_rangle	/Users/jayache/Projets/libft/ft_vector2_rangle.c	/^float	ft_vector2_rangle(t_vector2 vec1, t_vector2 vec2)$/;"	f
-ft_vector3	/Users/jayache/Projets/libft/ft_vector3.c	/^t_vector3	ft_vector3(float x, float y, float z)$/;"	f
-ft_vector3_add	/Users/jayache/Projets/libft/ft_vector3_add.c	/^t_vector3	ft_vector3_add(t_vector3 vec1, t_vector3 vec2)$/;"	f
-ft_vector3_angle	/Users/jayache/Projets/libft/ft_vector3_angle.c	/^float	ft_vector3_angle(t_vector3 vec1, t_vector3 vec2)$/;"	f
-ft_vector3_axis	/Users/jayache/Projets/libft/ft_vector3_axis.c	/^t_vector3	ft_vector3_axis(t_vector3 vec1, t_vector3 vec2)$/;"	f
-ft_vector3_cross	/Users/jayache/Projets/libft/ft_vector3_cross.c	/^t_vector3	ft_vector3_cross(t_vector3 vec1, t_vector3 vec2)$/;"	f
-ft_vector3_dot	/Users/jayache/Projets/libft/ft_vector3_dot.c	/^float	ft_vector3_dot(t_vector3 vec1, t_vector3 vec2)$/;"	f
-ft_vector3_magnitude	/Users/jayache/Projets/libft/ft_vector3_magnitude.c	/^float	ft_vector3_magnitude(t_vector3 vec)$/;"	f
-ft_vector3_multiply	/Users/jayache/Projets/libft/ft_vector3_multiply.c	/^t_vector3	ft_vector3_multiply(t_vector3 vec1, float scalar)$/;"	f
-ft_vector3_normalize	/Users/jayache/Projets/libft/ft_vector3_normalize.c	/^t_vector3	ft_vector3_normalize(t_vector3 vec)$/;"	f
-ft_vector3_opposite	/Users/jayache/Projets/libft/ft_vector3_opposite.c	/^t_vector3	ft_vector3_opposite(t_vector3 vtc)$/;"	f
-ft_vector3_sub	/Users/jayache/Projets/libft/ft_vector3_sub.c	/^t_vector3	ft_vector3_sub(t_vector3 vec1, t_vector3 vec2)$/;"	f
-ft_vector3_to_matrix	/Users/jayache/Projets/libft/ft_vector3_to_matrix.c	/^t_matrix	ft_vector3_to_matrix(t_vector3 vec)$/;"	f
-ft_vector4	/Users/jayache/Projets/libft/ft_vector4.c	/^t_vector4	ft_vector4(float x, float y, float z, float w)$/;"	f
-ft_vector4_from_3	/Users/jayache/Projets/libft/ft_vector4_from_3.c	/^t_vector4	ft_vector4_from_3(t_vector3 vtc)$/;"	f
-ft_vector4_p_matrix	/Users/jayache/Projets/libft/ft_vector4_p_matrix.c	/^t_vector4	ft_vector4_p_matrix(t_vector4 vec, t_matrix m)$/;"	f
-ft_vector4_to_matrix	/Users/jayache/Projets/libft/ft_vector4_to_matrix.c	/^t_matrix	ft_vector4_to_matrix(t_vector4 vec)$/;"	f
-get_next_line	/Users/jayache/Projets/libft/get_next_line.c	/^int				get_next_line(const int fd, char **line)$/;"	f
-goal_f	/Users/jayache/Projets/libft/libft.h	/^    int             (*goal_f)(void *data);$/;"	m	struct:s_algo_input
-goal_p	/Users/jayache/Projets/libft/libft.h	/^    void            *goal_p;$/;"	m	struct:s_algo_input
-gscore	/Users/jayache/Projets/libft/libft.h	/^	t_hashtable		*gscore;$/;"	m	struct:s_algo_data
-hashflag	/Users/jayache/Projets/libft/printf_flags.c	/^int	hashflag(t_arg arg, t_buffer *buf, char *str)$/;"	f
-height	/Users/jayache/Projets/libft/libft.h	/^	int				height;$/;"	m	struct:s_matrix
-heuristic	/Users/jayache/Projets/libft/libft.h	/^    size_t          (*heuristic)(void *data);$/;"	m	struct:s_algo_input
-init_arg	/Users/jayache/Projets/libft/printf_parser.c	/^static t_arg	init_arg(void)$/;"	f	file:
-init_buffer	/Users/jayache/Projets/libft/printf_write.c	/^t_buffer	init_buffer(void)$/;"	f
-initstritoa	/Users/jayache/Projets/libft/ft_itoa.c	/^static char	*initstritoa(long n, int neg)$/;"	f	file:
-intmax_t	/Users/jayache/Projets/libft/libft.h	/^    typedef __intmax_t intmax_t;$/;"	t
-invalid_arg	/Users/jayache/Projets/libft/printf_args.c	/^void	invalid_arg(t_arg arg, t_buffer *buf, va_list *ap)$/;"	f
-is_signed	/Users/jayache/Projets/libft/printf_essentials.c	/^int		is_signed(t_arg arg)$/;"	f
-item	/Users/jayache/Projets/libft/libft.h	/^	void			*item;$/;"	m	struct:s_btree
-key	/Users/jayache/Projets/libft/libft.h	/^    char    *key;$/;"	m	struct:s_hashnode
-left	/Users/jayache/Projets/libft/libft.h	/^	struct s_btree	*left;$/;"	m	struct:s_btree	typeref:struct:s_btree::s_btree
-matrix	/Users/jayache/Projets/libft/libft.h	/^	float			**matrix;$/;"	m	struct:s_matrix
-minimum	/Users/jayache/Projets/libft/ft_printf.h	/^	int			minimum;$/;"	m	struct:s_arg
-moment	/Users/jayache/Projets/libft/ft_printf.h	/^	int			*moment;$/;"	m	struct:s_fd
-nblen_base	/Users/jayache/Projets/libft/ft_itoa_base.c	/^static int	nblen_base(long nb, int base)$/;"	f	file:
-neighbors	/Users/jayache/Projets/libft/libft.h	/^    void            **(*neighbors)(void *data);$/;"	m	struct:s_algo_input
-next	/Users/jayache/Projets/libft/libft.h	/^	struct s_list	*next;$/;"	m	struct:s_list	typeref:struct:s_list::s_list
-nextword	/Users/jayache/Projets/libft/ft_strsplit.c	/^static int		nextword(char const *s, char c, int pos)$/;"	f	file:
-openset	/Users/jayache/Projets/libft/libft.h	/^	t_list			*openset;$/;"	m	struct:s_algo_data
-paddingspace	/Users/jayache/Projets/libft/printf_flags.c	/^int	paddingspace(t_arg arg, t_buffer *buf)$/;"	f
-paddingzeros	/Users/jayache/Projets/libft/printf_flags.c	/^int	paddingzeros(t_arg arg, t_buffer *buf)$/;"	f
-parent	/Users/jayache/Projets/libft/libft.h	/^	struct s_btree	*parent;$/;"	m	struct:s_btree	typeref:struct:s_btree::s_btree
-parsearg	/Users/jayache/Projets/libft/printf_parser.c	/^t_arg			parsearg(const char *str, int x)$/;"	f
-parsearg1	/Users/jayache/Projets/libft/printf_parser.c	/^static int		parsearg1(t_arg *arg, const char *str, int x)$/;"	f	file:
-parsecolor	/Users/jayache/Projets/libft/printf_parser.c	/^static int		parsecolor(t_arg *arg, const char *str, int x)$/;"	f	file:
-precision	/Users/jayache/Projets/libft/ft_printf.h	/^	int			precision;$/;"	m	struct:s_arg
-print_arg_hexa	/Users/jayache/Projets/libft/printf_print_arg.c	/^int	print_arg_hexa(t_arg arg, t_buffer *buf, char *str)$/;"	f
-print_arg_nbr	/Users/jayache/Projets/libft/printf_print_arg.c	/^int	print_arg_nbr(t_arg arg, t_buffer *buf, char *str)$/;"	f
-print_arg_oct	/Users/jayache/Projets/libft/printf_print_arg.c	/^int	print_arg_oct(t_arg arg, t_buffer *buf, char *str)$/;"	f
-printarg	/Users/jayache/Projets/libft/printf.c	/^extern int	printarg(t_arg arg, t_buffer *buf, va_list *ap)$/;"	f
-printf_putchar	/Users/jayache/Projets/libft/printf_essentials.c	/^int		printf_putchar(t_buffer *buf, char c)$/;"	f
-printf_putuchar	/Users/jayache/Projets/libft/printf_essentials.c	/^int		printf_putuchar(t_buffer *buf, int c)$/;"	f
-printf_write	/Users/jayache/Projets/libft/printf_write.c	/^void		printf_write(t_buffer buf)$/;"	f
-productcase	/Users/jayache/Projets/libft/ft_matrix_product.c	/^static float	productcase(t_matrix a, t_matrix b, int x, int y)$/;"	f	file:
-ptolower	/Users/jayache/Projets/libft/printf_essentials.c	/^void	ptolower(char *c)$/;"	f
-reconstruct_path	/Users/jayache/Projets/libft/ft_astar.c	/^static void	**reconstruct_path(t_hashtable *camefrom, t_algo_input *algo,$/;"	f	file:
-reverse_padding	/Users/jayache/Projets/libft/printf_flags.c	/^int	reverse_padding(t_arg arg, t_buffer *buf, int size)$/;"	f
-right	/Users/jayache/Projets/libft/libft.h	/^	struct s_btree	*right;$/;"	m	struct:s_btree	typeref:struct:s_btree::s_btree
-s_algo_data	/Users/jayache/Projets/libft/libft.h	/^typedef struct		s_algo_data$/;"	s
-s_algo_input	/Users/jayache/Projets/libft/libft.h	/^typedef struct      s_algo_input$/;"	s
-s_arg	/Users/jayache/Projets/libft/ft_printf.h	/^typedef struct	s_arg$/;"	s
-s_btree	/Users/jayache/Projets/libft/libft.h	/^typedef struct		s_btree$/;"	s
-s_buffer	/Users/jayache/Projets/libft/ft_printf.h	/^typedef struct	s_buffer$/;"	s
-s_fd	/Users/jayache/Projets/libft/ft_printf.h	/^typedef struct	s_fd$/;"	s
-s_hashnode	/Users/jayache/Projets/libft/libft.h	/^typedef struct      s_hashnode$/;"	s
-s_hashtable	/Users/jayache/Projets/libft/libft.h	/^typedef struct      s_hashtable$/;"	s
-s_list	/Users/jayache/Projets/libft/libft.h	/^typedef struct		s_list$/;"	s
-s_matrix	/Users/jayache/Projets/libft/libft.h	/^typedef struct		s_matrix$/;"	s
-s_vector2	/Users/jayache/Projets/libft/libft.h	/^typedef struct		s_vector2$/;"	s
-s_vector3	/Users/jayache/Projets/libft/libft.h	/^typedef struct		s_vector3$/;"	s
-s_vector4	/Users/jayache/Projets/libft/libft.h	/^typedef struct		s_vector4$/;"	s
-serialize	/Users/jayache/Projets/libft/libft.h	/^    char            *(*serialize)(void *data);$/;"	m	struct:s_algo_input
-sign	/Users/jayache/Projets/libft/printf_flags.c	/^int	sign(t_arg arg, t_buffer *buf, char *str)$/;"	f
-size	/Users/jayache/Projets/libft/ft_printf.h	/^	int			size;$/;"	m	struct:s_arg
-size	/Users/jayache/Projets/libft/ft_printf.h	/^	int			size;$/;"	m	struct:s_buffer
-size	/Users/jayache/Projets/libft/ft_printf.h	/^	long		size;$/;"	m	struct:s_fd
-size	/Users/jayache/Projets/libft/libft.h	/^    size_t  size;$/;"	m	struct:s_hashtable
-sizenextword	/Users/jayache/Projets/libft/ft_strsplit.c	/^static int		sizenextword(char const *s, char c, int pos)$/;"	f	file:
-str	/Users/jayache/Projets/libft/ft_printf.h	/^	char		*str;$/;"	m	struct:s_arg
-strjjoin	/Users/jayache/Projets/libft/get_next_line.c	/^static char		*strjjoin(char *s1, char *s2, int x, int cut)$/;"	f	file:
-strpadding	/Users/jayache/Projets/libft/printf_flags2.c	/^int	strpadding(t_arg arg, t_buffer *buf, int size)$/;"	f
-t_algo_data	/Users/jayache/Projets/libft/libft.h	/^}					t_algo_data;$/;"	t	typeref:struct:s_algo_data
-t_algo_input	/Users/jayache/Projets/libft/libft.h	/^}                   t_algo_input;$/;"	t	typeref:struct:s_algo_input
-t_arg	/Users/jayache/Projets/libft/ft_printf.h	/^}				t_arg;$/;"	t	typeref:struct:s_arg
-t_btree	/Users/jayache/Projets/libft/libft.h	/^}					t_btree;$/;"	t	typeref:struct:s_btree
-t_buffer	/Users/jayache/Projets/libft/ft_printf.h	/^}				t_buffer;$/;"	t	typeref:struct:s_buffer
-t_fd	/Users/jayache/Projets/libft/ft_printf.h	/^}				t_fd;$/;"	t	typeref:struct:s_fd
-t_hashnode	/Users/jayache/Projets/libft/libft.h	/^}                   t_hashnode;$/;"	t	typeref:struct:s_hashnode
-t_hashtable	/Users/jayache/Projets/libft/libft.h	/^}                   t_hashtable;$/;"	t	typeref:struct:s_hashtable
-t_list	/Users/jayache/Projets/libft/libft.h	/^}					t_list;$/;"	t	typeref:struct:s_list
-t_matrix	/Users/jayache/Projets/libft/libft.h	/^}					t_matrix;$/;"	t	typeref:struct:s_matrix
-t_vector2	/Users/jayache/Projets/libft/libft.h	/^}					t_vector2;$/;"	t	typeref:struct:s_vector2
-t_vector3	/Users/jayache/Projets/libft/libft.h	/^}					t_vector3;$/;"	t	typeref:struct:s_vector3
-t_vector4	/Users/jayache/Projets/libft/libft.h	/^}					t_vector4;$/;"	t	typeref:struct:s_vector4
-tab_init	/Users/jayache/Projets/libft/printf.c	/^extern void	(**tab_init(void))(t_arg arg, t_buffer *buff, va_list *valist)$/;"	f
-take_double_arg	/Users/jayache/Projets/libft/printf_take_arg.c	/^long double	take_double_arg(t_arg arg, va_list *ap)$/;"	f
-take_int_arg	/Users/jayache/Projets/libft/printf_take_arg.c	/^intmax_t	take_int_arg(t_arg arg, va_list *ap)$/;"	f
-take_unsigned_arg	/Users/jayache/Projets/libft/printf_take_arg.c	/^uintmax_t	take_unsigned_arg(t_arg arg, va_list *ap)$/;"	f
-tests	/Users/jayache/Projets/libft/Makefile	/^define tests$/;"	m
-type	/Users/jayache/Projets/libft/ft_printf.h	/^	int			type;$/;"	m	struct:s_arg
-uintmax_t	/Users/jayache/Projets/libft/libft.h	/^    typedef unsigned long long uintmax_t;$/;"	t
-w	/Users/jayache/Projets/libft/libft.h	/^	float			w;$/;"	m	struct:s_vector4
-width	/Users/jayache/Projets/libft/libft.h	/^	int				width;$/;"	m	struct:s_matrix
-wordcount	/Users/jayache/Projets/libft/ft_strsplit.c	/^static int		wordcount(char const *s, char c)$/;"	f	file:
-x	/Users/jayache/Projets/libft/libft.h	/^	float			x;$/;"	m	struct:s_vector3
-x	/Users/jayache/Projets/libft/libft.h	/^	float			x;$/;"	m	struct:s_vector4
-x	/Users/jayache/Projets/libft/libft.h	/^	long			x;$/;"	m	struct:s_vector2
-y	/Users/jayache/Projets/libft/libft.h	/^	float			y;$/;"	m	struct:s_vector3
-y	/Users/jayache/Projets/libft/libft.h	/^	float			y;$/;"	m	struct:s_vector4
-y	/Users/jayache/Projets/libft/libft.h	/^	long			y;$/;"	m	struct:s_vector2
-z	/Users/jayache/Projets/libft/libft.h	/^	float			z;$/;"	m	struct:s_vector3
-z	/Users/jayache/Projets/libft/libft.h	/^	float			z;$/;"	m	struct:s_vector4
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+ALGO	/home/selver/Documents/libs/libft/Makefile	/^ALGO= ft_astar.c$/;"	m
+ANSI_COLOR_BLUE	/home/selver/Documents/libs/libft/unit_test_lib/cbdd/src/color_terminal_displayer.c	21;"	d	file:
+ANSI_COLOR_CYAN	/home/selver/Documents/libs/libft/unit_test_lib/cbdd/src/color_terminal_displayer.c	23;"	d	file:
+ANSI_COLOR_GREEN	/home/selver/Documents/libs/libft/unit_test_lib/cbdd/src/color_terminal_displayer.c	19;"	d	file:
+ANSI_COLOR_MAGENTA	/home/selver/Documents/libs/libft/unit_test_lib/cbdd/src/color_terminal_displayer.c	22;"	d	file:
+ANSI_COLOR_RED	/home/selver/Documents/libs/libft/unit_test_lib/cbdd/src/color_terminal_displayer.c	18;"	d	file:
+ANSI_COLOR_RESET	/home/selver/Documents/libs/libft/unit_test_lib/cbdd/src/color_terminal_displayer.c	24;"	d	file:
+ANSI_COLOR_YELLOW	/home/selver/Documents/libs/libft/unit_test_lib/cbdd/src/color_terminal_displayer.c	20;"	d	file:
+ASSERT_RAISE_	/home/selver/Documents/libs/libft/unit_test_lib/cbdd/tests/assert_raise.h	2;"	d
+AnotherException	/home/selver/Documents/libs/libft/unit_test_lib/cbdd/tests/cbdd_tests.c	/^Except_T AnotherException = { "Another Exception" };$/;"	v
+Another_handled	/home/selver/Documents/libs/libft/unit_test_lib/cbdd/tests/assert_raise.c	/^  Another_handled = 2,$/;"	e	enum:handled	file:
+Assert_Failed	/home/selver/Documents/libs/libft/unit_test_lib/cbdd/tests/assert.c	/^const Except_T Assert_Failed = { "Assertion failed" };$/;"	v
+BADFUNCS	/home/selver/Documents/libs/libft/unit_test_lib/cbdd/Makefile	/^BADFUNCS='[^_.>a-zA-Z0-9](str(n?cpy|n?cat|xfrm|n?dup|str|pbrk|tok|_)|stpn?cpy|a?sn?printf|byte_)'$/;"	m
+BASE	/home/selver/Documents/libs/libft/Makefile	/^BASE = $(MEM) $(STR) $(IS) $(PUT) ft_toupper.c ft_tolower.c ft_error.c$/;"	m
+BEFORE_ALL_CALLED	/home/selver/Documents/libs/libft/unit_test_lib/cbdd/src/cbdd.c	/^static int BEFORE_ALL_CALLED = 0;$/;"	v	file:
+BTREE	/home/selver/Documents/libs/libft/Makefile	/^BTREE= ft_btree_apply_prefix.c ft_btree_apply_defix.c ft_btree_apply_infix.c ft_btree_apply_suffix.c ft_btree_create_node.c \\$/;"	m
+BUFF_SIZE	/home/selver/Documents/libs/libft/get_next_line.h	16;"	d
+CBDD_H	/home/selver/Documents/libs/libft/unit_test_lib/cbdd/src/cbdd.h	16;"	d
+CC	/home/selver/Documents/libs/libft/unit_test_lib/cbdd/Makefile	/^CC=clang$/;"	m
+CFLAGS	/home/selver/Documents/libs/libft/unit_test_lib/cbdd/Makefile	/^CFLAGS=-g -O2 -Wall -fblocks -Wextra -Isrc -rdynamic -DNDEBUG $(OPTFLAGS)$/;"	m
+CFLAGS	/home/selver/Documents/libs/libft/unit_test_lib/cbdd/Makefile	/^dev: CFLAGS=-g -Wall -Isrc -Wall -Wextra $(OPTFLAGS)$/;"	m
+COUNTER	/home/selver/Documents/libs/libft/Makefile	/^COUNTER= $/;"	m
+DEP	/home/selver/Documents/libs/libft/Makefile	/^DEP = $(OBJS:%.o=%.d)$/;"	m
+DIR	/home/selver/Documents/libs/libft/Makefile	/^DIR= ft_is_dot.c ft_is_hidden.c ft_cnt_type.c ft_is_dir.c ft_exists.c$/;"	m
+Displayer_display_describe_name	/home/selver/Documents/libs/libft/unit_test_lib/cbdd/src/cbdd.c	/^void Displayer_display_describe_name(const char* desc) {$/;"	f
+Displayer_display_example_name	/home/selver/Documents/libs/libft/unit_test_lib/cbdd/src/cbdd.c	/^void Displayer_display_example_name(const char* example) {$/;"	f
+Displayer_display_example_passed	/home/selver/Documents/libs/libft/unit_test_lib/cbdd/src/cbdd.c	/^void Displayer_display_example_passed() {$/;"	f
+Displayer_display_expect_equal_failed	/home/selver/Documents/libs/libft/unit_test_lib/cbdd/src/cbdd.c	/^void Displayer_display_expect_equal_failed(int exp, int act, const char*file, int line) {$/;"	f
+Displayer_display_expect_false_failed	/home/selver/Documents/libs/libft/unit_test_lib/cbdd/src/cbdd.c	/^void Displayer_display_expect_false_failed(int act, const char*file, int line) {$/;"	f
+Displayer_display_expect_null_failed	/home/selver/Documents/libs/libft/unit_test_lib/cbdd/src/cbdd.c	/^void Displayer_display_expect_null_failed(void *act, const char*file, int line) {$/;"	f
+Displayer_display_expect_true_failed	/home/selver/Documents/libs/libft/unit_test_lib/cbdd/src/cbdd.c	/^void Displayer_display_expect_true_failed(int act, const char*file, int line) {$/;"	f
+Displayer_display_refute_equal_failed	/home/selver/Documents/libs/libft/unit_test_lib/cbdd/src/cbdd.c	/^void Displayer_display_refute_equal_failed(int exp, int act, const char*file, int line) {$/;"	f
+Displayer_display_refute_equal_string_failed	/home/selver/Documents/libs/libft/unit_test_lib/cbdd/src/cbdd.c	/^void Displayer_display_refute_equal_string_failed(const char*exp, const char*act, const char*file, int line) {$/;"	f
+Displayer_display_refute_null_failed	/home/selver/Documents/libs/libft/unit_test_lib/cbdd/src/cbdd.c	/^void  Displayer_display_refute_null_failed(void *act, const char* file, int line) {$/;"	f
+Displayer_display_string_equal_failed	/home/selver/Documents/libs/libft/unit_test_lib/cbdd/src/cbdd.c	/^void Displayer_display_string_equal_failed(const char*exp, const char*act, const char*file, int line) {$/;"	f
+ELSE	/home/selver/Documents/libs/libft/unit_test_lib/cbdd/tests/except.h	48;"	d
+ELSE	/home/selver/Documents/libs/libft/unit_test_lib/cbdd/tests/except.h	77;"	d
+END_TRY	/home/selver/Documents/libs/libft/unit_test_lib/cbdd/tests/except.h	57;"	d
+END_TRY	/home/selver/Documents/libs/libft/unit_test_lib/cbdd/tests/except.h	86;"	d
+EQUAL_STRING_FREE	/home/selver/Documents/libs/libft/unit_test_lib/unit_test_str.c	3;"	d	file:
+ERROR_MALLOC	/home/selver/Documents/libs/libft/libft.h	26;"	d
+EXCEPT	/home/selver/Documents/libs/libft/unit_test_lib/cbdd/tests/except.h	44;"	d
+EXCEPT	/home/selver/Documents/libs/libft/unit_test_lib/cbdd/tests/except.h	73;"	d
+EXCEPT_INCLUDED	/home/selver/Documents/libs/libft/unit_test_lib/cbdd/tests/except.h	3;"	d
+EXPECTATION_FAILED	/home/selver/Documents/libs/libft/unit_test_lib/cbdd/src/cbdd.c	/^static int EXPECTATION_FAILED = 0;$/;"	v	file:
+Except_Frame	/home/selver/Documents/libs/libft/unit_test_lib/cbdd/tests/except.h	/^struct Except_Frame {$/;"	s
+Except_Frame	/home/selver/Documents/libs/libft/unit_test_lib/cbdd/tests/except.h	/^typedef struct Except_Frame Except_Frame;$/;"	t	typeref:struct:Except_Frame
+Except_entered	/home/selver/Documents/libs/libft/unit_test_lib/cbdd/tests/except.h	/^enum { Except_entered=0, Except_raised,$/;"	e	enum:__anon1
+Except_finalized	/home/selver/Documents/libs/libft/unit_test_lib/cbdd/tests/except.h	/^       Except_handled,   Except_finalized };$/;"	e	enum:__anon1
+Except_handled	/home/selver/Documents/libs/libft/unit_test_lib/cbdd/tests/except.h	/^       Except_handled,   Except_finalized };$/;"	e	enum:__anon1
+Except_index	/home/selver/Documents/libs/libft/unit_test_lib/cbdd/tests/except.c	/^int Except_index = -1;$/;"	v
+Except_init	/home/selver/Documents/libs/libft/unit_test_lib/cbdd/tests/except.c	/^void Except_init(void) {$/;"	f
+Except_pop	/home/selver/Documents/libs/libft/unit_test_lib/cbdd/tests/except.c	/^void Except_pop(void) {$/;"	f
+Except_push	/home/selver/Documents/libs/libft/unit_test_lib/cbdd/tests/except.c	/^void Except_push(Except_Frame *fp) {$/;"	f
+Except_raise	/home/selver/Documents/libs/libft/unit_test_lib/cbdd/tests/except.c	/^void Except_raise(const T *e, const char *file,$/;"	f
+Except_raised	/home/selver/Documents/libs/libft/unit_test_lib/cbdd/tests/except.h	/^enum { Except_entered=0, Except_raised,$/;"	e	enum:__anon1
+Except_stack	/home/selver/Documents/libs/libft/unit_test_lib/cbdd/tests/except.c	/^Except_Frame *Except_stack = NULL;$/;"	v
+FINALLY	/home/selver/Documents/libs/libft/unit_test_lib/cbdd/tests/except.h	52;"	d
+FINALLY	/home/selver/Documents/libs/libft/unit_test_lib/cbdd/tests/except.h	81;"	d
+FLAG	/home/selver/Documents/libs/libft/Makefile	/^FLAG = -Wall -Wextra -Werror -g3 -O3 #-fsanitize=address$/;"	m
+FT_PRINTF_H	/home/selver/Documents/libs/libft/ft_printf.h	14;"	d
+GET_NEXT_LINE_H	/home/selver/Documents/libs/libft/get_next_line.h	14;"	d
+HASHTABLE	/home/selver/Documents/libs/libft/Makefile	/^HASHTABLE= ft_hashtable_new.c ft_hashtable_clean.c ft_hashtable_sub.c ft_hashtable_free.c ft_hashtable_search.c ft_hashtable_add.c ft_hashtable_hash.c ft_hashnode_new.c$/;"	m
+INCLUDES	/home/selver/Documents/libs/libft/Makefile	/^INCLUDES = \/usr\/local\/include$/;"	m
+IS	/home/selver/Documents/libs/libft/Makefile	/^IS = ft_isalpha.c ft_iswhitespace.c ft_islower.c ft_isupper.c ft_isdigit.c \\$/;"	m
+LIBFT_H	/home/selver/Documents/libs/libft/libft.h	14;"	d
+LIBS	/home/selver/Documents/libs/libft/unit_test_lib/cbdd/Makefile	/^LIBS=-ldl $(OPTLIBS)$/;"	m
+LIB_HEADER	/home/selver/Documents/libs/libft/unit_test_lib/cbdd/Makefile	/^LIB_HEADER= src\/cbdd.h$/;"	m
+LST	/home/selver/Documents/libs/libft/Makefile	/^LST = ft_lstnew.c ft_lstdelone.c ft_lstdel.c ft_lstadd.c ft_lstiter.c \\$/;"	m
+MATH	/home/selver/Documents/libs/libft/Makefile	/^MATH= $(VECTOR2) $(VECTOR3) $(VECTOR4) $(MATRIX) ft_atoi.c ft_abs.c ft_sign.c \\$/;"	m
+MATRIX	/home/selver/Documents/libs/libft/Makefile	/^MATRIX= ft_matrix.c ft_matrix_product.c ft_matrix_free.c \\$/;"	m
+MAX_OPEN	/home/selver/Documents/libs/libft/get_next_line.h	17;"	d
+MEM	/home/selver/Documents/libs/libft/Makefile	/^MEM = ft_memccpy.c ft_memmove.c ft_memset.c ft_memcpy.c ft_memchr.c \\$/;"	m
+NAME	/home/selver/Documents/libs/libft/Makefile	/^NAME = libft.a$/;"	m
+NB	/home/selver/Documents/libs/libft/Makefile	/^NB = $(words $(SRCS))$/;"	m
+NOT_EQUAL_EXCEPTION	/home/selver/Documents/libs/libft/unit_test_lib/cbdd/tests/cbdd_tests.c	/^Except_T NOT_EQUAL_EXCEPTION = { "lhs does not equal rhs" };$/;"	v
+NOT_EQUAL_EXCEPTION_handled	/home/selver/Documents/libs/libft/unit_test_lib/cbdd/tests/assert_raise.c	/^  NOT_EQUAL_EXCEPTION_handled = 3 };$/;"	e	enum:handled	file:
+Not_hanlded	/home/selver/Documents/libs/libft/unit_test_lib/cbdd/tests/assert_raise.c	/^  Not_hanlded = 0,$/;"	e	enum:handled	file:
+OBJ	/home/selver/Documents/libs/libft/Makefile	/^OBJ = $(SRCS:.c=.o)$/;"	m
+OBJDIR	/home/selver/Documents/libs/libft/Makefile	/^OBJDIR = obj\/$/;"	m
+OBJECTS	/home/selver/Documents/libs/libft/unit_test_lib/cbdd/Makefile	/^OBJECTS=$(patsubst %.c,%.o,$(SOURCES))$/;"	m
+OBJS	/home/selver/Documents/libs/libft/Makefile	/^OBJS = $(addprefix $(OBJDIR), $(OBJ))$/;"	m
+PREFIX	/home/selver/Documents/libs/libft/unit_test_lib/cbdd/Makefile	/^PREFIX?=\/usr\/local$/;"	m
+PRINTF	/home/selver/Documents/libs/libft/Makefile	/^PRINTF= printf.c printf_args.c printf_args2.c printf_args3.c \\$/;"	m
+PUT	/home/selver/Documents/libs/libft/Makefile	/^PUT = ft_putchar.c ft_putstr.c ft_putnbr.c ft_putchar_fd.c ft_putstr_fd.c \\$/;"	m
+RAISE	/home/selver/Documents/libs/libft/unit_test_lib/cbdd/tests/except.h	32;"	d
+RAISE	/home/selver/Documents/libs/libft/unit_test_lib/cbdd/tests/except.h	62;"	d
+RERAISE	/home/selver/Documents/libs/libft/unit_test_lib/cbdd/tests/except.h	33;"	d
+RERAISE	/home/selver/Documents/libs/libft/unit_test_lib/cbdd/tests/except.h	63;"	d
+RETURN	/home/selver/Documents/libs/libft/unit_test_lib/cbdd/tests/except.h	35;"	d
+RETURN	/home/selver/Documents/libs/libft/unit_test_lib/cbdd/tests/except.h	65;"	d
+SOURCES	/home/selver/Documents/libs/libft/unit_test_lib/cbdd/Makefile	/^SOURCES=$(wildcard src\/**\/*.c src\/*.c)$/;"	m
+SO_TARGET	/home/selver/Documents/libs/libft/unit_test_lib/cbdd/Makefile	/^SO_TARGET=$(patsubst %.a,%.so,$(TARGET))$/;"	m
+SRCS	/home/selver/Documents/libs/libft/Makefile	/^SRCS = $(BASE) $(LST) $(MATH) $(PRINTF) $(ALGO) get_next_line.c $(DIR) $(BTREE) $(HASHTABLE)$/;"	m
+STR	/home/selver/Documents/libs/libft/Makefile	/^STR = ft_strlen.c ft_strcmp.c ft_strncmp.c ft_strstr.c ft_strnstr.c \\$/;"	m
+SomeException	/home/selver/Documents/libs/libft/unit_test_lib/cbdd/tests/cbdd_tests.c	/^Except_T SomeException = { "Some Exception" };$/;"	v
+SomeException_handled	/home/selver/Documents/libs/libft/unit_test_lib/cbdd/tests/assert_raise.c	/^  SomeException_handled = 1,$/;"	e	enum:handled	file:
+T	/home/selver/Documents/libs/libft/unit_test_lib/cbdd/tests/except.c	6;"	d	file:
+T	/home/selver/Documents/libs/libft/unit_test_lib/cbdd/tests/except.h	/^typedef struct T {$/;"	s
+T	/home/selver/Documents/libs/libft/unit_test_lib/cbdd/tests/except.h	/^} T;$/;"	t	typeref:struct:T
+T	/home/selver/Documents/libs/libft/unit_test_lib/cbdd/tests/except.h	5;"	d
+T	/home/selver/Documents/libs/libft/unit_test_lib/cbdd/tests/except.h	91;"	d
+TARGET	/home/selver/Documents/libs/libft/unit_test_lib/cbdd/Makefile	/^TARGET=build\/libcbdd.a$/;"	m
+TEST_H	/home/selver/Documents/libs/libft/unit_test_lib/test.h	2;"	d
+TEST_SOURCE	/home/selver/Documents/libs/libft/unit_test_lib/cbdd/Makefile	/^TEST_SOURCE=$(wildcard tests\/**\/*.c tests\/*.c)$/;"	m
+TEXT_SIZE	/home/selver/Documents/libs/libft/unit_test_lib/cbdd/src/color_terminal_displayer.c	26;"	d	file:
+TRY	/home/selver/Documents/libs/libft/unit_test_lib/cbdd/tests/except.h	36;"	d
+TRY	/home/selver/Documents/libs/libft/unit_test_lib/cbdd/tests/except.h	66;"	d
+VECTOR2	/home/selver/Documents/libs/libft/Makefile	/^VECTOR2= ft_vector2.c ft_vector2_normalize.c ft_vector2_magnitude.c \\$/;"	m
+VECTOR3	/home/selver/Documents/libs/libft/Makefile	/^VECTOR3= ft_vector3.c ft_vector3_normalize.c ft_vector3_magnitude.c \\$/;"	m
+VECTOR4	/home/selver/Documents/libs/libft/Makefile	/^VECTOR4= ft_vector4.c ft_vector4_p_matrix.c ft_matrix_to_vector4.c \\$/;"	m
+_expect_equal	/home/selver/Documents/libs/libft/unit_test_lib/cbdd/src/cbdd.c	/^void _expect_equal(long exp, long act, const char* file, int line) {$/;"	f
+_expect_equal_string	/home/selver/Documents/libs/libft/unit_test_lib/cbdd/src/cbdd.c	/^void _expect_equal_string(const char* exp, const char* act, const char* file, int line) {$/;"	f
+_expect_false	/home/selver/Documents/libs/libft/unit_test_lib/cbdd/src/cbdd.c	/^void _expect_false(int act, const char* file, int line) {$/;"	f
+_expect_null	/home/selver/Documents/libs/libft/unit_test_lib/cbdd/src/cbdd.c	/^void _expect_null(void *act, const char* file, int line) {$/;"	f
+_expect_true	/home/selver/Documents/libs/libft/unit_test_lib/cbdd/src/cbdd.c	/^void _expect_true(int act, const char* file, int line) {$/;"	f
+_refute_equal	/home/selver/Documents/libs/libft/unit_test_lib/cbdd/src/cbdd.c	/^void _refute_equal(long exp, long act, const char* file, int line) {$/;"	f
+_refute_equal_string	/home/selver/Documents/libs/libft/unit_test_lib/cbdd/src/cbdd.c	/^void _refute_equal_string(const char* exp, const char* act, const char* file, int line) {$/;"	f
+_refute_null	/home/selver/Documents/libs/libft/unit_test_lib/cbdd/src/cbdd.c	/^void _refute_null(void *act, const char* file, int line) {$/;"	f
+after_all	/home/selver/Documents/libs/libft/unit_test_lib/cbdd/src/cbdd.c	/^void after_all(void (^block)()) {$/;"	f
+after_each	/home/selver/Documents/libs/libft/unit_test_lib/cbdd/src/cbdd.c	/^void after_each(void (^block)()) {$/;"	f
+arg_add_flag	/home/selver/Documents/libs/libft/printf_arg_change.c	/^t_arg	arg_add_flag(t_arg arg, const char *str)$/;"	f
+arg_change_conv	/home/selver/Documents/libs/libft/printf_arg_change.c	/^t_arg	arg_change_conv(t_arg arg, const char *str)$/;"	f
+arg_change_flag	/home/selver/Documents/libs/libft/printf_arg_change.c	/^t_arg	arg_change_flag(t_arg arg, const char *str)$/;"	f
+assert	/home/selver/Documents/libs/libft/unit_test_lib/cbdd/tests/assert.c	/^void (assert)(int e) {$/;"	f
+assert	/home/selver/Documents/libs/libft/unit_test_lib/cbdd/tests/assert.h	2;"	d
+assert	/home/selver/Documents/libs/libft/unit_test_lib/cbdd/tests/assert.h	4;"	d
+assert	/home/selver/Documents/libs/libft/unit_test_lib/cbdd/tests/assert.h	8;"	d
+assert	/home/selver/Documents/libs/libft/unit_test_lib/cbdd/tests/except.c	44;"	d	file:
+assert	/home/selver/Documents/libs/libft/unit_test_lib/cbdd/tests/except.c	45;"	d	file:
+assert_equals	/home/selver/Documents/libs/libft/unit_test_lib/main.c	/^int assert_equals(const char *str, const char *str2)$/;"	f
+assert_raise	/home/selver/Documents/libs/libft/unit_test_lib/cbdd/tests/assert_raise.c	/^void assert_raise(Except_T expected, void (^block)() ) {$/;"	f
+astar_loop	/home/selver/Documents/libs/libft/ft_astar.c	/^static void	*astar_loop(t_algo_data *data, t_algo_input *algo)$/;"	f	file:
+before_all	/home/selver/Documents/libs/libft/unit_test_lib/cbdd/src/cbdd.c	/^void before_all(void (^block)()) {$/;"	f
+before_each	/home/selver/Documents/libs/libft/unit_test_lib/cbdd/src/cbdd.c	/^void before_each(void (^block)()) {$/;"	f
+buffer	/home/selver/Documents/libs/libft/ft_printf.h	/^	char		*buffer;$/;"	m	struct:s_buffer
+bufx	/home/selver/Documents/libs/libft/ft_printf.h	/^	int			bufx;$/;"	m	struct:s_buffer
+calc_blank_space	/home/selver/Documents/libs/libft/printf_essentials.c	/^int		calc_blank_space(t_arg arg)$/;"	f
+camefrom	/home/selver/Documents/libs/libft/libft.h	/^	t_hashtable		*camefrom;$/;"	m	struct:s_algo_data
+cbdd_expectation_failed	/home/selver/Documents/libs/libft/unit_test_lib/cbdd/src/cbdd.c	/^int cbdd_expectation_failed() {$/;"	f
+clear_global_blocks	/home/selver/Documents/libs/libft/unit_test_lib/cbdd/src/cbdd.c	/^void clear_global_blocks() {$/;"	f
+cmp	/home/selver/Documents/libs/libft/libft.h	/^    int             (*cmp)();$/;"	m	struct:s_algo_input
+color_print	/home/selver/Documents/libs/libft/unit_test_lib/cbdd/src/color_terminal_displayer.c	/^static void color_print(const char* color, const char* text) {$/;"	f	file:
+color_table	/home/selver/Documents/libs/libft/printf_arg_color.c	/^static char	*color_table(t_arg arg)$/;"	f	file:
+color_table2	/home/selver/Documents/libs/libft/printf_arg_color.c	/^static char	*color_table2(t_arg arg)$/;"	f	file:
+content	/home/selver/Documents/libs/libft/libft.h	/^	void			*content;$/;"	m	struct:s_list
+content	/home/selver/Documents/libs/libft/libft.h	/^    t_list  **content;$/;"	m	struct:s_hashtable
+content	/home/selver/Documents/libs/libft/libft.h	/^    void    *content;$/;"	m	struct:s_hashnode
+content_size	/home/selver/Documents/libs/libft/libft.h	/^	size_t			content_size;$/;"	m	struct:s_list
+context	/home/selver/Documents/libs/libft/unit_test_lib/cbdd/src/cbdd.c	/^void context(const char *string, void (^block)()) {$/;"	f
+conversion	/home/selver/Documents/libs/libft/ft_printf.h	/^	char		*conversion;$/;"	m	struct:s_arg
+copyback	/home/selver/Documents/libs/libft/ft_memmove.c	/^static void		*copyback(void *dst, const void *src, size_t len)$/;"	f	file:
+copyfront	/home/selver/Documents/libs/libft/ft_memmove.c	/^static void		*copyfront(void *dst, const void *src, size_t len)$/;"	f	file:
+def	/home/selver/Documents/libs/libft/libft.h	/^    void    *def;$/;"	m	struct:s_hashtable
+describe	/home/selver/Documents/libs/libft/unit_test_lib/cbdd/src/cbdd.c	/^void describe(const char *string, void (^block)()) {$/;"	f
+displays_describe_name_before_describe_block	/home/selver/Documents/libs/libft/unit_test_lib/cbdd/src/color_terminal_displayer.c	/^void  displays_describe_name_before_describe_block(const char* desc) {$/;"	f
+displays_example_name_before_it_block	/home/selver/Documents/libs/libft/unit_test_lib/cbdd/src/color_terminal_displayer.c	/^void displays_example_name_before_it_block(const char* example) {$/;"	f
+displays_example_passed	/home/selver/Documents/libs/libft/unit_test_lib/cbdd/src/color_terminal_displayer.c	/^void displays_example_passed() {$/;"	f
+displays_expect_equal_failed	/home/selver/Documents/libs/libft/unit_test_lib/cbdd/src/color_terminal_displayer.c	/^void displays_expect_equal_failed(long exp, long act, const char*file, int line) {$/;"	f
+displays_expect_false_failed	/home/selver/Documents/libs/libft/unit_test_lib/cbdd/src/color_terminal_displayer.c	/^void displays_expect_false_failed(int act, const char*file, int line) {$/;"	f
+displays_expect_null_failed	/home/selver/Documents/libs/libft/unit_test_lib/cbdd/src/color_terminal_displayer.c	/^void displays_expect_null_failed(void *act, const char*file, int line) {$/;"	f
+displays_expect_true_failed	/home/selver/Documents/libs/libft/unit_test_lib/cbdd/src/color_terminal_displayer.c	/^void displays_expect_true_failed(int act, const char*file, int line) {$/;"	f
+displays_refute_equal_failed	/home/selver/Documents/libs/libft/unit_test_lib/cbdd/src/color_terminal_displayer.c	/^void displays_refute_equal_failed(long actual, long expected, const char*file, int line) {$/;"	f
+displays_refute_null_failed	/home/selver/Documents/libs/libft/unit_test_lib/cbdd/src/color_terminal_displayer.c	/^void displays_refute_null_failed(void *act, const char* file, int line) {$/;"	f
+displays_string_equal_failed	/home/selver/Documents/libs/libft/unit_test_lib/cbdd/src/color_terminal_displayer.c	/^void displays_string_equal_failed(const char*exp, const char*act, const char*file, int line) {$/;"	f
+displays_string_refute_failed	/home/selver/Documents/libs/libft/unit_test_lib/cbdd/src/color_terminal_displayer.c	/^void displays_string_refute_failed(const char*exp, const char*act, const char*file, int line) {$/;"	f
+either_or_both_is_null	/home/selver/Documents/libs/libft/unit_test_lib/cbdd/src/cbdd.c	/^int either_or_both_is_null(const char* exp, const char* act) {$/;"	f
+env	/home/selver/Documents/libs/libft/unit_test_lib/cbdd/tests/except.h	/^	jmp_buf env;$/;"	m	struct:Except_Frame
+exception	/home/selver/Documents/libs/libft/unit_test_lib/cbdd/tests/except.h	/^	const T *exception;$/;"	m	struct:Except_Frame
+exec_the_before_all_block_once	/home/selver/Documents/libs/libft/unit_test_lib/cbdd/src/cbdd.c	/^void exec_the_before_all_block_once() {$/;"	f
+expect_equal	/home/selver/Documents/libs/libft/unit_test_lib/cbdd/src/cbdd.h	28;"	d
+expect_equal_failed	/home/selver/Documents/libs/libft/unit_test_lib/cbdd/src/cbdd.c	/^void expect_equal_failed(long exp, long act, const char*file, int line) {$/;"	f
+expect_equal_string	/home/selver/Documents/libs/libft/unit_test_lib/cbdd/src/cbdd.h	34;"	d
+expect_equal_string_failed	/home/selver/Documents/libs/libft/unit_test_lib/cbdd/src/cbdd.c	/^void expect_equal_string_failed(const char* exp, const char* act, const char*file, int line)  {$/;"	f
+expect_false	/home/selver/Documents/libs/libft/unit_test_lib/cbdd/src/cbdd.h	43;"	d
+expect_false_failed	/home/selver/Documents/libs/libft/unit_test_lib/cbdd/src/cbdd.c	/^void expect_false_failed(int act, const char*file, int line) {$/;"	f
+expect_null	/home/selver/Documents/libs/libft/unit_test_lib/cbdd/src/cbdd.h	46;"	d
+expect_null_failed	/home/selver/Documents/libs/libft/unit_test_lib/cbdd/src/cbdd.c	/^void expect_null_failed(void *act, const char* file, int line) {$/;"	f
+expect_true	/home/selver/Documents/libs/libft/unit_test_lib/cbdd/src/cbdd.h	40;"	d
+expect_true_failed	/home/selver/Documents/libs/libft/unit_test_lib/cbdd/src/cbdd.c	/^void expect_true_failed(int act, const char*file, int line) {$/;"	f
+expectation_passed	/home/selver/Documents/libs/libft/unit_test_lib/cbdd/src/cbdd.c	/^void expectation_passed()  {$/;"	f
+fd	/home/selver/Documents/libs/libft/ft_printf.h	/^	int			*fd;$/;"	m	struct:s_fd
+fd	/home/selver/Documents/libs/libft/ft_printf.h	/^	t_fd		fd;$/;"	m	struct:s_buffer
+file	/home/selver/Documents/libs/libft/unit_test_lib/cbdd/tests/except.h	/^	const char *file;$/;"	m	struct:Except_Frame
+flags	/home/selver/Documents/libs/libft/ft_printf.h	/^	char		*flags;$/;"	m	struct:s_arg
+free	/home/selver/Documents/libs/libft/libft.h	/^    void            (*free)(void *data, size_t size);$/;"	m	struct:s_algo_input
+free_arg	/home/selver/Documents/libs/libft/printf_free.c	/^void	free_arg(t_arg *arg)$/;"	f
+free_buffer	/home/selver/Documents/libs/libft/printf_free.c	/^void	free_buffer(t_buffer *buf)$/;"	f
+free_f	/home/selver/Documents/libs/libft/ft_hashtable_sub.c	/^static void	free_f(void *p, size_t size)$/;"	f	file:
+free_hashnode	/home/selver/Documents/libs/libft/ft_hashtable_clean.c	/^static void	free_hashnode(void *hashnode, size_t size)$/;"	f	file:
+free_hashnode	/home/selver/Documents/libs/libft/ft_hashtable_free.c	/^static void	free_hashnode(void *hashnode, size_t size)$/;"	f	file:
+free_info	/home/selver/Documents/libs/libft/unit_test_lib/lst_test.c	/^void free_info(void *ptr, size_t size)$/;"	f
+free_p	/home/selver/Documents/libs/libft/ft_astar.c	/^static void	free_p(void *p, size_t size)$/;"	f	file:
+fscore	/home/selver/Documents/libs/libft/libft.h	/^	t_hashtable		*fscore;$/;"	m	struct:s_algo_data
+ft_abs	/home/selver/Documents/libs/libft/ft_abs.c	/^unsigned long	ft_abs(int nb)$/;"	f
+ft_astar	/home/selver/Documents/libs/libft/ft_astar.c	/^void		**ft_astar(void *start, t_algo_input *algo)$/;"	f
+ft_atoi	/home/selver/Documents/libs/libft/ft_atoi.c	/^int	ft_atoi(const char *str)$/;"	f
+ft_btree_apply_defix	/home/selver/Documents/libs/libft/ft_btree_apply_defix.c	/^void	ft_btree_apply_defix(t_btree *root, void (*applyf)(void *))$/;"	f
+ft_btree_apply_infix	/home/selver/Documents/libs/libft/ft_btree_apply_infix.c	/^void	ft_btree_apply_infix(t_btree *root, void (*applyf)(void *))$/;"	f
+ft_btree_apply_prefix	/home/selver/Documents/libs/libft/ft_btree_apply_prefix.c	/^void	ft_btree_apply_prefix(t_btree *root, void (*applyf)(void *))$/;"	f
+ft_btree_apply_suffix	/home/selver/Documents/libs/libft/ft_btree_apply_suffix.c	/^void	ft_btree_apply_suffix(t_btree *root, void (*applyf)(void *))$/;"	f
+ft_btree_create_node	/home/selver/Documents/libs/libft/ft_btree_create_node.c	/^t_btree	*ft_btree_create_node(void *item)$/;"	f
+ft_btree_free	/home/selver/Documents/libs/libft/ft_btree_free.c	/^void	ft_btree_free(t_btree *root)$/;"	f
+ft_btree_insert_data	/home/selver/Documents/libs/libft/ft_btree_insert_data.c	/^void	ft_btree_insert_data(t_btree **root, void *item,$/;"	f
+ft_bzero	/home/selver/Documents/libs/libft/ft_bzero.c	/^void	ft_bzero(void *s, size_t n)$/;"	f
+ft_cnt_type	/home/selver/Documents/libs/libft/ft_cnt_type.c	/^int		ft_cnt_type(char **files, int size, int type)$/;"	f
+ft_cntspback	/home/selver/Documents/libs/libft/ft_cntspback.c	/^size_t	ft_cntspback(char const *s, char const c)$/;"	f
+ft_cntspfront	/home/selver/Documents/libs/libft/ft_cntspfront.c	/^size_t	ft_cntspfront(char const *s, char const c)$/;"	f
+ft_error	/home/selver/Documents/libs/libft/ft_error.c	/^void	ft_error(const char *const str)$/;"	f
+ft_exists	/home/selver/Documents/libs/libft/ft_exists.c	/^int		ft_exists(char *file)$/;"	f
+ft_free_2d	/home/selver/Documents/libs/libft/ft_free_2d.c	/^void	ft_free_2d(void *array, int size)$/;"	f
+ft_hashnode_new	/home/selver/Documents/libs/libft/ft_hashnode_new.c	/^t_hashnode	*ft_hashnode_new(char *index, void *val)$/;"	f
+ft_hashtable_add	/home/selver/Documents/libs/libft/ft_hashtable_add.c	/^void	ft_hashtable_add(t_hashtable *table, const char *index, void *value)$/;"	f
+ft_hashtable_clean	/home/selver/Documents/libs/libft/ft_hashtable_clean.c	/^void		ft_hashtable_clean(t_hashtable *table)$/;"	f
+ft_hashtable_free	/home/selver/Documents/libs/libft/ft_hashtable_free.c	/^void		ft_hashtable_free(t_hashtable *table)$/;"	f
+ft_hashtable_hash	/home/selver/Documents/libs/libft/ft_hashtable_hash.c	/^size_t	ft_hashtable_hash(const char *key)$/;"	f
+ft_hashtable_new	/home/selver/Documents/libs/libft/ft_hashtable_new.c	/^t_hashtable	*ft_hashtable_new(size_t size, void *def)$/;"	f
+ft_hashtable_search	/home/selver/Documents/libs/libft/ft_hashtable_search.c	/^void	*ft_hashtable_search(t_hashtable *table, const char *index)$/;"	f
+ft_hashtable_sub	/home/selver/Documents/libs/libft/ft_hashtable_sub.c	/^void		ft_hashtable_sub(t_hashtable *table, const char *index)$/;"	f
+ft_is_dir	/home/selver/Documents/libs/libft/ft_is_dir.c	/^int		ft_is_dir(char *name)$/;"	f
+ft_is_dot	/home/selver/Documents/libs/libft/ft_is_dot.c	/^int	ft_is_dot(char *name)$/;"	f
+ft_is_hidden	/home/selver/Documents/libs/libft/ft_is_hidden.c	/^int		ft_is_hidden(char *filename)$/;"	f
+ft_isalnum	/home/selver/Documents/libs/libft/ft_isalnum.c	/^int	ft_isalnum(int c)$/;"	f
+ft_isalpha	/home/selver/Documents/libs/libft/ft_isalpha.c	/^int	ft_isalpha(int c)$/;"	f
+ft_isascii	/home/selver/Documents/libs/libft/ft_isascii.c	/^int	ft_isascii(int c)$/;"	f
+ft_isdigit	/home/selver/Documents/libs/libft/ft_isdigit.c	/^int	ft_isdigit(int c)$/;"	f
+ft_islower	/home/selver/Documents/libs/libft/ft_islower.c	/^int	ft_islower(int c)$/;"	f
+ft_isprint	/home/selver/Documents/libs/libft/ft_isprint.c	/^int	ft_isprint(int c)$/;"	f
+ft_isupper	/home/selver/Documents/libs/libft/ft_isupper.c	/^int	ft_isupper(int c)$/;"	f
+ft_iswhitespace	/home/selver/Documents/libs/libft/ft_iswhitespace.c	/^int	ft_iswhitespace(char c)$/;"	f
+ft_itoa	/home/selver/Documents/libs/libft/ft_itoa.c	/^char		*ft_itoa(int n)$/;"	f
+ft_itoa_base	/home/selver/Documents/libs/libft/ft_itoa_base.c	/^char		*ft_itoa_base(long long nb, int base)$/;"	f
+ft_len_2d	/home/selver/Documents/libs/libft/ft_len_2d.c	/^int	ft_len_2d(char **array)$/;"	f
+ft_lst_append	/home/selver/Documents/libs/libft/ft_lst_append.c	/^void	ft_lst_append(t_list **root, t_list *append)$/;"	f
+ft_lst_exist	/home/selver/Documents/libs/libft/ft_lst_exist.c	/^int	ft_lst_exist(t_list *root, void *data, int (cmp(void*, void*)))$/;"	f
+ft_lst_sorted_insert	/home/selver/Documents/libs/libft/ft_lst_sorted_insert.c	/^void	ft_lst_sorted_insert(t_list **begin_list, t_list *data, int (*cmp)())$/;"	f
+ft_lstadd	/home/selver/Documents/libs/libft/ft_lstadd.c	/^void	ft_lstadd(t_list **alst, t_list *new)$/;"	f
+ft_lstdel	/home/selver/Documents/libs/libft/ft_lstdel.c	/^void	ft_lstdel(t_list **alst, void (*del)(void *, size_t))$/;"	f
+ft_lstdelbyval	/home/selver/Documents/libs/libft/ft_lstdelbyval.c	/^void	ft_lstdelbyval(t_list **lst, void *data, int (*cmp)(), void (*del)())$/;"	f
+ft_lstdelone	/home/selver/Documents/libs/libft/ft_lstdelone.c	/^void	ft_lstdelone(t_list **alst, void (*dsl)(void *, size_t))$/;"	f
+ft_lstgetbypos	/home/selver/Documents/libs/libft/ft_lstgetbypos.c	/^t_list	*ft_lstgetbypos(t_list *lst, int pos)$/;"	f
+ft_lstiter	/home/selver/Documents/libs/libft/ft_lstiter.c	/^void	ft_lstiter(t_list *lst, void (*f)(t_list *elem))$/;"	f
+ft_lstmap	/home/selver/Documents/libs/libft/ft_lstmap.c	/^t_list	*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem))$/;"	f
+ft_lstnew	/home/selver/Documents/libs/libft/ft_lstnew.c	/^t_list	*ft_lstnew(void const *content, size_t content_size)$/;"	f
+ft_lstnew_no_copy	/home/selver/Documents/libs/libft/ft_lstnew_no_copy.c	/^t_list	*ft_lstnew_no_copy(void *content, size_t content_size)$/;"	f
+ft_matrix	/home/selver/Documents/libs/libft/ft_matrix.c	/^t_matrix	ft_matrix(int width, int height)$/;"	f
+ft_matrix_diag_symetrie	/home/selver/Documents/libs/libft/ft_matrix_diag_symetrie.c	/^t_matrix	ft_matrix_diag_symetrie(t_matrix matrix)$/;"	f
+ft_matrix_free	/home/selver/Documents/libs/libft/ft_matrix_free.c	/^void	ft_matrix_free(t_matrix m)$/;"	f
+ft_matrix_identity	/home/selver/Documents/libs/libft/ft_matrix_identity.c	/^t_matrix	ft_matrix_identity(void)$/;"	f
+ft_matrix_product	/home/selver/Documents/libs/libft/ft_matrix_product.c	/^t_matrix		ft_matrix_product(t_matrix a, t_matrix b)$/;"	f
+ft_matrix_projection	/home/selver/Documents/libs/libft/ft_matrix_projection.c	/^t_matrix	ft_matrix_projection(float ratio, int near, int far, int fov)$/;"	f
+ft_matrix_ry	/home/selver/Documents/libs/libft/ft_matrix_ry.c	/^t_matrix	ft_matrix_ry(float angle)$/;"	f
+ft_matrix_to_vector4	/home/selver/Documents/libs/libft/ft_matrix_to_vector4.c	/^t_vector4	ft_matrix_to_vector4(t_matrix m)$/;"	f
+ft_matrix_translation	/home/selver/Documents/libs/libft/ft_matrix_translation.c	/^t_matrix	ft_matrix_translation(t_vector3 translation)$/;"	f
+ft_memalloc	/home/selver/Documents/libs/libft/ft_memalloc.c	/^void	*ft_memalloc(size_t size)$/;"	f
+ft_memccpy	/home/selver/Documents/libs/libft/ft_memccpy.c	/^void	*ft_memccpy(void *dst, const void *src, int c, size_t n)$/;"	f
+ft_memchr	/home/selver/Documents/libs/libft/ft_memchr.c	/^void	*ft_memchr(const void *s, int c, size_t n)$/;"	f
+ft_memcmp	/home/selver/Documents/libs/libft/ft_memcmp.c	/^int	ft_memcmp(const void *s1, const void *s2, size_t n)$/;"	f
+ft_memcpy	/home/selver/Documents/libs/libft/ft_memcpy.c	/^void	*ft_memcpy(void *dst, const void *src, size_t n)$/;"	f
+ft_memdel	/home/selver/Documents/libs/libft/ft_memdel.c	/^void	ft_memdel(void **ap)$/;"	f
+ft_memmove	/home/selver/Documents/libs/libft/ft_memmove.c	/^void			*ft_memmove(void *dst, const void *src, size_t len)$/;"	f
+ft_memset	/home/selver/Documents/libs/libft/ft_memset.c	/^void	*ft_memset(void *b, int c, size_t len)$/;"	f
+ft_min	/home/selver/Documents/libs/libft/ft_min.c	/^int	ft_min(int a, int b)$/;"	f
+ft_nblen	/home/selver/Documents/libs/libft/ft_nblen.c	/^int	ft_nblen(int nb)$/;"	f
+ft_pow	/home/selver/Documents/libs/libft/ft_pow.c	/^intmax_t	ft_pow(int n, int p)$/;"	f
+ft_print_matrix	/home/selver/Documents/libs/libft/ft_print_matrix.c	/^void	ft_print_matrix(t_matrix matrix)$/;"	f
+ft_printf	/home/selver/Documents/libs/libft/printf.c	/^int			ft_printf(const char *format, ...)$/;"	f
+ft_printf_printstr	/home/selver/Documents/libs/libft/printf_args.c	/^int		ft_printf_printstr(t_buffer *buf, const char *str, int x)$/;"	f
+ft_printf_putbinary	/home/selver/Documents/libs/libft/printf_args3.c	/^void	ft_printf_putbinary(t_arg arg, t_buffer *buf, va_list *ap)$/;"	f
+ft_printf_putchar	/home/selver/Documents/libs/libft/printf_args.c	/^void	ft_printf_putchar(t_arg arg, t_buffer *buf, va_list *ap)$/;"	f
+ft_printf_putcolor	/home/selver/Documents/libs/libft/printf_arg_color.c	/^void		ft_printf_putcolor(t_arg arg, t_buffer *buf, va_list *ap)$/;"	f
+ft_printf_putfd	/home/selver/Documents/libs/libft/printf_args3.c	/^void	ft_printf_putfd(t_arg arg, t_buffer *buf, va_list *ap)$/;"	f
+ft_printf_putfloat	/home/selver/Documents/libs/libft/printf_args3.c	/^void	ft_printf_putfloat(t_arg arg, t_buffer *buf, va_list *ap)$/;"	f
+ft_printf_puthexa	/home/selver/Documents/libs/libft/printf_args2.c	/^void		ft_printf_puthexa(t_arg arg, t_buffer *buf, va_list *ap)$/;"	f
+ft_printf_putlonguns	/home/selver/Documents/libs/libft/printf_args3.c	/^void	ft_printf_putlonguns(t_arg arg, t_buffer *buf, va_list *ap)$/;"	f
+ft_printf_putnbr	/home/selver/Documents/libs/libft/printf_args.c	/^void	ft_printf_putnbr(t_arg arg, t_buffer *buf, va_list *ap)$/;"	f
+ft_printf_putoct	/home/selver/Documents/libs/libft/printf_args2.c	/^void		ft_printf_putoct(t_arg arg, t_buffer *buf, va_list *ap)$/;"	f
+ft_printf_putpercent	/home/selver/Documents/libs/libft/printf_args2.c	/^void		ft_printf_putpercent(t_arg arg, t_buffer *buf, va_list *ap)$/;"	f
+ft_printf_putptr	/home/selver/Documents/libs/libft/printf_args3.c	/^void	ft_printf_putptr(t_arg arg, t_buffer *buf, va_list *ap)$/;"	f
+ft_printf_putstr	/home/selver/Documents/libs/libft/printf_args.c	/^void	ft_printf_putstr(t_arg arg, t_buffer *buf, va_list *ap)$/;"	f
+ft_printf_putuns	/home/selver/Documents/libs/libft/printf_args2.c	/^void		ft_printf_putuns(t_arg arg, t_buffer *buf, va_list *ap)$/;"	f
+ft_putchar	/home/selver/Documents/libs/libft/ft_putchar.c	/^int	ft_putchar(unsigned int c)$/;"	f
+ft_putchar_fd	/home/selver/Documents/libs/libft/ft_putchar_fd.c	/^int	ft_putchar_fd(char c, int fd)$/;"	f
+ft_putendl	/home/selver/Documents/libs/libft/ft_putendl.c	/^int	ft_putendl(char const *s)$/;"	f
+ft_putendl_fd	/home/selver/Documents/libs/libft/ft_putendl_fd.c	/^int	ft_putendl_fd(char const *s, int fd)$/;"	f
+ft_putnbr	/home/selver/Documents/libs/libft/ft_putnbr.c	/^void	ft_putnbr(int nb)$/;"	f
+ft_putnbr_fd	/home/selver/Documents/libs/libft/ft_putnbr_fd.c	/^void	ft_putnbr_fd(int nb, int fd)$/;"	f
+ft_putstr	/home/selver/Documents/libs/libft/ft_putstr.c	/^int	ft_putstr(char const *s)$/;"	f
+ft_putstr_fd	/home/selver/Documents/libs/libft/ft_putstr_fd.c	/^int	ft_putstr_fd(char const *s, int fd)$/;"	f
+ft_readfile	/home/selver/Documents/libs/libft/get_next_line.c	/^static int		ft_readfile(char **tab, char **line, const int fd)$/;"	f	file:
+ft_sign	/home/selver/Documents/libs/libft/ft_sign.c	/^int	ft_sign(double n)$/;"	f
+ft_sorted_list_insert	/home/selver/Documents/libs/libft/ft_sorted_list_insert.c	/^void	ft_sorted_list_insert(t_list **begin_list, void *data, int (*cmp)())$/;"	f
+ft_str3join	/home/selver/Documents/libs/libft/ft_str3join.c	/^char	*ft_str3join(const char *a, const char *b, const char *c)$/;"	f
+ft_stradd	/home/selver/Documents/libs/libft/ft_stradd.c	/^void	ft_stradd(char **str, char c)$/;"	f
+ft_strcat	/home/selver/Documents/libs/libft/ft_strcat.c	/^char	*ft_strcat(char *s1, const char *s2)$/;"	f
+ft_strchr	/home/selver/Documents/libs/libft/ft_strchr.c	/^char	*ft_strchr(const char *s, int c)$/;"	f
+ft_strclr	/home/selver/Documents/libs/libft/ft_strclr.c	/^void	ft_strclr(char *s)$/;"	f
+ft_strcmp	/home/selver/Documents/libs/libft/ft_strcmp.c	/^int	ft_strcmp(const char *s1, const char *s2)$/;"	f
+ft_strcpy	/home/selver/Documents/libs/libft/ft_strcpy.c	/^char	*ft_strcpy(char *dst, const char *src)$/;"	f
+ft_strcut	/home/selver/Documents/libs/libft/ft_strcut.c	/^char	*ft_strcut(char *cut, int begin, int end)$/;"	f
+ft_strdel	/home/selver/Documents/libs/libft/ft_strdel.c	/^void	ft_strdel(char **as)$/;"	f
+ft_strdup	/home/selver/Documents/libs/libft/ft_strdup.c	/^char	*ft_strdup(const char *s1)$/;"	f
+ft_strequ	/home/selver/Documents/libs/libft/ft_strequ.c	/^int	ft_strequ(char const *s1, char const *s2)$/;"	f
+ft_strfjoin	/home/selver/Documents/libs/libft/ft_strfjoin.c	/^char	*ft_strfjoin(char *s1, char const *s2)$/;"	f
+ft_strins	/home/selver/Documents/libs/libft/ft_strins.c	/^char	*ft_strins(char const *string, char const *ins, int pos)$/;"	f
+ft_strisnumeric	/home/selver/Documents/libs/libft/ft_strisnumeric.c	/^int	ft_strisnumeric(char const *str)$/;"	f
+ft_striswhitespace	/home/selver/Documents/libs/libft/ft_striswhitespace.c	/^int	ft_striswhitespace(char const *str)$/;"	f
+ft_striter	/home/selver/Documents/libs/libft/ft_striter.c	/^void	ft_striter(char *s, void (*f)(char *))$/;"	f
+ft_striteri	/home/selver/Documents/libs/libft/ft_striteri.c	/^void	ft_striteri(char *s, void (*f)(unsigned int, char *))$/;"	f
+ft_strjoin	/home/selver/Documents/libs/libft/ft_strjoin.c	/^char	*ft_strjoin(char const *s1, char const *s2)$/;"	f
+ft_strlcat	/home/selver/Documents/libs/libft/ft_strlcat.c	/^size_t	ft_strlcat(char *s1, const char *s2, size_t size)$/;"	f
+ft_strlen	/home/selver/Documents/libs/libft/ft_strlen.c	/^size_t	ft_strlen(const char *s)$/;"	f
+ft_strmap	/home/selver/Documents/libs/libft/ft_strmap.c	/^char	*ft_strmap(char const *s, char (*f)(char))$/;"	f
+ft_strmapi	/home/selver/Documents/libs/libft/ft_strmapi.c	/^char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))$/;"	f
+ft_strncat	/home/selver/Documents/libs/libft/ft_strncat.c	/^char	*ft_strncat(char *s1, const char *s2, size_t len)$/;"	f
+ft_strncmp	/home/selver/Documents/libs/libft/ft_strncmp.c	/^int	ft_strncmp(const char *s1, const char *s2, size_t n)$/;"	f
+ft_strncpy	/home/selver/Documents/libs/libft/ft_strncpy.c	/^char	*ft_strncpy(char *dst, const char *src, size_t len)$/;"	f
+ft_strndup	/home/selver/Documents/libs/libft/ft_strndup.c	/^char	*ft_strndup(const char *s1, int n)$/;"	f
+ft_strnequ	/home/selver/Documents/libs/libft/ft_strnequ.c	/^int	ft_strnequ(char const *s1, char const *s2, size_t n)$/;"	f
+ft_strnew	/home/selver/Documents/libs/libft/ft_strnew.c	/^char	*ft_strnew(size_t size)$/;"	f
+ft_strnlen	/home/selver/Documents/libs/libft/ft_strnlen.c	/^size_t	ft_strnlen(const char *s, size_t maxlen)$/;"	f
+ft_strnstr	/home/selver/Documents/libs/libft/ft_strnstr.c	/^char	*ft_strnstr(const char *haystack, const char *needle, size_t len)$/;"	f
+ft_strpbrk	/home/selver/Documents/libs/libft/ft_strpbrk.c	/^int	ft_strpbrk(const char *s, const char *charset)$/;"	f
+ft_strrchr	/home/selver/Documents/libs/libft/ft_strrchr.c	/^char	*ft_strrchr(const char *s, int c)$/;"	f
+ft_strsplit	/home/selver/Documents/libs/libft/ft_strsplit.c	/^char			**ft_strsplit(char const *s, char c)$/;"	f
+ft_strstr	/home/selver/Documents/libs/libft/ft_strstr.c	/^char	*ft_strstr(const char *haystack, const char *needle)$/;"	f
+ft_strsub	/home/selver/Documents/libs/libft/ft_strsub.c	/^char	*ft_strsub(char const *s, unsigned int start, size_t len)$/;"	f
+ft_strtrim	/home/selver/Documents/libs/libft/ft_strtrim.c	/^char	*ft_strtrim(char const *s)$/;"	f
+ft_tolower	/home/selver/Documents/libs/libft/ft_tolower.c	/^int	ft_tolower(int c)$/;"	f
+ft_toupper	/home/selver/Documents/libs/libft/ft_toupper.c	/^int	ft_toupper(int c)$/;"	f
+ft_vector2	/home/selver/Documents/libs/libft/ft_vector2.c	/^t_vector2	ft_vector2(float x, float y)$/;"	f
+ft_vector2_add	/home/selver/Documents/libs/libft/ft_vector2_add.c	/^t_vector2	ft_vector2_add(t_vector2 vec, t_vector2 vec2)$/;"	f
+ft_vector2_angle	/home/selver/Documents/libs/libft/ft_vector2_angle.c	/^float	ft_vector2_angle(t_vector2 vec1, t_vector2 vec2)$/;"	f
+ft_vector2_dot	/home/selver/Documents/libs/libft/ft_vector2_dot.c	/^float	ft_vector2_dot(t_vector2 vec1, t_vector2 vec2)$/;"	f
+ft_vector2_magnitude	/home/selver/Documents/libs/libft/ft_vector2_magnitude.c	/^float	ft_vector2_magnitude(t_vector2 vec)$/;"	f
+ft_vector2_multiply	/home/selver/Documents/libs/libft/ft_vector2_multiply.c	/^t_vector2	ft_vector2_multiply(t_vector2 vec, float scalar)$/;"	f
+ft_vector2_normalize	/home/selver/Documents/libs/libft/ft_vector2_normalize.c	/^t_vector2	ft_vector2_normalize(t_vector2 vec)$/;"	f
+ft_vector2_rangle	/home/selver/Documents/libs/libft/ft_vector2_rangle.c	/^float	ft_vector2_rangle(t_vector2 vec1, t_vector2 vec2)$/;"	f
+ft_vector3	/home/selver/Documents/libs/libft/ft_vector3.c	/^t_vector3	ft_vector3(float x, float y, float z)$/;"	f
+ft_vector3_add	/home/selver/Documents/libs/libft/ft_vector3_add.c	/^t_vector3	ft_vector3_add(t_vector3 vec1, t_vector3 vec2)$/;"	f
+ft_vector3_angle	/home/selver/Documents/libs/libft/ft_vector3_angle.c	/^float	ft_vector3_angle(t_vector3 vec1, t_vector3 vec2)$/;"	f
+ft_vector3_axis	/home/selver/Documents/libs/libft/ft_vector3_axis.c	/^t_vector3	ft_vector3_axis(t_vector3 vec1, t_vector3 vec2)$/;"	f
+ft_vector3_cross	/home/selver/Documents/libs/libft/ft_vector3_cross.c	/^t_vector3	ft_vector3_cross(t_vector3 vec1, t_vector3 vec2)$/;"	f
+ft_vector3_dot	/home/selver/Documents/libs/libft/ft_vector3_dot.c	/^float	ft_vector3_dot(t_vector3 vec1, t_vector3 vec2)$/;"	f
+ft_vector3_magnitude	/home/selver/Documents/libs/libft/ft_vector3_magnitude.c	/^float	ft_vector3_magnitude(t_vector3 vec)$/;"	f
+ft_vector3_multiply	/home/selver/Documents/libs/libft/ft_vector3_multiply.c	/^t_vector3	ft_vector3_multiply(t_vector3 vec1, float scalar)$/;"	f
+ft_vector3_normalize	/home/selver/Documents/libs/libft/ft_vector3_normalize.c	/^t_vector3	ft_vector3_normalize(t_vector3 vec)$/;"	f
+ft_vector3_opposite	/home/selver/Documents/libs/libft/ft_vector3_opposite.c	/^t_vector3	ft_vector3_opposite(t_vector3 vtc)$/;"	f
+ft_vector3_sub	/home/selver/Documents/libs/libft/ft_vector3_sub.c	/^t_vector3	ft_vector3_sub(t_vector3 vec1, t_vector3 vec2)$/;"	f
+ft_vector3_to_matrix	/home/selver/Documents/libs/libft/ft_vector3_to_matrix.c	/^t_matrix	ft_vector3_to_matrix(t_vector3 vec)$/;"	f
+ft_vector4	/home/selver/Documents/libs/libft/ft_vector4.c	/^t_vector4	ft_vector4(float x, float y, float z, float w)$/;"	f
+ft_vector4_from_3	/home/selver/Documents/libs/libft/ft_vector4_from_3.c	/^t_vector4	ft_vector4_from_3(t_vector3 vtc)$/;"	f
+ft_vector4_p_matrix	/home/selver/Documents/libs/libft/ft_vector4_p_matrix.c	/^t_vector4	ft_vector4_p_matrix(t_vector4 vec, t_matrix m)$/;"	f
+ft_vector4_to_matrix	/home/selver/Documents/libs/libft/ft_vector4_to_matrix.c	/^t_matrix	ft_vector4_to_matrix(t_vector4 vec)$/;"	f
+get_next_line	/home/selver/Documents/libs/libft/get_next_line.c	/^int				get_next_line(const int fd, char **line)$/;"	f
+goal_f	/home/selver/Documents/libs/libft/libft.h	/^    int             (*goal_f)(void *data);$/;"	m	struct:s_algo_input
+goal_p	/home/selver/Documents/libs/libft/libft.h	/^    void            *goal_p;$/;"	m	struct:s_algo_input
+gscore	/home/selver/Documents/libs/libft/libft.h	/^	t_hashtable		*gscore;$/;"	m	struct:s_algo_data
+handled	/home/selver/Documents/libs/libft/unit_test_lib/cbdd/tests/assert_raise.c	/^enum handled {$/;"	g	file:
+hashflag	/home/selver/Documents/libs/libft/printf_flags.c	/^int	hashflag(t_arg arg, t_buffer *buf, char *str)$/;"	f
+height	/home/selver/Documents/libs/libft/libft.h	/^	int				height;$/;"	m	struct:s_matrix
+heuristic	/home/selver/Documents/libs/libft/libft.h	/^    size_t          (*heuristic)(void *data);$/;"	m	struct:s_algo_input
+init_arg	/home/selver/Documents/libs/libft/printf_parser.c	/^static t_arg	init_arg(void)$/;"	f	file:
+init_buffer	/home/selver/Documents/libs/libft/printf_write.c	/^t_buffer	init_buffer(void)$/;"	f
+initstritoa	/home/selver/Documents/libs/libft/ft_itoa.c	/^static char	*initstritoa(long n, int neg)$/;"	f	file:
+intmax_t	/home/selver/Documents/libs/libft/libft.h	/^    typedef __intmax_t intmax_t;$/;"	t
+invalid_arg	/home/selver/Documents/libs/libft/printf_args.c	/^void	invalid_arg(t_arg arg, t_buffer *buf, va_list *ap)$/;"	f
+is_equal_string	/home/selver/Documents/libs/libft/unit_test_lib/cbdd/src/cbdd.c	/^int is_equal_string(const char* lhs, const char* rhs) {$/;"	f
+is_same_exception	/home/selver/Documents/libs/libft/unit_test_lib/cbdd/tests/assert_raise.c	/^int is_same_exception(Except_T e1, Except_T e2) {$/;"	f
+is_signed	/home/selver/Documents/libs/libft/printf_essentials.c	/^int		is_signed(t_arg arg)$/;"	f
+it	/home/selver/Documents/libs/libft/unit_test_lib/cbdd/src/cbdd.c	/^void it(const char *string, void (^block)()) {$/;"	f
+item	/home/selver/Documents/libs/libft/libft.h	/^	void			*item;$/;"	m	struct:s_btree
+key	/home/selver/Documents/libs/libft/libft.h	/^    char    *key;$/;"	m	struct:s_hashnode
+left	/home/selver/Documents/libs/libft/libft.h	/^	struct s_btree	*left;$/;"	m	struct:s_btree	typeref:struct:s_btree::s_btree
+line	/home/selver/Documents/libs/libft/unit_test_lib/cbdd/tests/except.h	/^	int line;$/;"	m	struct:Except_Frame
+main	/home/selver/Documents/libs/libft/unit_test_lib/cbdd/tests/cbdd_tests.c	/^int main() {$/;"	f
+main	/home/selver/Documents/libs/libft/unit_test_lib/lst_test.c	/^int main()$/;"	f
+main	/home/selver/Documents/libs/libft/unit_test_lib/main.c	/^int main(int ac, char **av)$/;"	f
+main	/home/selver/Documents/libs/libft/unit_test_lib/unit_hashtable.c	/^int main()$/;"	f
+main	/home/selver/Documents/libs/libft/unit_test_lib/unit_test_str.c	/^int main() {$/;"	f
+matrix	/home/selver/Documents/libs/libft/libft.h	/^	float			**matrix;$/;"	m	struct:s_matrix
+minimum	/home/selver/Documents/libs/libft/ft_printf.h	/^	int			minimum;$/;"	m	struct:s_arg
+moment	/home/selver/Documents/libs/libft/ft_printf.h	/^	int			*moment;$/;"	m	struct:s_fd
+nblen_base	/home/selver/Documents/libs/libft/ft_itoa_base.c	/^static int	nblen_base(long nb, int base)$/;"	f	file:
+neighbors	/home/selver/Documents/libs/libft/libft.h	/^    void            **(*neighbors)(void *data);$/;"	m	struct:s_algo_input
+next	/home/selver/Documents/libs/libft/libft.h	/^	struct s_list	*next;$/;"	m	struct:s_list	typeref:struct:s_list::s_list
+nextword	/home/selver/Documents/libs/libft/ft_strsplit.c	/^static int		nextword(char const *s, char c, int pos)$/;"	f	file:
+openset	/home/selver/Documents/libs/libft/libft.h	/^	t_list			*openset;$/;"	m	struct:s_algo_data
+paddingspace	/home/selver/Documents/libs/libft/printf_flags.c	/^int	paddingspace(t_arg arg, t_buffer *buf)$/;"	f
+paddingzeros	/home/selver/Documents/libs/libft/printf_flags.c	/^int	paddingzeros(t_arg arg, t_buffer *buf)$/;"	f
+parent	/home/selver/Documents/libs/libft/libft.h	/^	struct s_btree	*parent;$/;"	m	struct:s_btree	typeref:struct:s_btree::s_btree
+parsearg	/home/selver/Documents/libs/libft/printf_parser.c	/^t_arg			parsearg(const char *str, int x)$/;"	f
+parsearg1	/home/selver/Documents/libs/libft/printf_parser.c	/^static int		parsearg1(t_arg *arg, const char *str, int x)$/;"	f	file:
+parsecolor	/home/selver/Documents/libs/libft/printf_parser.c	/^static int		parsecolor(t_arg *arg, const char *str, int x)$/;"	f	file:
+precision	/home/selver/Documents/libs/libft/ft_printf.h	/^	int			precision;$/;"	m	struct:s_arg
+prev	/home/selver/Documents/libs/libft/unit_test_lib/cbdd/tests/except.h	/^	Except_Frame *prev;$/;"	m	struct:Except_Frame
+print_arg_hexa	/home/selver/Documents/libs/libft/printf_print_arg.c	/^int	print_arg_hexa(t_arg arg, t_buffer *buf, char *str)$/;"	f
+print_arg_nbr	/home/selver/Documents/libs/libft/printf_print_arg.c	/^int	print_arg_nbr(t_arg arg, t_buffer *buf, char *str)$/;"	f
+print_arg_oct	/home/selver/Documents/libs/libft/printf_print_arg.c	/^int	print_arg_oct(t_arg arg, t_buffer *buf, char *str)$/;"	f
+print_lst	/home/selver/Documents/libs/libft/unit_test_lib/lst_test.c	/^void print_lst(t_list *lst)$/;"	f
+print_result	/home/selver/Documents/libs/libft/unit_test_lib/main.c	/^void print_result(int result)$/;"	f
+printarg	/home/selver/Documents/libs/libft/printf.c	/^extern int	printarg(t_arg arg, t_buffer *buf, va_list *ap)$/;"	f
+printf_putchar	/home/selver/Documents/libs/libft/printf_essentials.c	/^int		printf_putchar(t_buffer *buf, char c)$/;"	f
+printf_putuchar	/home/selver/Documents/libs/libft/printf_essentials.c	/^int		printf_putuchar(t_buffer *buf, int c)$/;"	f
+printf_write	/home/selver/Documents/libs/libft/printf_write.c	/^void		printf_write(t_buffer buf)$/;"	f
+process_neighbor	/home/selver/Documents/libs/libft/ft_astar.c	/^static void	process_neighbor(t_algo_data *data, t_algo_input *algo,$/;"	f	file:
+productcase	/home/selver/Documents/libs/libft/ft_matrix_product.c	/^static float	productcase(t_matrix a, t_matrix b, int x, int y)$/;"	f	file:
+ptolower	/home/selver/Documents/libs/libft/printf_essentials.c	/^void	ptolower(char *c)$/;"	f
+rcsid	/home/selver/Documents/libs/libft/unit_test_lib/cbdd/tests/assert.c	/^static char rcsid[] = "$Id: assert.c 6 2007-01-22 00:45:22Z drhanson $";$/;"	v	file:
+rcsid	/home/selver/Documents/libs/libft/unit_test_lib/cbdd/tests/except.c	/^static char rcsid[] = "$Id: except.c 6 2007-01-22 00:45:22Z drhanson $" "\\n$Id: except.c 6 2007-01-22 00:45:22Z drhanson $";$/;"	v	file:
+reason	/home/selver/Documents/libs/libft/unit_test_lib/cbdd/tests/except.h	/^	const char *reason;$/;"	m	struct:T
+reconstruct_path	/home/selver/Documents/libs/libft/ft_astar.c	/^static void	**reconstruct_path(t_hashtable *camefrom, t_algo_input *algo,$/;"	f	file:
+refute_equal	/home/selver/Documents/libs/libft/unit_test_lib/cbdd/src/cbdd.h	31;"	d
+refute_equal_failed	/home/selver/Documents/libs/libft/unit_test_lib/cbdd/src/cbdd.c	/^void refute_equal_failed(long exp, long act, const char* file, int line) {$/;"	f
+refute_equal_string	/home/selver/Documents/libs/libft/unit_test_lib/cbdd/src/cbdd.h	37;"	d
+refute_equal_string_failed	/home/selver/Documents/libs/libft/unit_test_lib/cbdd/src/cbdd.c	/^void refute_equal_string_failed(const char* exp, const char* act, const char *file, int line) { $/;"	f
+refute_null	/home/selver/Documents/libs/libft/unit_test_lib/cbdd/src/cbdd.h	49;"	d
+refute_null_failed	/home/selver/Documents/libs/libft/unit_test_lib/cbdd/src/cbdd.c	/^void refute_null_failed(void *act, const char* file, int line) {$/;"	f
+reverse_padding	/home/selver/Documents/libs/libft/printf_flags.c	/^int	reverse_padding(t_arg arg, t_buffer *buf, int size)$/;"	f
+right	/home/selver/Documents/libs/libft/libft.h	/^	struct s_btree	*right;$/;"	m	struct:s_btree	typeref:struct:s_btree::s_btree
+run_test	/home/selver/Documents/libs/libft/unit_test_lib/cbdd/tests/cbdd_tests.c	20;"	d	file:
+s_algo_data	/home/selver/Documents/libs/libft/libft.h	/^typedef struct		s_algo_data$/;"	s
+s_algo_input	/home/selver/Documents/libs/libft/libft.h	/^typedef struct      s_algo_input$/;"	s
+s_arg	/home/selver/Documents/libs/libft/ft_printf.h	/^typedef struct	s_arg$/;"	s
+s_btree	/home/selver/Documents/libs/libft/libft.h	/^typedef struct		s_btree$/;"	s
+s_buffer	/home/selver/Documents/libs/libft/ft_printf.h	/^typedef struct	s_buffer$/;"	s
+s_fd	/home/selver/Documents/libs/libft/ft_printf.h	/^typedef struct	s_fd$/;"	s
+s_hashnode	/home/selver/Documents/libs/libft/libft.h	/^typedef struct      s_hashnode$/;"	s
+s_hashtable	/home/selver/Documents/libs/libft/libft.h	/^typedef struct      s_hashtable$/;"	s
+s_list	/home/selver/Documents/libs/libft/libft.h	/^typedef struct		s_list$/;"	s
+s_matrix	/home/selver/Documents/libs/libft/libft.h	/^typedef struct		s_matrix$/;"	s
+s_vector2	/home/selver/Documents/libs/libft/libft.h	/^typedef struct		s_vector2$/;"	s
+s_vector3	/home/selver/Documents/libs/libft/libft.h	/^typedef struct		s_vector3$/;"	s
+s_vector4	/home/selver/Documents/libs/libft/libft.h	/^typedef struct		s_vector4$/;"	s
+serialize	/home/selver/Documents/libs/libft/libft.h	/^    char            *(*serialize)(void *data);$/;"	m	struct:s_algo_input
+sign	/home/selver/Documents/libs/libft/printf_flags.c	/^int	sign(t_arg arg, t_buffer *buf, char *str)$/;"	f
+size	/home/selver/Documents/libs/libft/ft_printf.h	/^	int			size;$/;"	m	struct:s_arg
+size	/home/selver/Documents/libs/libft/ft_printf.h	/^	int			size;$/;"	m	struct:s_buffer
+size	/home/selver/Documents/libs/libft/ft_printf.h	/^	long		size;$/;"	m	struct:s_fd
+size	/home/selver/Documents/libs/libft/libft.h	/^    size_t  size;$/;"	m	struct:s_hashtable
+sizenextword	/home/selver/Documents/libs/libft/ft_strsplit.c	/^static int		sizenextword(char const *s, char c, int pos)$/;"	f	file:
+str	/home/selver/Documents/libs/libft/ft_printf.h	/^	char		*str;$/;"	m	struct:s_arg
+strjjoin	/home/selver/Documents/libs/libft/get_next_line.c	/^static char		*strjjoin(char *s1, char *s2, int x, int cut)$/;"	f	file:
+strpadding	/home/selver/Documents/libs/libft/printf_flags2.c	/^int	strpadding(t_arg arg, t_buffer *buf, int size)$/;"	f
+t_algo_data	/home/selver/Documents/libs/libft/libft.h	/^}					t_algo_data;$/;"	t	typeref:struct:s_algo_data
+t_algo_input	/home/selver/Documents/libs/libft/libft.h	/^}                   t_algo_input;$/;"	t	typeref:struct:s_algo_input
+t_arg	/home/selver/Documents/libs/libft/ft_printf.h	/^}				t_arg;$/;"	t	typeref:struct:s_arg
+t_btree	/home/selver/Documents/libs/libft/libft.h	/^}					t_btree;$/;"	t	typeref:struct:s_btree
+t_buffer	/home/selver/Documents/libs/libft/ft_printf.h	/^}				t_buffer;$/;"	t	typeref:struct:s_buffer
+t_fd	/home/selver/Documents/libs/libft/ft_printf.h	/^}				t_fd;$/;"	t	typeref:struct:s_fd
+t_hashnode	/home/selver/Documents/libs/libft/libft.h	/^}                   t_hashnode;$/;"	t	typeref:struct:s_hashnode
+t_hashtable	/home/selver/Documents/libs/libft/libft.h	/^}                   t_hashtable;$/;"	t	typeref:struct:s_hashtable
+t_list	/home/selver/Documents/libs/libft/libft.h	/^}					t_list;$/;"	t	typeref:struct:s_list
+t_matrix	/home/selver/Documents/libs/libft/libft.h	/^}					t_matrix;$/;"	t	typeref:struct:s_matrix
+t_vector2	/home/selver/Documents/libs/libft/libft.h	/^}					t_vector2;$/;"	t	typeref:struct:s_vector2
+t_vector3	/home/selver/Documents/libs/libft/libft.h	/^}					t_vector3;$/;"	t	typeref:struct:s_vector3
+t_vector4	/home/selver/Documents/libs/libft/libft.h	/^}					t_vector4;$/;"	t	typeref:struct:s_vector4
+tab_init	/home/selver/Documents/libs/libft/printf.c	/^extern void	(**tab_init(void))(t_arg arg, t_buffer *buff, va_list *valist)$/;"	f
+take_double_arg	/home/selver/Documents/libs/libft/printf_take_arg.c	/^long double	take_double_arg(t_arg arg, va_list *ap)$/;"	f
+take_int_arg	/home/selver/Documents/libs/libft/printf_take_arg.c	/^intmax_t	take_int_arg(t_arg arg, va_list *ap)$/;"	f
+take_unsigned_arg	/home/selver/Documents/libs/libft/printf_take_arg.c	/^uintmax_t	take_unsigned_arg(t_arg arg, va_list *ap)$/;"	f
+test_after_all_runs_after_all_it_block	/home/selver/Documents/libs/libft/unit_test_lib/cbdd/tests/cbdd_tests.c	/^void test_after_all_runs_after_all_it_block() {$/;"	f
+test_after_each_runs_after_every_it_block	/home/selver/Documents/libs/libft/unit_test_lib/cbdd/tests/cbdd_tests.c	/^void test_after_each_runs_after_every_it_block() { $/;"	f
+test_before_all_runs_before_all_it_blocks	/home/selver/Documents/libs/libft/unit_test_lib/cbdd/tests/cbdd_tests.c	/^void test_before_all_runs_before_all_it_blocks() {$/;"	f
+test_before_all_runs_within_its_describe_context	/home/selver/Documents/libs/libft/unit_test_lib/cbdd/tests/cbdd_tests.c	/^void test_before_all_runs_within_its_describe_context() {$/;"	f
+test_before_all_with_before_each_with_after_all	/home/selver/Documents/libs/libft/unit_test_lib/cbdd/tests/cbdd_tests.c	/^void test_before_all_with_before_each_with_after_all() {$/;"	f
+test_before_each_only_runs_within_its_describe_context	/home/selver/Documents/libs/libft/unit_test_lib/cbdd/tests/cbdd_tests.c	/^void test_before_each_only_runs_within_its_describe_context() {$/;"	f
+test_before_each_runs_before_every_it_block	/home/selver/Documents/libs/libft/unit_test_lib/cbdd/tests/cbdd_tests.c	/^void test_before_each_runs_before_every_it_block() {$/;"	f
+test_context_is_alias_to_describe	/home/selver/Documents/libs/libft/unit_test_lib/cbdd/tests/cbdd_tests.c	/^void test_context_is_alias_to_describe() {$/;"	f
+test_expect_equal_can_fail	/home/selver/Documents/libs/libft/unit_test_lib/cbdd/tests/cbdd_tests.c	/^void test_expect_equal_can_fail() {$/;"	f
+test_expect_equal_can_pass	/home/selver/Documents/libs/libft/unit_test_lib/cbdd/tests/cbdd_tests.c	/^void test_expect_equal_can_pass() {$/;"	f
+test_expect_equal_string_can_fail	/home/selver/Documents/libs/libft/unit_test_lib/cbdd/tests/cbdd_tests.c	/^void test_expect_equal_string_can_fail() {$/;"	f
+test_expect_equal_string_can_pass	/home/selver/Documents/libs/libft/unit_test_lib/cbdd/tests/cbdd_tests.c	/^void test_expect_equal_string_can_pass() {$/;"	f
+test_expect_false_can_fail	/home/selver/Documents/libs/libft/unit_test_lib/cbdd/tests/cbdd_tests.c	/^void test_expect_false_can_fail() {$/;"	f
+test_expect_false_can_pass	/home/selver/Documents/libs/libft/unit_test_lib/cbdd/tests/cbdd_tests.c	/^void test_expect_false_can_pass() {$/;"	f
+test_expect_null_can_fail	/home/selver/Documents/libs/libft/unit_test_lib/cbdd/tests/cbdd_tests.c	/^void test_expect_null_can_fail() {$/;"	f
+test_expect_null_can_pass	/home/selver/Documents/libs/libft/unit_test_lib/cbdd/tests/cbdd_tests.c	/^void test_expect_null_can_pass() {$/;"	f
+test_expect_true_can_fail	/home/selver/Documents/libs/libft/unit_test_lib/cbdd/tests/cbdd_tests.c	/^void test_expect_true_can_fail() {$/;"	f
+test_expect_true_can_pass	/home/selver/Documents/libs/libft/unit_test_lib/cbdd/tests/cbdd_tests.c	/^void test_expect_true_can_pass() {$/;"	f
+test_ft_lst_add	/home/selver/Documents/libs/libft/unit_test_lib/lst_test.c	/^void    test_ft_lst_add()$/;"	f
+test_ft_lst_append	/home/selver/Documents/libs/libft/unit_test_lib/lst_test.c	/^void    test_ft_lst_append()$/;"	f
+test_ft_lst_del_one	/home/selver/Documents/libs/libft/unit_test_lib/lst_test.c	/^void    test_ft_lst_del_one()$/;"	f
+test_ft_lst_new	/home/selver/Documents/libs/libft/unit_test_lib/lst_test.c	/^void    test_ft_lst_new()$/;"	f
+test_ft_lst_new_no_copy	/home/selver/Documents/libs/libft/unit_test_lib/lst_test.c	/^void    test_ft_lst_new_no_copy()$/;"	f
+test_ft_lst_sorted_insert	/home/selver/Documents/libs/libft/unit_test_lib/lst_test.c	/^void    test_ft_lst_sorted_insert()$/;"	f
+test_refute_equal_can_fail	/home/selver/Documents/libs/libft/unit_test_lib/cbdd/tests/cbdd_tests.c	/^void test_refute_equal_can_fail() {$/;"	f
+test_refute_equal_can_pass	/home/selver/Documents/libs/libft/unit_test_lib/cbdd/tests/cbdd_tests.c	/^void test_refute_equal_can_pass() {$/;"	f
+test_refute_equal_string_can_fail	/home/selver/Documents/libs/libft/unit_test_lib/cbdd/tests/cbdd_tests.c	/^void test_refute_equal_string_can_fail() {$/;"	f
+test_refute_equal_string_can_pass	/home/selver/Documents/libs/libft/unit_test_lib/cbdd/tests/cbdd_tests.c	/^void test_refute_equal_string_can_pass() {$/;"	f
+test_refute_null_can_fail	/home/selver/Documents/libs/libft/unit_test_lib/cbdd/tests/cbdd_tests.c	/^void test_refute_null_can_fail() {$/;"	f
+test_refute_null_can_pass	/home/selver/Documents/libs/libft/unit_test_lib/cbdd/tests/cbdd_tests.c	/^void test_refute_null_can_pass() {$/;"	f
+test_that_it_can_fail	/home/selver/Documents/libs/libft/unit_test_lib/cbdd/tests/cbdd_tests.c	/^void test_that_it_can_fail() {$/;"	f
+test_that_it_can_pass	/home/selver/Documents/libs/libft/unit_test_lib/cbdd/tests/cbdd_tests.c	/^void test_that_it_can_pass() {$/;"	f
+tests	/home/selver/Documents/libs/libft/Makefile	/^define tests$/;"	m
+type	/home/selver/Documents/libs/libft/ft_printf.h	/^	int			type;$/;"	m	struct:s_arg
+uintmax_t	/home/selver/Documents/libs/libft/libft.h	/^    typedef unsigned long long uintmax_t;$/;"	t
+w	/home/selver/Documents/libs/libft/libft.h	/^	float			w;$/;"	m	struct:s_vector4
+width	/home/selver/Documents/libs/libft/libft.h	/^	int				width;$/;"	m	struct:s_matrix
+wordcount	/home/selver/Documents/libs/libft/ft_strsplit.c	/^static int		wordcount(char const *s, char c)$/;"	f	file:
+x	/home/selver/Documents/libs/libft/libft.h	/^	float			x;$/;"	m	struct:s_vector3
+x	/home/selver/Documents/libs/libft/libft.h	/^	float			x;$/;"	m	struct:s_vector4
+x	/home/selver/Documents/libs/libft/libft.h	/^	long			x;$/;"	m	struct:s_vector2
+y	/home/selver/Documents/libs/libft/libft.h	/^	float			y;$/;"	m	struct:s_vector3
+y	/home/selver/Documents/libs/libft/libft.h	/^	float			y;$/;"	m	struct:s_vector4
+y	/home/selver/Documents/libs/libft/libft.h	/^	long			y;$/;"	m	struct:s_vector2
+z	/home/selver/Documents/libs/libft/libft.h	/^	float			z;$/;"	m	struct:s_vector3
+z	/home/selver/Documents/libs/libft/libft.h	/^	float			z;$/;"	m	struct:s_vector4

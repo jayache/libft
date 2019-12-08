@@ -91,6 +91,7 @@ $(if $(filter $(1), ft_astar), @echo "\n\033[38mCOMPILING ALGO FUNCTIONS")
 endef
 
 all:
+	@pkdir -p obj
 	@echo "$(words $(COUNTER)) / $(NB)\c"
 	@make $(NAME) || make error
 
