@@ -34,7 +34,10 @@ BASE = $(MEM) $(STR) $(IS) $(PUT) ft_toupper.c ft_tolower.c ft_error.c
 
 LST = ft_lstnew.c ft_lstdelone.c ft_lstdel.c ft_lstadd.c ft_lstiter.c \
 	  ft_lstmap.c  ft_lst_append.c ft_lstgetbypos.c ft_lstnew_no_copy.c \
-	  ft_sorted_list_insert.c
+	  ft_sorted_list_insert.c ft_lst_exist.c
+
+ALGO= ft_astar.c
+
 VECTOR2= ft_vector2.c ft_vector2_normalize.c ft_vector2_magnitude.c \
 		 ft_vector2_multiply.c ft_vector2_add.c ft_vector2_angle.c \
 		 ft_vector2_rangle.c ft_vector2_dot.c
@@ -51,7 +54,7 @@ MATRIX= ft_matrix.c ft_matrix_product.c ft_matrix_free.c \
 		ft_matrix_diag_symetrie.c ft_matrix_projection.c
 MATH= $(VECTOR2) $(VECTOR3) $(VECTOR4) $(MATRIX) ft_atoi.c ft_abs.c ft_sign.c \
 	 ft_itoa_base.c ft_nblen.c ft_itoa.c ft_min.c ft_pow.c 
-HASHTABLE= ft_hashtable_new.c ft_hashtable_sub.c ft_hashtable_free.c ft_hashtable_search.c ft_hashtable_add.c ft_hashtable_hash.c ft_hashnode_new.c
+HASHTABLE= ft_hashtable_new.c ft_hashtable_clean.c ft_hashtable_sub.c ft_hashtable_free.c ft_hashtable_search.c ft_hashtable_add.c ft_hashtable_hash.c ft_hashnode_new.c
 PRINTF= printf.c printf_args.c printf_args2.c printf_args3.c \
 		printf_arg_color.c printf_arg_change.c printf_flags2.c printf_flags.c printf_free.c \
 		printf_essentials.c printf_parser.c printf_print_arg.c printf_write.c \
@@ -62,7 +65,7 @@ DIR= ft_is_dot.c ft_is_hidden.c ft_cnt_type.c ft_is_dir.c ft_exists.c
 BTREE= ft_btree_apply_prefix.c ft_btree_apply_defix.c ft_btree_apply_infix.c ft_btree_apply_suffix.c ft_btree_create_node.c \
 	   ft_btree_insert_data.c ft_btree_free.c
 
-SRCS = $(BASE) $(LST) $(MATH) $(PRINTF)  get_next_line.c $(DIR) $(BTREE) $(HASHTABLE)
+SRCS = $(BASE) $(LST) $(MATH) $(PRINTF) $(ALGO) get_next_line.c $(DIR) $(BTREE) $(HASHTABLE)
 INCLUDES = /usr/local/include
 OBJDIR = obj/
 OBJ = $(SRCS:.c=.o)
@@ -70,7 +73,7 @@ OBJS = $(addprefix $(OBJDIR), $(OBJ))
 DEP = $(OBJS:%.o=%.d)
 COUNTER= 
 NB = $(words $(SRCS))
-FLAG = -Wall -Wextra -g3 -O3
+FLAG = -Wall -Wextra -Werror -g3 -O3 #-fsanitize=address
 
 define tests
 $(if $(filter $(1), ft_strlen), @echo "\n\033[32mCOMPILING STRING FUNCTIONS")
@@ -83,7 +86,8 @@ $(if $(filter $(1), ft_lstnew), @echo "\n\033[38mCOMPILING LIST FUNCTIONS")
 $(if $(filter $(1), ft_is_dot), @echo "\n\033[38mCOMPILING DIR FUNCTIONS")
 $(if $(filter $(1), ft_btree_apply_prefix), @echo "\n\033[32mCOMPILING BTREE FUNCTIONS")
 $(if $(filter $(1), printf), @echo "\n\033[38mCOMPILING PRINTF")
-$(if $(filter $(1), ft_hashtable_new), @echo "\n\033[38mCOMPILING HASHTABLE")
+$(if $(filter $(1), ft_hashtable_new), @echo "\n\033[38mCOMPILING HASHTABLE FUNCTIONS")
+$(if $(filter $(1), ft_astar), @echo "\n\033[38mCOMPILING ALGO FUNCTIONS")
 endef
 
 all:

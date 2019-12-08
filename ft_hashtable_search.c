@@ -1,9 +1,7 @@
 #include "libft.h"
 
 /*
-** RETURN ELEMENT AT INDEX N, OR NULL IF NOTHING IS FOUND
-** THERE IS NO WAY TO MAKE THE DIFFERENCE BETWEEN AN EXISTING NULL VALUE
-** AND NO VALUE FOR THE END USER
+** RETURN ELEMENT AT INDEX N, OR TABLE DEFAULT IF NOTHING IS FOUND
 */
 
 void    *ft_hashtable_search(t_hashtable *table, const char *index)
@@ -19,5 +17,5 @@ void    *ft_hashtable_search(t_hashtable *table, const char *index)
             return (((t_hashnode*)current->content)->content);
         current = current->next;
     }
-    return (NULL);
+    return (table->def);
 }

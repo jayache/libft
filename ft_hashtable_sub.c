@@ -4,6 +4,17 @@
 ** REMOVE ONE ENTRY
 */
 
+static void free_f(void *p, size_t size)
+{
+    t_hashnode *n;
+
+    n = p;
+    free(n->key);
+    free(n);
+    if ( size)
+        return ;
+}
+
 void    ft_hashtable_sub(t_hashtable *table, const char *index)
 {
     size_t      key;
@@ -19,13 +30,15 @@ void    ft_hashtable_sub(t_hashtable *table, const char *index)
         node = current->content;
         if (!ft_strcmp(node->key, index))
         {
-            free(node->key);
-            free(node);
+            //free(node->key);
+            //free(node);
             if (last)
                 last->next = current->next;
             else
                 table->content[key] = current->next;
-            free(current);
+            //free(current);
+            ft_lstdelone(&current, free_f);
+            return ;
         }
         last = current;
         current = current->next;

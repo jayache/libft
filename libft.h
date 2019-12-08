@@ -39,6 +39,7 @@ typedef struct		s_list
 
 typedef struct      s_hashtable
 {
+    void    *def;
     size_t  size;
     t_list  **content;
 }                   t_hashtable;
@@ -84,6 +85,17 @@ typedef struct		s_matrix
 	int				width;
 	int				height;
 }					t_matrix;
+
+typedef struct      s_algo_input
+{
+    void            (*free)(void *data, size_t size);
+    char            *(*serialize)(void *data);
+    size_t          (*heuristic)(void *data);
+    int             (*cmp)();
+    void            **(*neighbors)(void *data);
+    int             (*goal_f)(void *data);
+    void            *goal_p;
+}                   t_algo_input;
 
 int					ft_toupper(int c);
 int					ft_tolower(int c);
@@ -181,6 +193,7 @@ t_list				*ft_lstnew(void const *content, size_t content_size);
 t_list				*ft_lstnew_no_copy(void *content, size_t content_size);
 t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
 t_list				*ft_lstgetbypos(t_list *lst, int pos);
+int                 ft_lst_exist(t_list *root, void *data, int (cmp()));
 
 int					get_next_line(int fd, char **line);
 int					ft_printf(const char *str, ...);
@@ -266,6 +279,12 @@ void                ft_hashtable_add(t_hashtable *table, const char *index,
 void                ft_hashtable_sub(t_hashtable *table, const char *index);
 t_hashnode          *ft_hashnode_new(char *index, void *value);
 void                *ft_hashtable_search(t_hashtable *table, const char *index);
+void                ft_hashtable_clean(t_hashtable *table);
 void                ft_hashtable_free(t_hashtable *table);
 
+/*
+** ALGOS
+*/
+
+void                **ft_astar(void *start, t_algo_input *algo);
 #	endif
