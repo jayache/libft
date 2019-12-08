@@ -6,7 +6,7 @@
 /*   By: jayache <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/06 19:44:10 by jayache           #+#    #+#             */
-/*   Updated: 2019/12/08 10:13:47 by jayache          ###   ########.fr       */
+/*   Updated: 2019/12/08 10:33:08 by jayache          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,10 +25,10 @@
 
 #	define ERROR_MALLOC "Malloc returned 0\n"
 
-#   ifdef __linux__
-    typedef __intmax_t intmax_t;
-    typedef unsigned long long uintmax_t;
-#   endif
+#	ifdef __linux__
+	typedef __intmax_t intmax_t;
+	typedef unsigned long long uintmax_t;
+#	endif
 
 typedef struct		s_list
 {
@@ -37,18 +37,18 @@ typedef struct		s_list
 	struct s_list	*next;
 }					t_list;
 
-typedef struct      s_hashtable
+typedef struct		s_hashtable
 {
-    void    *def;
-    size_t  size;
-    t_list  **content;
-}                   t_hashtable;
+	void			*def;
+	size_t			size;
+	t_list			**content;
+}					t_hashtable;
 
-typedef struct      s_hashnode
+typedef struct		s_hashnode
 {
-    char    *key;
-    void    *content;
-}                   t_hashnode;
+	char			*key;
+	void			*content;
+}					t_hashnode;
 
 typedef struct		s_btree
 {
@@ -86,16 +86,16 @@ typedef struct		s_matrix
 	int				height;
 }					t_matrix;
 
-typedef struct      s_algo_input
+typedef struct		s_algo_input
 {
-    void            (*free)(void *data, size_t size);
-    char            *(*serialize)(void *data);
-    size_t          (*heuristic)(void *data);
-    int             (*cmp)();
-    void            **(*neighbors)(void *data);
-    int             (*goal_f)(void *data);
-    void            *goal_p;
-}                   t_algo_input;
+	void			(*free)(void *data, size_t size);
+	char			*(*serialize)(void *data);
+	size_t			(*heuristic)(void *data);
+	int				(*cmp)();
+	void			**(*neighbors)(void *data);
+	int				(*goal_f)(void *data);
+	void			*goal_p;
+}					t_algo_input;
 
 typedef struct		s_algo_data
 {
@@ -197,15 +197,15 @@ void				ft_lstdelone(t_list **alst, void (*del)(void *, size_t));
 void				ft_lstadd(t_list **alst, t_list *new);
 void				ft_lst_append(t_list **root, t_list *append);
 void				ft_lstdelbyval(t_list **root, void *val, int (*cmp)(),
-        void (*del)());
+		void (*del)());
 void				ft_lst_sorted_insert(t_list **root, t_list *add,
-        int (*cmp)());
+		int (*cmp)());
 void				ft_lstiter(t_list *lst, void (*f)(t_list *elem));
 t_list				*ft_lstnew(void const *content, size_t content_size);
 t_list				*ft_lstnew_no_copy(void *content, size_t content_size);
 t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
 t_list				*ft_lstgetbypos(t_list *lst, int pos);
-int                 ft_lst_exist(t_list *root, void *data, int (cmp()));
+int					ft_lst_exist(t_list *root, void *data, int (cmp()));
 
 int					get_next_line(int fd, char **line);
 int					ft_printf(const char *str, ...);
@@ -284,19 +284,19 @@ void				ft_btree_insert_data(t_btree **root, void *item,
 ** HASHTABLE
 */
 
-t_hashtable         *ft_hashtable_new(size_t size, void *def);
-size_t              ft_hashtable_hash(const char *key);
-void                ft_hashtable_add(t_hashtable *table, const char *index,
-        void *value);
-void                ft_hashtable_sub(t_hashtable *table, const char *index);
-t_hashnode          *ft_hashnode_new(char *index, void *value);
-void                *ft_hashtable_search(t_hashtable *table, const char *index);
-void                ft_hashtable_clean(t_hashtable *table);
-void                ft_hashtable_free(t_hashtable *table);
+t_hashtable			*ft_hashtable_new(size_t size, void *def);
+size_t				ft_hashtable_hash(const char *key);
+void				ft_hashtable_add(t_hashtable *table, const char *index,
+		void *value);
+void				ft_hashtable_sub(t_hashtable *table, const char *index);
+t_hashnode			*ft_hashnode_new(char *index, void *value);
+void				*ft_hashtable_search(t_hashtable *table, const char *index);
+void				ft_hashtable_clean(t_hashtable *table);
+void				ft_hashtable_free(t_hashtable *table);
 
 /*
 ** ALGOS
 */
 
-void                **ft_astar(void *start, t_algo_input *algo);
+void				**ft_astar(void *start, t_algo_input *algo);
 #	endif
