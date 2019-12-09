@@ -95,6 +95,7 @@ static void		*astar_loop(t_algo_data *data, t_algo_input *algo,
 	ft_lstdelone(&(data->openset), free_p);
 	data->openset = save;
 	out->otime = ft_max(out->otime, ft_lst_size(data->openset));
+    out->osize = ft_max(out->osize, ft_hashtable_size(data->camefrom));
 	return (0);
 }
 

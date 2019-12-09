@@ -302,7 +302,7 @@ t_hashnode			*ft_hashnode_new(char *index, void *value);
 void				*ft_hashtable_search(t_hashtable *table, const char *index);
 void				ft_hashtable_clean(t_hashtable *table);
 void				ft_hashtable_free(t_hashtable *table);
-void				ft_hashtable_size(t_hashtable *table);
+size_t              ft_hashtable_size(t_hashtable *table);
 
 /*
 ** ALGOS

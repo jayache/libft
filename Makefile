@@ -32,7 +32,7 @@ NAME = libft.a
 
 BASE = $(MEM) $(STR) $(IS) $(PUT) ft_toupper.c ft_tolower.c ft_error.c
 
-LST = ft_lstnew.c ft_lstdelone.c ft_lstdel.c ft_lstadd.c ft_lstiter.c \
+LST = ft_lstnew.c ft_lstdelone.c ft_lstdel.c ft_lst_size.c ft_lstadd.c ft_lstiter.c \
 	  ft_lstmap.c  ft_lst_append.c ft_lstgetbypos.c ft_lstnew_no_copy.c \
 	  ft_sorted_list_insert.c ft_lst_exist.c
 
@@ -53,8 +53,8 @@ MATRIX= ft_matrix.c ft_matrix_product.c ft_matrix_free.c \
 		ft_print_matrix.c ft_matrix_translation.c ft_matrix_ry.c \
 		ft_matrix_diag_symetrie.c ft_matrix_projection.c
 MATH= $(VECTOR2) $(VECTOR3) $(VECTOR4) $(MATRIX) ft_atoi.c ft_abs.c ft_sign.c \
-	 ft_itoa_base.c ft_nblen.c ft_itoa.c ft_min.c ft_pow.c 
-HASHTABLE= ft_hashtable_new.c ft_hashtable_clean.c ft_hashtable_sub.c ft_hashtable_free.c ft_hashtable_search.c ft_hashtable_add.c ft_hashtable_hash.c ft_hashnode_new.c
+	 ft_itoa_base.c ft_nblen.c ft_max.c ft_itoa.c ft_min.c ft_pow.c 
+HASHTABLE= ft_hashtable_new.c ft_hashtable_size.c ft_hashtable_clean.c ft_hashtable_sub.c ft_hashtable_free.c ft_hashtable_search.c ft_hashtable_add.c ft_hashtable_hash.c ft_hashnode_new.c
 PRINTF= printf.c printf_args.c printf_args2.c printf_args3.c \
 		printf_arg_color.c printf_arg_change.c printf_flags2.c printf_flags.c printf_free.c \
 		printf_essentials.c printf_parser.c printf_print_arg.c printf_write.c \
@@ -73,7 +73,7 @@ OBJS = $(addprefix $(OBJDIR), $(OBJ))
 DEP = $(OBJS:%.o=%.d)
 COUNTER= 
 NB = $(words $(SRCS))
-FLAG = -Wall -Wextra -Werror -g3 -O3 #-fsanitize=address
+FLAG = -Wall -Wextra -Werror -g3 -O3 -fsanitize=address
 
 define tests
 $(if $(filter $(1), ft_strlen), @echo "\n\033[32mCOMPILING STRING FUNCTIONS")
