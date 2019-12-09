@@ -6,13 +6,13 @@
 /*   By: jayache <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/08 10:02:56 by jayache           #+#    #+#             */
-/*   Updated: 2019/12/08 10:55:38 by jayache          ###   ########.fr       */
+/*   Updated: 2019/12/09 10:30:23 by jayache          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static void	free_p(void *p, size_t size)
+static void		free_p(void *p, size_t size)
 {
 	free(p);
 	if (p)
@@ -20,7 +20,7 @@ static void	free_p(void *p, size_t size)
 			return ;
 }
 
-static void	**reconstruct_path(t_hashtable *camefrom, t_algo_input *algo,
+static void		**reconstruct_path(t_hashtable *camefrom, t_algo_input *algo,
 		void *goal)
 {
 	void	**path;
@@ -95,7 +95,7 @@ static void		*astar_loop(t_algo_data *data, t_algo_input *algo,
 	ft_lstdelone(&(data->openset), free_p);
 	data->openset = save;
 	out->otime = ft_max(out->otime, ft_lst_size(data->openset));
-    out->osize = ft_max(out->osize, ft_hashtable_size(data->camefrom));
+	out->osize = ft_max(out->osize, ft_hashtable_size(data->camefrom));
 	return (0);
 }
 

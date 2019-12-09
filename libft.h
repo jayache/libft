@@ -6,7 +6,7 @@
 /*   By: jayache <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/06 19:44:10 by jayache           #+#    #+#             */
-/*   Updated: 2019/12/08 11:01:54 by jayache          ###   ########.fr       */
+/*   Updated: 2019/12/09 11:26:54 by jayache          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -105,12 +105,12 @@ typedef struct		s_algo_data
 	t_list			*openset;
 }					t_algo_data;
 
-typedef struct      s_algo_output
+typedef struct		s_algo_output
 {
 	size_t			otime;
 	size_t			osize;
 	void			**path;
-}                   t_algo_output;
+}					t_algo_output;
 
 int					ft_toupper(int c);
 int					ft_tolower(int c);
@@ -302,7 +302,7 @@ t_hashnode			*ft_hashnode_new(char *index, void *value);
 void				*ft_hashtable_search(t_hashtable *table, const char *index);
 void				ft_hashtable_clean(t_hashtable *table);
 void				ft_hashtable_free(t_hashtable *table);
-size_t              ft_hashtable_size(t_hashtable *table);
+size_t				ft_hashtable_size(t_hashtable *table);
 
 /*
 ** ALGOS
