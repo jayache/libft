@@ -6,7 +6,7 @@
 /*   By: jayache <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/06 19:44:10 by jayache           #+#    #+#             */
-/*   Updated: 2019/12/09 11:26:54 by jayache          ###   ########.fr       */
+/*   Updated: 2020/09/13 07:59:48 by jayache          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,11 +24,6 @@
 #	include <fcntl.h>
 
 #	define ERROR_MALLOC "Malloc returned 0\n"
-
-#	ifdef __linux__
-	typedef __intmax_t intmax_t;
-	typedef unsigned long long uintmax_t;
-#	endif
 
 typedef struct		s_list
 {
