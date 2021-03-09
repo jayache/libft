@@ -6,7 +6,7 @@
 /*   By: jayache <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/06 19:44:10 by jayache           #+#    #+#             */
-/*   Updated: 2020/09/13 07:59:48 by jayache          ###   ########.fr       */
+/*   Updated: 2021/03/09 09:52:08 by selver           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 #	include <string.h>
 #	include <stdlib.h>
+#	include <stdint.h>
 #	include <unistd.h>
 #	include <math.h>
 #	include <errno.h>

@@ -6,7 +6,7 @@
 #    By: jayache <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/06 19:39:42 by jayache           #+#    #+#              #
-#    Updated: 2019/12/08 10:53:09 by jayache          ###   ########.fr        #
+#    Updated: 2021/03/09 09:51:51 by selver           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -73,7 +73,7 @@ OBJS = $(addprefix $(OBJDIR), $(OBJ))
 DEP = $(OBJS:%.o=%.d)
 COUNTER= 
 NB = $(words $(SRCS))
-FLAG = -Wall -Wextra -Werror -g3 -O3 -fsanitize=address
+FLAG = -Wall -Wextra -Werror -g3 -O3 #-fsanitize=address
 
 define tests
 $(if $(filter $(1), ft_strlen), @echo "\n\033[32mCOMPILING STRING FUNCTIONS")
